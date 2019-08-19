@@ -825,6 +825,7 @@ public company). The certificate limit is specified for each scenario
 and depends on the number of players.
 
 \subsubsection{Exception to the certificate limit}
+\label{sec:certificate-limit-exceptions}
 If the stock price of a public company is in the yellow or brown
 section of the stock price table, its stock certificates do not count
 towards the certificate limit.
@@ -834,6 +835,7 @@ Players can usually only own up to 60\% of a public company's
 shares.
 
 \subsubsection{Exception to the ownership limit}
+\label{sec:ownership-limit-exceptions}
 If a stock company's stock price is in the brown section of the stock
 price table, players can hold shares of that company beyond the 60\%
 ownership limit.
@@ -933,7 +935,7 @@ station token.
 \subsection{Establishment of public companies}
 A public company is established when 5 if its certificates (60\% of
 its shares) are purchased from the initial offer. Exception: In the
-1890 scenario, Kinki Nippon Railways is established when owner of
+1890 scenario, Kinki Nippon Railways is established when the owner of the
 Osaka Electric Railway minor company announces the establishment of
 Kinki Nippon Railways.
 
@@ -1022,117 +1024,129 @@ available to start for the remainder of the game.
 % とが可能になります。閉鋒された公共会社は、以後ゲーム中使用しません。
 
 \section{Stock round}
-In the stock round, you will buy and sell the rights book of the
-railway council, which will be the player's income source in this
-game. Until the individual company and the small company are all
-purchased, an initial round will take place, not a regular stock
-round.
+In the stock round, players buy and sell railway company shares, which
+form the source of players' income during the game. While private and
+minor companies remain unsold, a special initial stock round takes
+place instead of a regular stock round.
 
-Since a player who holds the largest share of a public company will be
-the president, buying and selling stocks is important.
+As the presidency of public companies is decided by which player has
+the largest share holdings, buying and selling of shares is important.
 
-\subsection{Priority Trading Card}
-The stock round is started in clockwise order from the player with the
-preferred buy and sell card and is advanced by each player performing
-a turn.
+\subsection{Priority Deal Card}
+Beginning with the player holding the priority deal card, players
+perform turn actions in clockwise order.
 
-The player whose turn has ended announces that his turn has ended, and
-gives the player with the first buy and sell card to the next turn's
-player. This is true for both regular stock rounds and initial stock
-rounds.
+If the player holding the priority deal card performs an action
+instead of passing, they will pass the card to the next player in
+clockwise order. This is true for both regular stock rounds and
+initial stock rounds.
 
 \subsection{Progress of the stock round}
-The stock round starts from the player with the preferred buy and sell
-card on an occasional basis, and proceeds by each player taking turns
-in turn. In each player's turn, you can perform one of the following
-four actions:
+The stock round starts from the player with the priority deal card,
+and proceeds by each player taking turns in clockwise order. On their
+turn, a player may perform one of the following four actions:
 \begin{itemize}
-\item Sale of title
-\item Purchase of Rights
-\item Selling and purchasing rights documents
+\item Sell shares
+\item Buy 1 stock certificate.
+\item Sell and buy shares (in either order)
 \item Pass
 \end{itemize}
 
-The player who has played his turn passes the preferred buy and sell
-card to the next turn player.
+A player who takes an action other than passing will give the priority
+deal card to the next player in turn order.
 
 The stock round will continue to be played until all players pass in
-succession, and the turn will be repeated many times, regardless of
-whether the previous turn has bought or sold the title, the player is
-new It is possible to buy and sell the title in your turn.
+succession, and may go around the table several times. Players who
+pass may take future actions in the stock round, provided the stock
+round has not ended before the turn returns to them.
 
-\subsection{Sale of Rights}
-It is possible to voluntarily sell only the shares of the public
-company in each turn of each player in the stock round, and if it is
-requested by that player in the turn of another player, sell the
-private company Can be (reference: 10.9).
+\subsection{Selling shares}
+Only shares of public companies may be sold. During another player's
+turn, it is possible to sell private companies if the other player
+requests to purchase them (reference: 10.9).
 
-\subsubsection{Fall in stock price due to the sale of a title}
-When a player sells a stock certificate, it places the stock
-certificate in the open market and receives the amount of stock in the
-stock list. Then move the railway company's stock token down one line
-for every 10\% of the sold stock. When the stock token is on the
-bottom line, the stock price does not change, regardless of how many
-shares are sold.
+\subsubsection{Fall in stock price due to the sale of shares}
+When a player sells a stock certificate, they place the stock
+certificate in the open market and receive the current value according
+to the stock price table. The railway company's stock price token is then moved
+down one row for every 10\% of the shares sold. When the stock price token
+is on the bottom row, the stock price does not change, regardless of
+how many shares are sold.
 
-\subsubsection{Pre-sale limit of sale of rights}
-You can not put more than 50\% of the shares of any railway company in
-the open market. You can not sell stock certificates that exceed this
-limit. The president's stock can not be sold unless another player has
-at least two shares of the company. During the stock round of the
-first game turn, all players are prohibited from selling the title.
+\subsubsection{Restrictions on share sales}
+No more than 50\% of the shares of any railway company may be in the
+open market. Stock sales that would exceed this limit are not
+allowed.
 
-\subsection{Purchase of Rights}
-Players can purchase one stock certificate that has never been
-purchased, or one stock certificate on the open market. You can also
-buy one private company from another player.  The company's stock
-certificates, which have never been purchased, will be purchased in
-order from the president stock certificate at the face value decided
-by the first player to buy. The stock certificate of the open market
-is purchased with the stock price indicated in the stock price table
-at that time The president's shares of Kintetsu (see 1890 scenario)
-and some of the share certificates appear as small companies
-convert. The president's share of the subway is delivered to the
-purchaser in addition to Osaka City Tram.
+The president's certificate can not be sold unless another player
+has at least two shares of the company.
 
-\subsubsection{Restriction on Purchase of Rights}
-A stock sold by a player during a stock round can not be purchased
-during the stock round. In addition, you can not purchase beyond the
-number limit and the holding limit of the title. (Exception: 6.21,
-6.31) During the first game turn and the initial stock round, you can
-not buy a late-income company.  Buying a non-personal company license
-from another player or a public company has been a success (see:
-10.9).
+During the stock round of the first game turn, all players are
+prohibited from selling stock.
 
-\subsection{Sale and Purchase of Rights}
-The player may choose which to sell and buy first, but all sales must
-be done at once.  You can buy a stock certificate of a company whose
-stock price is higher than the surface price and sell it immediately
-to get a profit.
+\subsection{Buying shares}
+Players can purchase one stock certificate from the initial offer, or
+one stock certificate from the open market. Players may also buy one
+private company from another player.  Stock certificates from the
+initial offer, will be purchased in order, beginning with the
+president's certificate, at the par price decided by the first player
+to buy shares of that company. Stock certificates in the open market
+are purchased at the price currently indicated on the stock price
+table. The president's certificate and four regular certificates of
+Kinki Nippon Railway (see 1890 scenario) appear as minor companies
+convert. The president's share of Osaka Municipal Subway is given to the
+purchaser of the Osaka Municipal Electrica Railway private company.
 
-\subsection{The end of the equity round}
-The Stock Round ends when all players pass in succession. If the stock
-has never been bought or sold, nothing happens and the preferred buy
-and sell card does not move. When the stock round is over, move the
-round marker from stock to Run 1.
+\subsubsection{Restrictions on share purchases}
+Players may not buy shares of a company which they have sold
+previously in the same stock round. In addition a player may not
+purchase shares which would cause them to exceed certificate or
+ownership limits. (Exception: \ref{sec:certificate-limit-exceptions},
+\ref{sec:ownership-limit-exceptions})
 
-\subsubsection{Stocks sold out}
-At the end of the stock round, stock tokens for public companies, all
-of which are owned by one or more players, move up one line. When the
-stock token is on the top line, it does not move.
+During the first game turn and the initial stock round, late private
+companies may not be purchased.
+
+The purchase of certificates from other players which are not private
+companies is prohibited (see: 10.9)
+
+\subsection{Sell and Buy Shares}
+Players may choose whether to sell or buy first, but all sales must be
+done at once. If a company's stock price is higher than its par price,
+it is possible to buy one certificate from the initial offer and
+immediately sell it for a profit.
+
+\subsection{End of stock round}
+The stock round ends when all players pass in succession. If not
+player performed actions, the priority deal card does not move. When
+the stock round is over, move the round marker from stock round to
+operating round 1.
+
+\subsubsection{Price adjustment for sold out companies}
+At the end of the stock round, stock price tokens for public companies
+whose shares are all owned by one or more players move up one
+row. If the stock price token is already on the top row, it does not move.
 
 % ⑧.株式ラウンド
-% 株式ラウンドでは、このゲームでプレーヤーの収入源となる鉄道会杏の権利書の売買を行います。個人会社と小会社が全て購入されるまでは、通常の株式ラウンドでなく、初期椛式ラウンドが行われます。
+
+% 株式ラウンドでは、このゲームでプレーヤーの収入源となる鉄道会杏の権利
+% 書の売買を行います。個人会社と小会社が全て購入されるまでは、通常の株
+% 式ラウンドでなく、初期椛式ラウンドが行われます。
 
 % ある公共会社で、一番多く株式を保有してているプレーヤーが社長となるため、株の売買は、重要な意味を持ちますむ
 
 % ⑧.①優先売買カード
 % 株式ラウンドは、優先売買カードを持ったプレーヤーから時計回りの順番で始められ、各プレーヤーが手番を行うことにより進めあられます。
 
-% 手番の終了したプレーヤーは自分の手番が終了したことを客言し、次の手番のプレーヤーに優先売買カードを渡します。これは、通常の株式ラウンドも初期株式ラウァンドについても同様でむ
+% 手番の終了したプレーヤーは自分の手番が終了したことを客言し、次の手番
+% のプレーヤーに優先売買カードを渡します。これは、通常の株式ラウンドも
+% 初期株式ラウァンドについても同様でむ
 
 % ⑧.②株式ラウンドの進行
-% 株式ラウンドは、優先売買カードを持ったプレーヤーから時託回りに始まり、各プレーヤーが順番に手番を行うことにより進められます。各プレーヤーの手番には、以下の④つの行動のうちーつを行うことが出来ます
+
+% 株式ラウンドは、優先売買カードを持ったプレーヤーから時託回りに始まり、
+% 各プレーヤーが順番に手番を行うことにより進められます。各プレーヤーの
+% 手番には、以下の④つの行動のうちーつを行うことが出来ます
 
 % ・檬利書の売却
 
@@ -1144,36 +1158,72 @@ stock token is on the top line, it does not move.
 
 % 自分の手番をプレイしたプレーヤーは、優先売買カードを次の手番のプレーヤーに渡します。
 
-% 全プレーヤーが連続してパスを行うまで、株式ラウンドは続けてプレイされ、何度も手番がまわってきますれ前回の手番に権利書の売買を行ったかどうかにかかわらず、プレーヤーは新たな自分の手番に権利書の売買が可能となります。
+% 全プレーヤーが連続してパスを行うまで、株式ラウンドは続けてプレイされ、
+% 何度も手番がまわってきます。前回の手番に権利書の売買を行ったかどうか
+% にかかわらず、プレーヤーは新たな自分の手番に権利書の売買が可能となり
+% ます。
 
 % ⑧.③権利書の売却
-% 株式ラウンド中の各プレーヤーの各手番で、公共会社の株.券のみを自発的に売却することが可能でむ他プレーヤーの手番にそのプレーヤーから要求があれば、個人会社を売却することができます(参照:①0.⑨。
+
+% 株式ラウンド中の含プレーヤーの谷手番で、公共会社の株.券のみを自発的に
+% 売却することが可能でむ
+
+% 他プレーヤーや、公共会社から、個人会社以外の権利書を購入することは、
+% 華止されんています(参熙:①0.⑨。
+
 
 % ⑧.③.①権利書売却による株価の下落
-% プレーヤーが株券を売却したとき、公開市場にその株券を置き、株価表の株価の金額を受け取ります。その後、その鉄道会社の株価トークンを、売却された株券①0%ごとに①ライン下に移動させます。株価トークンが、一番下のラインになると、何枚株券を売却しても、株価は変化しません。
+
+% プレーヤーが株券を売却したとき、公開市場にその株券を置き、株価表の株
+% 価の金額を受け取ります。その後、その鉄道会社の株価トークンを、売却さ
+% れた株券①0\%ごとに①ライン下に移動させます。株価トークンが、一番下のラ
+% インになると、何枚株券を売却しても、株価は変化しません。
 
 % ⑧.③.②権利書の売却前限
-% 公開市場には、どの鉄道会社の株券も⑤0%を超えて置くことはできません。この制限を超えるような株券の売却はできません。他のプレーヤーが少なくともその会社の株券を②枚持っていなければ、社長株券を売却することはできません。第①ゲームターンの株式ラウンド中、全てのプレーヤーが檬利書を売却することを禁止します。
+
+% 公開市場には、どの鉄道会社の株券も⑤0\%を超えて置くことはできません。
+% この制限を超えるような株券の売却はできません。他のプレーヤーが少なく
+% ともその会社の株券を②枚持っていなければ、社長株券を売却することはでき
+% ません。第①ゲームターンの株式ラウンド中、全てのプレーヤーが檬利書を売
+% 却することを禁止します。
 
 % ⑧.④権利書の購入ー
-% プレーヤーはまだ一度も購入されていない株券①枚か、公開市場にある株券①枚を購入できます。他のプレーヤーから個人会社を①つ購入することもできます。
-% まだ一度も購入されていない会社の株券は、最初に購入するプレーヤーの決定する額面価格で社長株券から順番に購入されていきます。公開市場の株券はそのときの株価表で示された株価で購入します
-% 近鉄(①⑧⑨0シナリオ参照)の社長株と一部の株券は、小会社が転換して登場します。地下鉄の社長株は、大阪市電に付加する形で購入者に渡されます。
+
+% プレーヤーはまだ一度も購入されていない株券①枚か、公開市場にある株
+% 券①枚を購入できます。他のプレーヤーから個人会社を①つ購入することもで
+% きます。まだ一度も購入されていない会社の株券は、最初に購入するプレー
+% ヤーの決定する額面価格で社長株券から順番に購入されていきます。公開市
+% 場の株券はそのときの株価表で示された株価で購入します近鉄(①⑧⑨0シナリオ
+% 参照)の社長株と一部の株券は、小会社が転換して登場します。地下鉄の社長
+% 株は、大阪市電に付加する形で購入者に渡されます。
 
 % ⑧.④.①権利書の購入の制限
-% あるプレーヤーが、株式ラウンド中に売却した銘柄は、その株式ラランド中は、購入できなくなります。また、権利誠の枚数制限や保有制限を超えるような購入はできません。(伺外:⑥.②①、⑥.③①)
-% 第①ゲームターン及び初期株式ラウンド中は、後発会社を購入できません。
-% 他プレーヤーや、公共会社から、個人会社以外の権利書を購入することは、華止さんています(参照:①0.⑨。
+
+% あるプレーヤーが、株式ラウンド中に売却した銘柄は、その株式ラランド中
+% は、購入できなくなります。また、権利誠の枚数制限や保有制限を超えるよ
+% うな購入はできません。(伺外:⑥.②①、⑥.③①)第①ゲームターン及び初期株式ラ
+% ウンド中は、後発会社を購入できません。他プレーヤーや、公共会社から、
+% 個人会社以外の権利書を購入することは、華止さんています(参照:①0.⑨。
 
 % ⑧.⑤権利書の売却と購入
-% プレーヤーは、売却と購入を行うとき、どちらを先に行ってもかまいませんが、すべての売却は一度で終えなくてはなりません。
-% 類面価格より株価が高い会社の株券を贈入し、その手番ですぐに売却して利益を得ることもできます。
+% プレーヤーは、売却と購入を行うとき、どちらを先に行ってもかまいません
+% が、すべての売却は一度で終えるなくてはなりません。
+
+% 額面価格より株価が高い会社の株券を購入し、その手番ですぐに売却して利
+% 益を得ることもできます。
 
 % ⑧.⑥株式ラウンドの終了
-% 全てのプレーヤーが連続してパスを行ったときに、株式ラウンドは終了します。一度も株券の売買が行われなかったときは、何もおこらず、優先売買カードも移動しません。株式ラウンドが終了したら、ラウンドマーカーを株式から運営ラゥンド①に彦します。
+
+% 全てのプレーヤーが連続してパスを行ったときに、株式ラウンドは終了しま
+% す。一度も株券の売買が行われなかったときは、何もおこらず、優先売買カー
+% ドも移動しません。株式ラウンドが終了したら、ラウンドマーカーを株式か
+% ら運営ラゥンド①に彦します。
 
 % ⑧.⑥.①株価の売り切れ上がり|
-% 株式ラウンド終了時、全ての株券が①人あるいは福数のプレーヤーによって所有さもんている公共会社の株価トークンは、①ライン上に移動します。株価トークンが一番上のラインにある時は、粟動しません。
+
+% 株式ラウンド終了時、全ての株券が①人あるいは福数のプレーヤーによって所
+% 有さもんている公共会社の株価トークンは、①ライン上に移動します。株価トー
+% クンが一番上のラインにある時は、粟動しません。
 
 \section{Initial stock round}
 
