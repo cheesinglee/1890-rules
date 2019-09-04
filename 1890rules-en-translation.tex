@@ -2,13 +2,21 @@
 
 \usepackage{CJK}
 \usepackage{amssymb}
+\usepackage{enumitem}
 \usepackage[utf8]{inputenc}
-
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage[table]{xcolor}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[top=1in, bottom=1.25in, left=1.25in, right=1.25in]{geometry}
+\usepackage{mathtools}
 
 \title{1890}
 \setcounter{secnumdepth}{4}
 \begin{document}
 \begin{CJK}{UTF8}{min}
+\begin{multicols}{2}
 \section*{Introduction}
 
 \subsubsection*{1890 is a game about the railways of Kansai}
@@ -22,12 +30,12 @@ the railway era in Keihanshin to the year 2000, although some
 scenarios may end earlier.
 
 \subsubsection*{1890 is a game about asset growth}
-1890 simulates stock investing and managing railway companies. At the end
+1890 simulates stock investing and railway company management. At the end
 of the game, the player with the greatest net worth will be the
 winner. This is calculated as the combination of cash on hand and
 the value of shares held.
 
-\subsubsection*{1890 is a game about managing railway companies}
+\subsubsection*{1890 is a game about railway company management}
 1890 has several types of railway companies, each with unique
 features. Private companies and late income companies pay a fixed
 income. Minor companies operate small trains. Public companies have a
@@ -61,14 +69,6 @@ tracked next to the stock market board. The number of game rounds is
 determined by the scenario.
 
 \subsection{Stock Rounds}
-% 最初に株価シートのラウンド進行表の株式ラウンドにラウンドマーカーを配
-% 置します。各プレーヤーは、自分の手嘴に資産を増加させる唯一の道具であ
-% り手段である権利書の売翌、購入、売却と購入の両方、あるいは売買しない
-% かの選択を行うことが出来ま.
-
-% 全ての個人会社と小会社が購入されるまでは、通常の株式ラウンドと手順が
-% 異なる初期株式ラウンドがプレイされます。初期森式ラウンドが終了したら、
-% 引き続きそのまま通常の株式ラウンドを行います。
 
 During the stock round, each player can choose to sell
 shares, buy, sell then buy, or pass. Company shares are the unique
@@ -92,15 +92,7 @@ When there are multiple operating rounds, move the round marker to the
 corresponding position of that operating round. Unless the game ends during
 the operating round, a new game turn will begin afterwards.
 
-% ①.③運営ラウンドの概要
 
-% ラウンド進行表の運営ラウンド①にラウンドマーカーを配置します。運営ラウ
-% ンドは、各鉄道会社の社長がその会社を運営するラウンドです。最初に個人
-% 会社、後発会社、そして小会社、最後に公共会社が運営されます。小会社は、
-% 定められたNo順に、公共会社は株価の順に運営されます。各会社の社長が、
-% その会社の手番に運営を行います。複数回運営ラウンドがあるときは、その
-% 運営ラウンドの該当する位置にラウンドマーカーを移動させます。その運営
-% ラウンドで、ゲームが終了したならば、次のゲームターンとなります。
 
 \subsection{Game Phases}
 The game of 1890 progresses over 6 phases. The game phase is updated
@@ -109,39 +101,23 @@ rules may change: the number of operating rounds, types of track tiles
 which may be laid, train limits, etc. vary over the course of the
 game.
 
-%①.④ゲームフェイズの概
-
-%①⑧⑨0は、時代の経過によって⑥つのフェイズで進行します。新しい種類の列車
-%が購入されると、ゲームフェイズは、更新されます。新しいフェイズになると、
-%ルーレの一部が変化し、運営ラウンドの回数、線路タイルの置き換えできる種
-%頭、列車保有制限等が変重されます。
 
 \subsection{Game End}
 The game ends when the bank is exhausted, any player goes bankrupt,
 or the last game turn is over.
 
-%①.⑤ゲームの終了銀行が破産するか、いずれ
-%かのプレーヤーが破産するか、最終ゲームターンを終了すると、ゲームは終了します。
 
 \subsection{Scenarios [A1-]}
 The 'Hanshin Railway' and 'Keihan Railway' scenarios are introductory
 scenarios which finish in less time. The full '1890' scenario finishes
 in 3-5 hours. Please decide the scenario and variant before playing.
 
-%1.⑥シナリオ[A-コ
-
-%①⑧⑨0には、短時閻で終了する入門用の`枚神レールウゥウェイ」、`京阪祐レつー
-%レウェイ」。③ー⑤時間で終了する本シナリオの`①⑧⑨0」を用意しています。シ
-%ナリオとバリアントを決定してから、プレイして下さい。
 
 \section{Game Etiquette}
 Each player plays so that everyone can enjoy the game. Play will be
 smoothed by players planning their stock trades or company operations
 ahead of their turn.
 
-% 各プレーヤーは、全員がゲームを楽しめるようにプレイしましレょう。自分
-% の手番までに、株券の売買予定や会社の運営について計画すると、プレイが
-% 手際よく行るます。
 
 \subsection{Disclosure of player share and cash holdings}
 Cash and share holdings of each player are public knowledge. Players
@@ -149,13 +125,6 @@ should arrange their possessions such that they are easily seen by
 others, and must respond truthfully to questions. However, excessive
 inquiries will slow the game and should be avoided.
 
-% ②.①プレーヤーの現金と権利書の公開
-
-% 各プレーヤーの所有する現金と権利書は、公開されているものとします。誰か
-% から尋ねられたら、答えなくてはいけません。但し、ゲームの展開や時間に影
-% 響が出るほど何底も閻く行為は、差し控えるようにしましょう。各プレーヤー
-% は、自分の保有する権利書を誰からもよく見えるように、いつも整理して並べ
-% ておきます。
 
 \subsection{Company Charters}
 
@@ -164,22 +133,11 @@ companies owned by the railway company on top of the company sheet so
 that everyone can see it. Company funds are also placed on the company
 sheet, but the amount does not need to be publicized.
 
-% ②.②会社シートの内容の非公開
-
-% 各鉄道会社の社長は、鉄道会社の所有する制車、個人会社を、全員に見える
-% ように会社シートの上に置き管理します会社の資金も会社シートに罪かれま
-% すが、その内容を公表する必要はありません。
 
 \subsection{Confusion of Assets}
 Players must take care to separate their assets from those of the
 companies that they manage.
 
-% ②.③資産の混同
-
-% このゲームをプレイするプレーヤーは、各鉄道会社が所有する運営資金や個
-% 人会社と、自分の資産を混同することなく処理しなくてはなりません。間違
-% えて混同してしまうと、今までのプレイが水の泡となってしまいます。馴れ
-% ないうちは、特に注意してプレイしましょう。
 
 \subsection{Solo Play}
 
@@ -189,29 +147,14 @@ beginner player can enjoy the game. Too inductive players, is adopted
 other specific play, let's put it is often not fun even have
 participated each other care. And as many as one 18XX player.
 
-% ②.④一人でも多くの①⑧XXプレーヤーを
-
-% 熱練プレーヤーに混ざって初心者プレーヤーがプレイする時、熱練プレーヤー
-% は初心者プレーヤーもゲームが楽しめるよう考膚してゲームを進めるべきだ
-% と愚います。あまりに誘導的なプレーヤー、採他的なプレイは、参加してい
-% ても楽しくないことが多いですお互い気をつけましょう。そして、①人でも多
-% くの①⑧XXえXプレーヤーを。
-
 \section{Components}
 
 The 1890 is distributed as a kit. For kit production, please follow
 the procedure in the attached sheet.
 
-% ③.コンポーネント
-
-% ①⑧⑨0は、キット形式の配布となっています。キット製作については、別紙の
-% 製作の手順に従って行って下さい。
-
 \subsection{Manual}
 
 This booklet, which contains 1890 rules
-% ③.①マニュアル
-% ①⑧⑨0のレルールレが書いてあるこの内子でむ
 
 \subsection{Map}
 
@@ -254,61 +197,11 @@ railway company will develop a short line for operation.
   replacing track tiles.
 \end{description}
 
-% ③.②マップ
-
-% ①⑧⑨0のマップは、大阪を中心とした構成となっており、六角形のヘクスで、
-% 仕切られています。各ヘクスの中には、練路タイルを配置出来るようになっ
-% ており、各鉄道会社が運営フエイズに略線開発を行います。
-
-% 緑の領域 緑色でヘベクスに区切られていない場所は、線路タイルを置くこと
-% が出来ませすん。また、この方向に線路タイルを置くことも禁止されていま
-% す。
-
-% 海の領域 青色でヘクスに区切られていない場所は、海となります。ここには、
-% 線路タイルを置くことが出来ません。また、この方向に線路タイルを置くこ
-% とも禁正されていますれ
-
-% 赤色の領域 赤色の領城には種路タイルを置くことが出来ません。この顕域は、
-% 列車の運営時に都市と同様に扱います。その時は、黒の三角に繋がるように
-% 線路タイルを置きます。
-
-% マップ部分 ヘクスで区切られた領域が、線路タイルを配置できる場所となり
-% まずれ。
-
-% 平地 白い部分は、平地のヘへクスです。都市を含まない線異タイルを配置、置き換え出来まれむ。
-
-% 大都市 大都市の線路タイルを配置、置き換え出来ます。一部の線路タイルの
-% 配置や置き換えには、経費が必要ですむ。
-
-% 小都市 黄色の小都市タイルのみ配置することが出来ますれ。
-
-% ②つの小都市 大東と四条畷のヘクスのみが、②つの小都市となっています。こ
-% こに線路タイルを置くの仕、経費が必でれ
-
-% 河川 河川は、マップに青色で危刷されています。河川のー部は、ヘクス辺を
-% 添れていますこのヘクス辺に向けて線路タイルを配置することは禁止されて
-% います。また、ヘクスの中を流れている河川の中には、線路を配置するのに
-% 経費を必要とするものが多くあります。
-
-% 山岳 茶色の三角が、山岳へクスです。最初に線路タイルを酒するのに経費を
-% 必要とします。都市を含まない線路タイノルを配置、置き換え出来ますむ。
-
-% 黛い縁取りのヘクス このヘクスは、線路タイルの配置や罪き換えを禁止しまずむ
-
-% 黄色の縁取りのヘクス このヘへヘクスには、緑色の線路タイルから配置する
-% ことが出来ます
-
-% 黄色の線路タイルが印刷されているヘクス 緑色の線路タイルへの罠き換えが
-% 可能ですむ。特殊タイルの指定が多いので、線路の罹き換えには注意して下
-% さい。
 
 \subsection{Share Certificates}
 Shares for private companies, late private companies, minor companies, and
 public companies.
 
-% ③.④権利書
-
-% 個人会社、後発会社、小会社、公共会社の権利書があります.
 
 \subsection{Public company and Minor Company Charters}
 This sheet is used when operating public and minor companies.  These
@@ -316,11 +209,6 @@ charters are managed by the president of the company. Company funds
 and trains, unused station tokens, and purchased private companies are
 placed on top of the charter.
 
-% ③.⑤公共会社シート・小会社シート
-
-% 公共会社と小会社の運営時に用いるシートです。これらのシートは、その会
-% 社の社長が管理します。シートの上には、会社の資金と列車、未使用の駅トー
-% クン、購入された個人会社が置かれます.
 
 \subsection{Track Tiles}
 
@@ -329,36 +217,22 @@ are yellow tiles, green tiles and brown tiles, and there are special
 tiles that can only be found in specific places. [Reference: Track tile
 table (end of volume)]
 
-% ③.⑥線路タイル
-
-% 線跡タイルを跡置、置き換えすることによって,マップは開発さしていきます。
-% 黄色タイル、緑タイル、茶色タイルがあり、特定の場所としかおけない特殊
-% タイルもあります。[参脈:線路タイル表(巻末)]
 
 \subsection{Money}
 
-Paper banknotes in denominations of \yen 1, \yen 4, \yen 5, \yen 10,
-\yen 20, \yen 35, \yen 50 are (24 notes each), \yen 100 (30 notes),
-and \yen 500 (12 notes). An additional 12 notes each of \yen 500 and
-\yen 1000, are available for use after the bank breaks. The number of available banknotes may be reduced depending on the scenario.
-
-% ③.⑦紛幣
-% ¥1、¥4、¥5、¥10、¥20、¥35、¥50は、各②④枚。¥100は、
-% ③0枚 ¥⑤00は①②枚
-% 破産処理用の紙幣として、¥⑤00、¥1000、各①②枚)が用意されています。
-% 紙幣は、シナリオにより使用する上限が決められています。
+Paper banknotes in denominations of 1円, 4円, 5円, 10円, 20円, 35円,
+50円 are (24 notes each), 100円 (30 notes), and 500円 (12 notes). An
+additional 12 notes each of 500円 and 1000円, are available for use
+after the bank breaks. The number of available banknotes may be
+reduced depending on the scenario.
 
 \subsection{Priority Deal Card}
 
 This card indicates turn order in the stock round.
 
-% 株式ラウンド中の手番を示すカードでれ
 
 \subsection{Train Cards}
 Shows a train
-
-% ③.⑨ 列車カード
-% 列車を示しています
 
 \subsection{Station Tokens}
 Markers used to operate each public company. The trains that a company
@@ -367,22 +241,13 @@ public company's unused stations tokens are placed on the company
 charter. Minor companies' order tokens are used as their station
 token.
 
-% ③.①0 駅トークン
-
-% 各公共会社の運営に使用するマーカーです。運営する列車は、必ず駅トーク
-% ンの配置された都市を通らねばなりません。公共会社の使用されていない駅
-% トーケンは、会社シートの上に置いておきます。子会社の駅トークンは、順
-% 番トークンで代用します.
 
 \subsection{Order Tokens}
 Used to determine turn order at the beginning of the game. After
 that, they will be used as station tokens for minor companies or the
 Kobe Shinkansen Railway late private company.
 
-% ③.①①順番トークン
 
-% ゲームの最初に順番を決定するのに使用しますむ。その後は、子会社や、後
-% 発会社(神戸髙速鉄道)の駅トータンとして利用しますれ
 
 \subsection{Stock price tokens}
 The square token containing the company name is used to indicate the
@@ -390,11 +255,6 @@ stock price of the public company. The one with the front and back is
 used in the stock price table, and the one with only one side is used
 in the par price table.
 
-% ③.⑫株価トークン
-
-% 会社名の入っている四角いトークンは、公共会社の株価を示すのに使用しま
-% す,表裏(朋暗)のあるものを株価表で使用します。片面だけのものは、領面価
-% 格表で使用します。
 
 \subsection{Stock Market Board}
 The stock market board is used to manage game turns, rounds, and stock
@@ -402,11 +262,6 @@ prices for public companies. Place each marker or token in its
 designated space and be careful not to shift the position
 inadvertently.
 
-% ③.①③株式シート
-
-% 株式シートは、ダームターンや、ラウンド、公共会社の株価を管理するのに
-% 使用します。各マーカーや、トークンは、定められた枠の中に置き、不注意
-% に位置をずらしたりしないように注意して下さい。
 
 \subsubsection{Game Turn Tracker}
 The current game turn is indicated by the game turn marker. Every time
@@ -414,26 +269,16 @@ the game turn is changed, the position of the marker is
 updated. Depending on the variant, the game ends after a predefined
 number of turns.
 
-% ③.①③.①ゲームターン表
-
-% 現在のゲームターンをゲームターンマーカーにより表します。ゲームターン
-% が、変更される度にマーカーの位置を更新していきます。バリアントによっ
-% ては、定められたゲームターンになるとゲームは、終了します。
 
 \subsubsection{Round Progress Marker}
 The current round is represented by a round marker. It will be
 updated each time a new stock round or operating round begins.
 
-% ③.①③.②ラウンド進行表
-
-% 現在、どのラウンドかをラウンドマーカーにより表します。株式ラウンドと
-% 各運営ラウンドが変更される度に更新していきます。
 
 \subsubsection{Open Market}
 Sold shares and discarded trains are placed in the open market.
 
-% ③.①③.③ 公開市場
-% 公開市場には、売却された株券、廃棄された列車が晩かれます。
+
 
 \subsubsection{Par Value Table}
 The par value table determines the price of a public company's
@@ -441,11 +286,7 @@ unsold stock. This price does not change. When the president's share
 of a public company is purchased, the company's par value token is
 placed within the par value area.
 
-% ③.①③.④額面価格表
 
-% 類面価格表は、公共会社のまだ売却されんていない株式の価格を決定します。
-% この価格は変動しません。公共会社の社長株が購入されると、額面価格表の
-% エリア内にその会社の額面価格トークンを配置します。
 
 \subsubsection{Stock Price Table}
 The stock price table tracks the changing stock prices of public
@@ -459,38 +300,21 @@ is traded at this price. Also, the stock certificates held by the
 players at the end of the game will be converted to the prices on this
 stock table.
 
-% ③.①③.⑤株価表
-
-% 株価表は、公共会社の変動する株価の管理を行いますれ。公共会社の株価は
-% 株価表上の株価トークタンで示され、株の売買で上下、配当か無配かで左右
-% に移動します。公共会社の株価がどのセクションであるかは、ゲームで重要
-% な意味を持ちます。公共会社の株券を売却するときや、公開市場から株券を
-% 購入するときは、この価格で取り引きされます。また、ゲーム終丁時にプレー
-% ヤーが保有する株券も、この株価表の価格に換算します。
 
 \paragraph{Red framed area}
 Denotes the values which may be chosen as the initial stock price for
 newly started companies. This area has no other effect on play.
 
-% ③.①③.⑤.① 赤枠のエリア
-
-% 新しく設立された会社の株価トークンはこのエリア内のいずれかのマス目に
-% 置かれます。このエリアはプレイに何の影響もありません。
 
 \paragraph{White Section}
 No special limitations are in play for a company whose stock price is
 in this section.
 
-% 3.13.⑤.②白色セクツョン
-% 白いスペースは、株券の通常の状熊を意味します。特别な制限はありません。
 
 \paragraph{Yellow Section}
 Share certificates of companies whose stock price is in this area
 are not counted towards the certificate limit.
 
-% ③.①③.⑤.③黄色セクション
-
-% このエリアに株価トータンのある会社の株券は権利書の枚数制限には数えません。
 
 \paragraph{Brown Section}
 Share certificates of companies whose stock price in this area
@@ -498,18 +322,11 @@ are not counted toward the certificate limit. Also, you
 may own shares of companies with stock price in this area beyond the
 60\% limit.
 
-% ③.①③.⑤.④茶色セクション
-
-% このエリアに株価トータンのある会社の株券は権利書の枚整制限には数えま
-% せん。また、このエリアに株価トークンのある会社の株券は⑥0\%ぬの制限を
-% 超えて所有してもかまいません。
 
 \paragraph{Closing Section}
 Companies whose stock price token has enters the closing
 section will be closed immediately [Ref. 7.4 company closing].
 
-% ③.①③.⑤.⑤閉鎮セクション
-% 株価トータンが閉鎖セクションに入った鉄道会社は、その時点で閉鎖されまむ[参照⑦.④会社の閉鎖]
 
 \section{Game Preparation}
 
@@ -518,11 +335,6 @@ be able to see the player's assets etc., it is recommended to play on
 a large table. The number of game components used will vary depending
 on the scenario.
 
-% ④.ゲームの準備
-
-% ①⑧⑨0をプレイするには、③r以上のスペースが必要でれ。プレーヤーの資産等
-% も見えるように配するため、大きめのテーブル等でプレイすることを薦めま
-% す。シナリオにより、ゲームパーツの使用数は変化しまむ。
 
 \subsection{Game Setup}
 Select the scenario to play and prepare the game as follows.
@@ -550,26 +362,7 @@ Select the scenario to play and prepare the game as follows.
   indicated by the chosen scenario.
 
 \end{itemize}
-% ④.①.①ゲームのセットアップ
 
-% プレイするシナリオを決定し、以下の要領でゲームの準備をします。
-
-% ・マップと、株価シートをマップの中央に並べます。
-
-% ・公共会社の株券は、社長株を一番上にし、マップに並べておきます。後発会社の権利書も、吉様に並べます
-
-% ・各刊車を、同じ種類ごとにマップの該当する場所に置いておきます。
-
-% ・銀行家を決定し、銀行の現金を全プレーヤーに見えるように配置します
-
-% ・線路タイル、鉄道会社シート、駅トークン、額面価格トークン、株価トー
-% クンを、マップや株式市場ポードのそばに置きます,株価シートのゲームター
-% ン表の①の覧所にゲームターンマーカーを、ラウンド進行表の株式ラウンドの
-% 位置にラランドマーカーを置きます,
-
-% ・各プレーヤーの前に、権利書や、会社シート、紙常などを罰くための場所を確保します.
-
-% `適当な場所に個人会社と小会社の権利書を、シナリオに指示されている順番に並べます
 
 \subsection{Bank}
 Choose one player to be the banker. The banker controls the inflow and
@@ -598,31 +391,8 @@ ascending token number, centered on the banker. There are two number 4
 tokens, but the darker one is used as the number 7 token. The player
 with the number 1 token receives the priority deal card.
 
-% ①人のプレーヤーを銀行家に液定します。銀行家は、銀行の資金の入出を管理
-% します。銀行家には、プレイ中に銀行の資金を自分や誹か、あるいは鉄道会
-% 社等の資産と混岬しないように注意し、管理する能力が求められます。一般
-% 的に銀行家は、ゲームに馴れているプレーヤーが担当します。
 
-% ④.②.①スタート資金
-
-% グゲームを始める前に銀行家は、プレイするシナリオで必要な紙幣を準備し
-% ます。そして、各プレーヤーに所持金を手渡します.
-
-% ④.②.②銀行の現金の入出
-
-% 各鉄道会社の配当の支払いは、銀行から行いますむ新しい列車、公開市場に
-% ある列車、障害地形の贄用、株券の購入による支払いは、すべて銀行に行い
-% ます.
-
-% ④.③順番
-
-% 告プレーヤーはカップ等に入れた順番トータンを①個ずつ引き、順田を決定し
-% ます。銀行家は、資金を扱いやすい暖所に座ります。他のプレーヤーは、銭
-% 行家を中心にして、順喪トークンの順になるように時計回りに座席の位置を
-% 決定します④番トータンは、②個ありますが、色の濃いものは⑦番トータクンと
-% して使用しますむ。①番のプレーヤーは、優先売質カードを受け取ります。
-
-\section{Game phases}
+\section{Game phases} \label{sec:game-phases}
 
 The game phases represent the progress of time and carry signifcant
 influence to the game. Each game phase changes represents a
@@ -726,83 +496,7 @@ phase:
 \item Red offboard spaces are valued using the rightmost number.
 \end{itemize}
 
-% ⑤ゲームフェイズ
 
-% ゲームフェイズは時代の移り変わりを示したもので、ゲームに大きな影繁を与えます。ゲームフェイズが変化するたびに、鉄道開拓史の区切りが訪れるのでむれ
-
-% グゲームフェイズは、新型の列車が購入されると直ちに更新されますず
-% す。②一②③、③ー③の列車が登場すると第①フェイズ下期、第②フェイズ下期とな
-% りますが、吉上期とルールレ上同様で違い伯ありません。列車の購入できる
-% 種類が変化するだけです
-
-% ①⑧⑨0仕、⑧⑥⑧つのゲームフェイズにより構成されでいます。①回の運営ラウン
-% ドで②回以上のフェイズの写新がされることもあります。また、第⑥フェイズ
-% を待たずしてゲームが終了することもあります。以下は、それぞれのフェイ
-% ズにおこるルーノレの変更等を説明したものでれ
-
-
-
-
-% 第①フェイズ{上期、下期)
-
-% ゲダームの開始時から、最初の②一②列車が購入されるまでを第①フェイズ上期、
-% それから最初の③列車が購入されるまでを第①フェイズ下期といい、両方を合
-% わせて単に第①フェイズと呼びます,これらのフェイズの間、以下の制限が適
-% 用されます。
-% ・黄色の線路タイルのみ配置できます。
-% ・JR西日本は、タイルを②ヶ所、配置もしくは置き摘えすることが出来ます。
-% ・小会社は②載、公共会社は④輌、は⑥輛まで列車を所有できます。
-% ・公共会社は個人会社を購入できません。
-% ・ゲームターンに運営ラウンドは‡回でむ
-% ・淑い領基へ列車が還行する時、一番左の数字を使用します。
-
-% 第②フェイズ(上期、下期)
-
-% 最初の③列車が購入された時から、最初の③一③列車が購入されるまでを第②フェ
-% イズ上翠、それから最初に④列車が購入されるまでを第②フェイズ下期といい、
-% 両方を合わせ単に第②フェイズといいます,これらのフェイズの間、以下の制
-% 限が遮用されます。
-
-% ・黄色と縁色の線路タイルが配置できます。
-% ・JR西日本は、タイルを②ヶ所、配置もしくは醇き換えすることが出来まれ
-% ・小会社は②輌、公共会社は④輩、JRは⑥輪まで制車を所有できます。
-% ・公共会社は個人会社を購入できます。
-% ・欧のゲームターンからは、運営ラウンドは②回でむ
-% ・赤い領域へ列車が運行する時は一番左の数字を使用します
-
-% 第③フェイズ
-% 最初の④列車が購入されたときから、最初の⑤列車が購入されるまでが第③フェイズです。このフェイズの間、以下の制限が適用されます。
-% ・黄色と緑色の線跡タイルが配置できます。
-% ・丁玉西日本は、タイルを②ヶ所に引くことが出来まれ
-% ・小会社は①輌、公共会社は⑧輌、Rは④輌まで列車を所有できます。
-% ・公共会社は個人会社を購入できます。
-% ・ゲームターンに運営ラウンドは②回でれむ
-% ・全ての②列車は魔止されますず。
-% ・赤い領基へ列車が運行するときは一番左の数字を使用します
-% 第④フェイズ
-% 最初の⑤列車が購入された時から、最初の⑥列車が購入されるまでが第④フェイズですれこのフェイズの間、以下の制限が適用されます。
-% ・黄色と緑色と茶色の線路タイルが配置できます。
-% ・け七西昌本は、このフェイズ以降タイルの配置を①枚だけしか行えるません。
-% ・小会社は①輛、公共会社は②輌、仕③輌まで制車を所有できますれ
-% ・全ての個人会社は閉鎖されます。(例外:阪堺電気較道)
-% ・欧のゲームターンからは、運営ラウンドは③回でむ。
-% ・全ての②一②列車は廃止されます
-% ・赤い領婦へ列車が運行するときは中央の敗字を使用します
-% 第⑤フェイズ
-% 最初の⑥列車が購入された時から、最初のD列車が購入されるまでが第⑤フェイズです。このフェイズの間、以下の制限が適用されますれ。
-% ・全ての線路タイルが配置できます。
-% ・小会社は①輌、公共会社は②輩、TRは③輌まで刃車を所有できます。
-% ・D刃車を購入することができます
-% ・全ての⑧列車、③一③列車は魔止されますれ
-% ・ダームターンの運喰ラウンドは③回でむ
-% ・赤い領基へ列車が運行するときは中央の敬字を使用します。
-% 第⑥フェイズ
-% 最初のD列車が購入された時から、ゲームの終了までが第⑥フェイズです。このフェイズの間、以下の制眺が適用されます。
-% ・全ての線路タイルがW配置できます。
-% ・小会社は①輩、公共会社は②輸、すRは③輌まで制車を所有できます。
-% ・全ての④列車は靡止されます
-% ・ゲダームターンの運営ラウンドは③回でむ
-% ・赤い饂埋へ列車が遭行するときは一番右の数字を使用しまず.
 \section{Shares}
 
 \subsection{Shares and certificates}
@@ -861,99 +555,48 @@ two of their regular stock certificates for the president's
 certificate, and receive the company charter and all its holdings
 (trains, station tokens, private companies, funds).
 
-% ⑥.株式
 
-% ⑥.①株券と権利書~
+\section{Starting and closing of companies}
+Private companies, minor companies, and late private companies are
+started at the time of purchase by a player. Public companies are
+established when a fixed number of shares are purchased from the
+initial offer.
 
-% ①⑧⑨0では、各鉄道会社の所有権を表すために権利書を使用します。権利書と
-% は、各会社の所有権を示す書類でれむ。公共会社の権利書を特に株券と表記
-% します
-
-% 個人会社、小会社、後発会社の①枚の檬利書はその会社に対する①00\%の所有
-% 権を意味します。ある公共会社の①枚の株券は①0\%か②0\%の所有権を意昨し、
-% それぞれ、権利書の枚数制限において①枚の権利書として数えます。
-
-% 各鉄道会社とも運営ラウワンドに配当するときは、このパーセンテージに従い収益を告株主に分配します。
-
-
-% ⑥.②権利書の枚数制限
-
-% 各プレーヤーの所有できる権利書(個人会社、小会社、後発会社、公共会
-% 社)の枚攻には、來限があります。この檬利書の枚数制限は、シナリオごとに
-% 明記されており、プレーヤーの人数によって決定されます。
-
-% ⑥.②.①権利書の枚数制限の例外
-% ある公共会社の株価が黄色セクションや茶色セクションにあると、権利書の枚数制限に吊まなくなります。
-
-% ⑥.③権利書の保有制限
-% プレーヤーは、通常、同じ灰共会社の株券を⑥0%までしか所有できません。
-
-% ⑥.③.①権利書の保有制限の例外
-
-% ある公共会社の株価が、茶色セクションにあると、⑥0%の株式の保有制限を無視して、その公共会社の株券を保有することができます。
-
-% ⑥.④権利書の枚数制限や保有制限を越えた時
-
-% 運営ラウンド中、もしくは株式ラウンドの終了の処理を行⑤とき、株価トーク
-% ンが、黄色や茶色のセクションから移勘することによって、権利書の枚数制
-% 限や、保有制限違反になることがあります。この場合、次の株式ラウンドの、
-% そのプレーヤーの最初の手番に、制限におさまるように売却可能な株券を売
-% 却しなくてはなりません。
-
-% ⑥.⑤社長の交代
-
-% 社長のな代は、あるプレーヤーが株券を購入するか、社映が自社の株券を売
-% 却したときに起こります。
-
-% ある公共会社において、現在の社長よりその会社の株券をパーセンテージで
-% 多く所有するプレーヤーがいれば、そのプレーヤーは新しい社長となり、そ
-% の鉄道会社の運営権と全ての責任を与そられます。複数のプレーヤーが同じ
-% 枚数を所有しているときには、退陣する社長から時計回りで最も近いプレー
-% ヤーが新しい社長になります。新社長は、社長株を持つように通常株券②枚と
-% 交換し、会社シート(列車、駅トークン、個人会社、資金)をそのままの状態
-% で受け取ります
-
-\section{Establishment and closing of companies}
-Private companies, minor companies, and late private companies are established at
-the time of purchase by a player. Public companies are established
-when a fixed number of shares are purchased from the initial offer.
-
-\subsection{Establishment of private companies and late private companies}
-Private companies and a late private companies are established at the
+\subsection{Starting private companies and late private companies}
+Private companies and a late private companies are started at the
 moment their certificate is purchased. The purchasing player is the
 president.
 
-\subsection{Establishment of minor companies}
-Minor companies are established when their certificate is
+\subsection{Starting minor companies}
+Minor companies are started when their certificate is
 purchased. The player who has purchased the certificate will be the
 president. The minor company certificate is also used as its company
-charter. Once the company is established, the
+charter. Once the company is started, the
 president receives capital from the bank and places it on the company
 charter and the corresponding the order number token is placed as its
 station token.
 
-\subsection{Establishment of public companies}
-A public company is established when 5 if its certificates (60\% of
-its shares) are purchased from the initial offer. Exception: In the
-1890 scenario, Kinki Nippon Railways is established when the owner of the
-Osaka Electric Railway minor company announces the establishment of
-Kinki Nippon Railways.
+\subsection{Starting public companies}
+A public company is started when 5 shares (50\%) are purchased from
+the initial offer. Exception: In the 1890 scenario, Kinki Nippon
+Railways is started when the owner of the Osaka Electric Railway minor
+company announces the start of Kinki Nippon Railways.
 
 \subsubsection{Purchasing the president certificate of a public company}
 Usually, the first stock certificate purchased from a public company
 is the president's stock certificate. The player who buys the
 president's stock certificate determines the par price of the public
-company from the following options: \yen 65, \yen 70, \yen 75, \yen
-80, \yen 90, or \yen 100. Then, places the par token in the par price
-table, and places the stock price token in the red-outlined are in the
-stock price table. If other companies' tokens occupy that space, the
-new company's token is placed at the bottom of the stack. The price to
-purchase the president's certificate is two times the par price.
+company from the following options: 65円, 70円, 75円, 80円, 90円, or
+100円. Then, places the par token in the par price table, and places
+the stock price token in the red-outlined are in the stock price
+table. If other companies' tokens occupy that space, the new company's
+token is placed at the bottom of the stack. The price to purchase the
+president's certificate is two times the par price.
 
-\subsubsection{Preparation for establishment}
-The president of the established public company receives the company
+\subsubsection{Preparation for starting a public company}
+The president of the started public company receives the company
 charter and its station tokens, placing them on the spaces on the
-company charter marked with prices \yen 40 and \yen 100. As capital,
+company charter marked with prices 40円 and 100円. As capital,
 the company receives ten times the par price from the bank. For the
 remainder of the game, further sale and purchase of the company's
 shares will not affect the amount of funds in its treaury. [Exception:
@@ -973,55 +616,6 @@ place station tokens there. Closed public companies are no longer
 available to start for the remainder of the game.
 
 
-% ⑦.会社の設立と閉鑽
-
-% 個人会社、小会社、後発会社は、プレーヤーに購入された時点で設立されま
-% す。公共会社は最初に置かれた位置から、定められた枝数、株券が購入され
-% ると設立されんます.
-
-% ⑦①個人会社、後発会社の設立
-
-% 個人会社、後発会社は、権利書を購入された瞬間に設立されます。購入した
-% プレーヤーが、社長となります。
-
-% ⑦②小会社の設立
-
-% 小会社は、その権利書が購入された時点に設立されます。権利書を購入した
-% プレーヤーは、社長となります,小会社の権利書は、その小会社の会社シート
-% としても使用します。会社が設立されると、社長は、資本金を銀行から受け
-% 取り、会社シートに置きます。そして、順番トークンの該当するNoを訣トー
-% クンとして配置します。
-
-% ⑦.③公共会社の設立
-
-% 最初に置かれた位置に株券が⑤株(60%)になるまで株券が購入されると、公共会社は設立されます。
-% 例外:①⑧⑨0シナリオでは、大阪電気軌道が近鉄の設立を宜言した時に、近鉄は設立されます。
-
-% ⑦③.①公共会社の社長株購入
-
-% 通常、ある公共会社の最初に購入される株券は社長株券です。社長株券を購
-% 入するプレーヤーは、その公共会社の類面価格を\B⑤、\⑦0、宏⑤、啓0、\⑨0、
-% 迪00の中から決定します。そして、顕面価格表に額而価格トータンを、株価
-% 表の赤枠で囲まれたエリア内に株価トークンを配置します。すでにその場所
-% に他のトークンがあるときは、一番下に株価トークンを賓きます。社長株券
-% の購入は、株価の②枚分を支払うことによって行います。
-
-% ⑦③.②設立準備
-
-% 設立された公共会社の社長は、会社シートと駅トークンを受け取り、会社シー
-% トの右上の地名が書かれている場所と、\d0、宝00と書かれた場所に駅トーク
-% ンを置きます。そして、資本金として、顕面価格の①0倍の金額を銀行から受
-% け取ります。それ以降、例え株券の売買がおこっても、その会社の金庫に資
-% 金が入ることはありません。[例外:C⑧.④近鉄]
-
-% ⑦④会社の閉鎖
-% 個人会社は、第④フェイズになると閉鎖します(例外:阪堺電気軍道、C⑧.④、D⑧.⑤:大阪市電)。
-
-% 公共会社は、株価トークンが閉鎖セクションに入ると閉類します。閉鎖した
-% 会社の権利書は、強制増棄となります。公共会社の資産は、銀行に返され、
-% 列車は公開市場に晩かれます。マップ上に配置された駅トークンも全て取り
-% 去られ、空いている大都市となり、他の鉄道会社が駅トークンを配置するこ
-% とが可能になります。閉鋒された公共会社は、以後ゲーム中使用しません。
 
 \section{Stock round}
 In the stock round, players buy and sell railway company shares, which
@@ -1066,6 +660,7 @@ turn, it is possible to sell private companies if the other player
 requests to purchase them (reference: 10.9).
 
 \subsubsection{Fall in stock price due to the sale of shares}
+\label{sr-sell-price-drop}
 When a player sells a stock certificate, they place the stock
 certificate in the open market and receive the current value according
 to the stock price table. The railway company's stock price token is then moved
@@ -1074,6 +669,7 @@ is on the bottom row, the stock price does not change, regardless of
 how many shares are sold.
 
 \subsubsection{Restrictions on share sales}
+\label{sr-sell-restrictions}
 No more than 50\% of the shares of any railway company may be in the
 open market. Stock sales that would exceed this limit are not
 allowed.
@@ -1084,7 +680,7 @@ has at least two shares of the company.
 During the stock round of the first game turn, all players are
 prohibited from selling stock.
 
-\subsection{Buying shares}
+\subsection{Buying shares} \label{sr-buy}
 Players can purchase one stock certificate from the initial offer, or
 one stock certificate from the open market. Players may also buy one
 private company from another player.  Stock certificates from the
@@ -1101,8 +697,8 @@ purchaser of the Osaka Municipal Electrica Railway private company.
 Players may not buy shares of a company which they have sold
 previously in the same stock round. In addition a player may not
 purchase shares which would cause them to exceed certificate or
-ownership limits. (Exception: \ref{sec:certificate-limit-exceptions},
-\ref{sec:ownership-limit-exceptions})
+ownership limits. (Exception: \autoref{sec:certificate-limit-exceptions},
+\autoref{sec:ownership-limit-exceptions})
 
 During the first game turn and the initial stock round, late private
 companies may not be purchased.
@@ -1110,1320 +706,659 @@ companies may not be purchased.
 The purchase of certificates from other players which are not private
 companies is prohibited (see: 10.9)
 
-\subsection{Sell and Buy Shares}
+\subsection{Sell and Buy Shares} \label{sr-sell-buy}
 Players may choose whether to sell or buy first, but all sales must be
 done at once. If a company's stock price is higher than its par price,
 it is possible to buy one certificate from the initial offer and
 immediately sell it for a profit.
 
-\subsection{End of stock round}
-The stock round ends when all players pass in succession. If not
+\subsection{End of stock round} \label{sr-end-of-sr}
+The stock round ends when all players pass in succession. If no
 player performed actions, the priority deal card does not move. When
 the stock round is over, move the round marker from stock round to
 operating round 1.
 
 \subsubsection{Price adjustment for sold out companies}
+\label{sr-sold-out}
 At the end of the stock round, stock price tokens for public companies
 whose shares are all owned by one or more players move up one
 row. If the stock price token is already on the top row, it does not move.
 
-% ⑧.株式ラウンド
 
-% 株式ラウンドでは、このゲームでプレーヤーの収入源となる鉄道会杏の権利
-% 書の売買を行います。個人会社と小会社が全て購入されるまでは、通常の株
-% 式ラウンドでなく、初期椛式ラウンドが行われます。
+\section{Initial stock round}\label{isr}
 
-% ある公共会社で、一番多く株式を保有してているプレーヤーが社長となるため、株の売買は、重要な意味を持ちますむ
-
-% ⑧.①優先売買カード
-% 株式ラウンドは、優先売買カードを持ったプレーヤーから時計回りの順番で始められ、各プレーヤーが手番を行うことにより進めあられます。
-
-% 手番の終了したプレーヤーは自分の手番が終了したことを客言し、次の手番
-% のプレーヤーに優先売買カードを渡します。これは、通常の株式ラウンドも
-% 初期株式ラウァンドについても同様でむ
-
-% ⑧.②株式ラウンドの進行
-
-% 株式ラウンドは、優先売買カードを持ったプレーヤーから時託回りに始まり、
-% 各プレーヤーが順番に手番を行うことにより進められます。各プレーヤーの
-% 手番には、以下の④つの行動のうちーつを行うことが出来ます
-
-% ・檬利書の売却
-
-% `権刑書の購入
-
-% ・権狼書の売勘と購入
-
-% ・パス
-
-% 自分の手番をプレイしたプレーヤーは、優先売買カードを次の手番のプレーヤーに渡します。
-
-% 全プレーヤーが連続してパスを行うまで、株式ラウンドは続けてプレイされ、
-% 何度も手番がまわってきます。前回の手番に権利書の売買を行ったかどうか
-% にかかわらず、プレーヤーは新たな自分の手番に権利書の売買が可能となり
-% ます。
-
-% ⑧.③権利書の売却
-
-% 株式ラウンド中の含プレーヤーの谷手番で、公共会社の株.券のみを自発的に
-% 売却することが可能でむ
-
-% 他プレーヤーや、公共会社から、個人会社以外の権利書を購入することは、
-% 華止されんています(参熙:①0.⑨。
-
-
-% ⑧.③.①権利書売却による株価の下落
-
-% プレーヤーが株券を売却したとき、公開市場にその株券を置き、株価表の株
-% 価の金額を受け取ります。その後、その鉄道会社の株価トークンを、売却さ
-% れた株券①0\%ごとに①ライン下に移動させます。株価トークンが、一番下のラ
-% インになると、何枚株券を売却しても、株価は変化しません。
-
-% ⑧.③.②権利書の売却前限
-
-% 公開市場には、どの鉄道会社の株券も⑤0\%を超えて置くことはできません。
-% この制限を超えるような株券の売却はできません。他のプレーヤーが少なく
-% ともその会社の株券を②枚持っていなければ、社長株券を売却することはでき
-% ません。第①ゲームターンの株式ラウンド中、全てのプレーヤーが檬利書を売
-% 却することを禁止します。
-
-% ⑧.④権利書の購入ー
-
-% プレーヤーはまだ一度も購入されていない株券①枚か、公開市場にある株
-% 券①枚を購入できます。他のプレーヤーから個人会社を①つ購入することもで
-% きます。まだ一度も購入されていない会社の株券は、最初に購入するプレー
-% ヤーの決定する額面価格で社長株券から順番に購入されていきます。公開市
-% 場の株券はそのときの株価表で示された株価で購入します近鉄(①⑧⑨0シナリオ
-% 参照)の社長株と一部の株券は、小会社が転換して登場します。地下鉄の社長
-% 株は、大阪市電に付加する形で購入者に渡されます。
-
-% ⑧.④.①権利書の購入の制限
-
-% あるプレーヤーが、株式ラウンド中に売却した銘柄は、その株式ラランド中
-% は、購入できなくなります。また、権利誠の枚数制限や保有制限を超えるよ
-% うな購入はできません。(伺外:⑥.②①、⑥.③①)第①ゲームターン及び初期株式ラ
-% ウンド中は、後発会社を購入できません。他プレーヤーや、公共会社から、
-% 個人会社以外の権利書を購入することは、華止さんています(参照:①0.⑨。
-
-% ⑧.⑤権利書の売却と購入
-% プレーヤーは、売却と購入を行うとき、どちらを先に行ってもかまいません
-% が、すべての売却は一度で終えるなくてはなりません。
-
-% 額面価格より株価が高い会社の株券を購入し、その手番ですぐに売却して利
-% 益を得ることもできます。
-
-% ⑧.⑥株式ラウンドの終了
-
-% 全てのプレーヤーが連続してパスを行ったときに、株式ラウンドは終了しま
-% す。一度も株券の売買が行われなかったときは、何もおこらず、優先売買カー
-% ドも移動しません。株式ラウンドが終了したら、ラウンドマーカーを株式か
-% ら運営ラゥンド①に彦します。
-
-% ⑧.⑥.①株価の売り切れ上がり|
-
-% 株式ラウンド終了時、全ての株券が①人あるいは福数のプレーヤーによって所
-% 有さもんている公共会社の株価トークンは、①ライン上に移動します。株価トー
-% クンが一番上のラインにある時は、粟動しません。
-
-\section{Initial stock round}
-
-The stock round until all private companies and small companies
-appearing in the scenario are purchased by the player will play an
-initial stock round different from the normal stock round.
+Until all private and minor companies appearing in the chosen scenario
+have been purchased by players, an initial stock round will be played
+instead of a normal stock round.
 
 \subsection{Progress of the Initial Stock Round}
-Each railway company is ordered for sale in the order shown in the
+Each private and minor company is arranged for sale in the order shown in the
 scenario. The initial stock round is resolved clockwise from the
-player with the preferred buy and sell card. Each player performs one
-of the following in his turn, and passes the priority selling purchase
-card to the next turn (the person on the left.
+player with the priority deal card. Each player performs one
+of the following in his turn, and passes the priority deal
+card to the next player in clockwise order.
 
 \begin{itemize}
-
-\item Purchase one train company that can be purchased.
-\item Participate in the auction of one possible railway company.
+\item Buy a purchaseable company.
+\item Bid for one of the auctionable companies.
 \item Pass.
 \end{itemize}
 
 \subsubsection{Available Railway Companies and Auctioned Companies}
-The only railway companies that players can buy are the railway
-companies at the very beginning of the listed railway companies. The
-railway companies listed after that will be auctionable railway
-companies.
+The only railway companies that players can buy are the companies at
+the very beginning of the list of companies. The companies listed
+after that will are auctionable railway companies.
 
 \subsubsection{Purchase Available Railway Company}
-When a turn player buys a purchasable railway company, he buys at the
-par value. Then, hand over the priority sale card to the next player
-and finish the turn. If there is no bid price for the railway company
-next to the purchased railway company, it will be the first railway
-company in which the railway companies are lined up, and it will be a
-new purchasable railway company. If one of the players is selling to
-the railway company, the auction will be processed.
+The active player may buy the purchaseable company at face value, then
+passes the priority deal card to the next player.
+
+If the next company in line has no bids on it, it will become the new
+purchaseable company. Otherwise, if one or more players have bid on
+it, the auction will be carried out.
 
 \subsubsection{Participate in the auction of a competitive railway company}
-A turn player can bid on a later railway company than a ready-made
-railway company. Then hand over the preferred buy and sell card to the
-next player. If you have enough money, you can bid on several railway
-companies (though of course you need more than one turn).
+The active player may place a bid on one of the auctionable railway
+companies and then pass the priority deal card to the next
+player. Over the course of multiple turns, a player may have bids on
+several railway companies, if they have enough money.
 
-\paragraph{How to bid}
-When participating in an auction of a railway company, the initial bid
-price is set to be a bit higher than the nominal price of the railway
-company. After that, when bidding, set 5 or more higher than the
-highest bidding price. The player who bids the money keeps a portion
-of the bid price. This money can not be used until the competing
-company is sold and remains frozen. There is no need to raise the bid
-price, but it is possible to add a new bid price by adding cash to the
-funds you have allocated to your turn. Once you bid, hand over the
-Precedence card to the next player and finish your turn.
+\paragraph{How to bid}\label{isr-bidding}
+
+The initial bid on a railway company must be greater than its face
+value by 5円 or more. Subsequent bids on that company must exceed
+the highest bed by 5円 or more. The player who makes a bid must set
+aside money equal to the value of the bid. This money is unavailable
+for other use until the company they bid on is sold. It is possible to
+increase the value of a previously placed bid by adding more money to
+these reserved funds, but there is no requirement to do so. After
+bidding. pass the priority deal card to the next player.
 
 \subsubsection{Auction}
-When an enterable railway company is purchased, the auction will start
-if someone bids on the railway company to be offered next. Auctions
-can only be made by players who bid on the railway company. However,
-if there is only one player who bids, the reward will be sold at the
-price of the bid that the player made. If a good number of players
-have bid prices, then the auction starts with the player with the
-highest bid price, clockwise.
+When a purchaseable railway company is bought, and the next company in
+line has bids on it, an auction will be resolved for that
+company. Only players who have placed bids on the company will
+participate in the auction. If only one player has bid, the company
+will be sold to them at their bid value. If multiple players have
+bids, then the auction will commence clockwise from the player with
+the highest bid.
 
-Even in this auction, the new bid price must be increased by 5 or more
-from the maximum price. If you pass without updating the bid value,
-the player is removed from the auction. The highest bid player buys
-the railway company at that price
+To remain in the auction, players must increase their bid to exceed
+the current high bid by 5円 or more. Otherwise, they pass and are
+removed from the auction. When all but one player have passed, the
+remaining player purchases the railway company for their bid value.
 
-From now on, if someone bids on a railway company, we will resolve the
-auction, if there is a railway company that has not been auctioned, it
-will become a new purchasable railway company and the initial Continue
-the stock round.
+After resolving the auction, if the next company in line also has bids
+on it, resolve a new auction for that company. Otherwise, the next
+company becomes the new purchaseable company and the initial stock
+round continues.
 
-Even if the auctioned company is sold, the preferred trading card and
-the initial stock round turn will not change. All you have to do is
-move the preferred buy / sell card to the next player of the player
-who bought the railway company that caused the auction.
+Regardless of how many companies were auctioned and to whom, the
+priority deal card is passed to the player clockwise from the player
+who made the purchase that triggered the auction(s).
 
 \subsection{End of the Initial Stock Round}
-The initial stock round ends when all private companies and small
-companies are purchased by each player. After the initial share round
-ends, the regular share round is played. During the initial stock
-round, the underwriting company and the public company can not
-purchase the rights document. Also, you can not purchase the generic
-company's title on the first game turn.
+The initial stock round ends when all private companies and minor
+companies have been purchased by players. After the initial stock
+round ends, a regular stock round is played. During the initial stock
+round, late private company and public company certificates can not be
+bought. In addition, late private companies can not be bought on the
+first game turn.
 
 \subsection{Initial stock round across multiple game turns}
-The initial stock rafter may be played for more than two game
-turns. In one stock round, if all private companies used in the
-scenario, small companies are not purchased, but everyone passes in
-succession, stock Laland will end and play the operation round as it
-is, with private companies and small companies If someone is buying
-something, those companies will operate. And the game turn is
-updated. The stock round of the second game turn will continue the
-initial stock round from the last time, the bidding price given to
-each railway company will become effective until they are sold, and
-the funds for that amount shall be kept separately It will not be.
+The initial stock round may be played for two or more game turns. If
+all players pass consecutively before all the private and minor
+companies are sold, the stock round ends and an operating round is
+played. Private and minor companies which have been sold will
+operate. The game turn is incremented and the stock round of the next
+game turn will continue from the previous intital stock round. Bids
+from the previous game turn remain on the companies and their corresponding
+funds must be kept in reserve.
 
-\subsubsection{Arima Electric Railway's purchase price decline}
-Each time one game turn ends without being sold by Arima, its purchase
-price drops \yen 5. If this makes the purchase price \yen O, the
-player with the preferred buy and sell card will receive it free of
-charge in the next initial stock round. This receipt is treated as
-having purchased Arima and continues the initial stock round. Arima
-Railway is the only railway company whose purchasing price falls. This
-purchase does not change the par value of the resident railway.
+\subsubsection{Arima Electric Railway purchase price decrease}
+\label{isr-arima}
+Each time one game turn ends without the Arima Electric Railway being
+sold, its purchase price drops 5円. If this makes the purchase
+price 0円, the player with the priority deal card must buy it in
+the next initial stock round. This receipt is considered as the player
+having purchased Arima and any consequences that would entail from
+such a purchase are carried out (e.g. passing priority deal, triggering
+auctions). Arima Railway is the only railway company whose purchase
+price falls in this manner, and this does not affect its face value..
 
 \subsection{Determination of stock price (1890 scenario)}
-Some buy the par value of a public company if purchased during the initial stock round. (C8.1 ・ D8.1: Osaka City Tramway, C8.2: Osaka Electric Trajectory)
+The player who purchases the Osaka Municpal Electric Railway private
+company immediately sets the par price for the Osaka Municipal Subway
+public company. The player who purchases the Osaka Electric Railroad
+minor company immediately sets the par price for the Kinki Nippon
+Railways public company. (C8.1, C8.2, D8.1)
 
 
-% ⑨.初翠株式ラワンド′
-
-% シナリオに登場する全ての個人会社と小会社が、プレーヤーによって購入されるまでの株式ラウンドは、通常の株式ラウンドと異なる初期株式ラウンドをプレイします。
-
-% ⑨.①初期株式ラウンドの進行
-% 各鉄道会社は、シナリオで示された順番に並べられ、売りに出されます。初期株式ラランドは、優先売買カードを持ったプレーヤーから、時計回りに解決していきます。各プレーヤーは自分の手番に以下のいずれかを実行し、優先売購買カードを次の手番(左隕の人に渡します。
-
-% ・購入可能な鉄道会社①社を購入する。
-
-% ・麟り可能な鉄道会社①社の競売に参加する。
-
-% ・パスをする。
-
-% ⑨.①.①購入可能な鉄道会社と競売可能な会社
-% プレーヤーが購入可能な鉄道会社は、並べられた鉄道会社の一番初めにある鉄道会社のみです。それ以降に並べられた鉄道会社は、競売可能な鉄道会社となります。
-
-% ⑨.①.②購入可能な鉄道会社の購入
-
-% 手番プレーヤーが、購入可能な鉄道会社を購入するときは:額面価格で購入し
-% ます。そして、侵先売買カードを次のプレーヤーに手渡し、手番を終えま
-% す。
-
-% 購入された鉄道会社の次の鉄道会社に競り値がついてなければ、その鉄道会
-% 社が並べられた一番初めの鉄道会社となり、新たな購入可能な鉄道会社とな
-% ります。もし、その鉄道会社にいずれかのプレーヤーが競売をかけていれば、
-% 競売の処理を行います。
-
-% ⑨.①.③競り可能な鉄道会社の競売に参加する
-
-% 手番プレーヤーは、購入可脇な鉄道会社よりも、後の鉄道会社に競り値を付
-% けることが出来まむ。そして、優先売買カードを次のプレーヤーに手渡しま
-% す。十分な資金があれば、複数の鉄道会社に競り値をつけることもできま
-% す(もちろん、複数の手番が必要ですが)。
-
-
-% ⑨.①.③.①競り値の付け方
-
-% ある鉄道会社の競売に参加するとき、最初の競り値はその鉄道会社の額面価
-% 格よりも¥5以上宇く設定します。それ以降、競り値をつけるとき、最も高い
-% 競り値に対して¥5以上高く設定します。競り値を付けたプレーヤーは、競り
-% 値の分の資金を取り分けておきます。この資金は競売される会社が売却され
-% るまで使用できず、凍結されたままとなります。競り値は上げる必要はあり
-% ませんが、自分の手番に取り分けた資金に現金を追加することにより、新た
-% な競り値を付けることは可能です。競り値を付けたら、優先売買カードを次
-% のプレーヤーに手渡し、手番を終了します。
-
-% ⑨.①.④競売
-
-% 嗚入可能な鉄道会社が購入された時、次に売りに出される鉄道会社に誰かが、
-% 競り値を付けていれば、競売が始められます。競売は、その鉄道会社に競り
-% 値をつけているプレーヤーだけが参加できます。ただし、競り値をつけたプ
-% レーヤーが①人だけなら、その檬利書は、そのプレーヤーのつけた競り値の価
-% 格で売却されます。福数のプレーヤーが艇り値をつけていれば、最も高い競
-% り値を付けたプレーヤーのだのプレーヤーから時計回りに競売を始めます。
-
-% この競売でも、新たにつける競り値は、最高額から⑨⑤以上高くしなくてはな
-% りません。競り値を更新せずにパスすれば、そのプレーヤーは、競売からは
-% ずされます。最も高い競り値を付けたプレーヤーは、その価格で、その鉄道
-% 会社を購入します以後、同檜に誰かが、鉄道会社に競り値を付けていれば競
-% 売を解決していきます,もし、競売されしていない鉄道会社があれば、それが
-% 新たな購入可能な鋒道会社となり初期株式ラウンドを続けます。
-
-% 童り偵をつけられた会社が売却されても、優先売買カードと初期株式ラウン
-% ドの手番は、変化しません。競売の原因となった鉄道会社を購入したプレー
-% ヤーの次手番の人に優先売買カードが移るだけです.
-
-% ⑨.②初期株式ラウンドの終了
-
-% 初期株式ラウンドは、全ての個人会社と小会社が、各プレーヤーに購入され
-% ると終了します。初期株式ラウンドが終了すると、そのまま通常の株式ラウ
-% ンドがプレイされます。初期株式ラウンド中は、後発会社と公共会社の権利
-% 書は、購入することが出来ません。また、後発会社の権利書は、第①ゲームター
-% ンに購入することが出来ません。
-
-% ⑨.③複数ゲームターンにまたがる初期株式ラウンド
-
-% 初期株式ラウンドは、②ゲームターン以上に渡ってプレイされることもありま
-% す。ある株式ラウンドに、シナリオで保用する全ての個人会社、小会社が購
-% 入されずに全員が連続してパスをすると、株式ラウンドは終了し、そのまま
-% 運営ラウンドをプレイします。個人会社と小会社で誰かに購入されているも
-% のがあれば、それらの会社は運営します。そして、ゲームターンが更新され
-% ます。第②ゲームターンの株式ラウンドは、前回から引き続き、初期株式ラウ
-% ンドを行います。各鉄道会社につけられている競り値は、それらが売却され
-% るまで有効となり、その分の資金は、取り分けておかねばなりません。
-
-
-% 初期株式ラワンドは、②ゲームターン以上に游ってプレイされることもありま
-% す。ある株式ラウンドに、シナリオで使用する全ての個人会社、小会社が購
-% 入されずに全員が連続してパスをすると、株式ラランドは終了し、そのまま
-% 運営ラウンドをプレイします,個人会社と小会社で誰かに購入されているもの
-% があれば、それらの会社は運営します。そして、ゲームターンが更新されま
-% す。第②ゲームターンの株式ラウンドは、前回から引き続き、初期株式ラウン
-% ドを行います,各鉄道会社につけられている競り値は、それらが売却されるま
-% で有効となり、その分の資金は、取り分けておかねばなりません。
-
-% ⑨.③.①有馬電鉄の購入価格の低下
-% 有馬電鉄が売却されずに①ゲームターンを終了するごとに、その購入価格が\⑤下がります,。これによって購入価格が\Oになれば、次の初期株式ラウンドで、優先売買カードを持つプレーヤーが無料で受け取ります。この受け取りは有馬電鉄を購入したものと扱われ、初期株式ラウンドが続けられます。購入価格の低下する鉄道会社は、有馬電鉄だけです,。この購入により、有居電鉄の額面価格は、変更されません。
-
-% ⑨.④株価の決定(①①⑧⑨0シナリオガ)
-% 初翠株式ラウンド中に購入されると公共会社の額面価格を決定するものもあります。C⑧.①・D⑧.①:大阪市電、C⑧.②:大阪電気軌道)・
 
 \section{Operating Round}
-In the operation round, all railway companies that can operate will
-lose their order in turn. The operation round will be held 13 times in
-one game turn. The first game turn will be held only once, but the
-game phase will be updated to 2 difficulties and 3 times. It will
-increase. Each operating round counts as the first, second and third
-operating rounds. `
+In the operating round, all railway companies that can operate will do
+so in turn order. There will be 1 to 3 operating rounds per game turn
+depending on the game phase.
 
 \subsection{Progress of the operation round}
 The operation round will proceed in the following steps.
 \begin{enumerate}
-\item Operate a private company and a generic company.
-\item Operate a small company according to No (1-5).
-\item Operate in order from public companies with high stock prices,
+\item Operate private companies and late private companies.
+\item Operate minor companies in numeric order (1-5).
+\item Operate public companies in order of descending stock price.
 \end{enumerate}
 
-\subsection{Operating a private company, a generic company}
-The operation of a private company and a subsidiary company will be
-conducted simultaneously. The dividend amount written in the title is
-distributed to the owner of the title.
+\subsection{Operating private companies and late private company}
+All private companies and late private companies operate
+simultaneously.  The dividend amount printed on their certificate is
+paid to their owner.
 
-\subsection{Operation of small companies and public companies}
-First, small companies operate in order of No. In Europe, public
-companies operate in the order of high stock prices. When the public
-company has the same stock price, the position of the stock token will
-operate from the right public company. If the company's stock token is
-in the same box, it operates from the company above. The public
-company can purchase a private company owned by the player while
-operating. Each small company and public company operate in their turn
-according to the following procedure.
+\subsection{Operating minor companies and public companies}
+First, small companies operate in numeric order. Next, public
+companies operate in the order of descending stock price. If two
+public companies have the same stock price, the company whose stock
+price token is further right will operate first. If the two companies'
+stock price tokens are in the same space, the company at the top of
+the stack will operate first.
+
+A minor or public company's operating round turn consists of the following steps:
+
 \begin{enumerate}
-\item Arrange and replace the line tiles. (Optional)
-\item put a new station token. (Optional, public company)
-\item run the train, calculate the revenue.
-\item public companies pay dividends or put them in the company's
-  funds. Small companies will pay dividends.
-\item move the stock token in the stock list. (Public company)
-\item buy a train. (Any)
+\item Lay and upgrade track tiles. (Optional)
+\item Place a new station token. (Optional, public company only)
+\item Run trains for revenue.
+\item Public companies pay dividends or withhold. Minor companies will
+  pay dividends.
+\item Move the stock price token in the stock price table. (Public company only)
+\item Buy trains. (Optional)
 \end{enumerate}
 
-\subsubsection{Track tile}
-The railway company can construct the track by arranging or replacing
+The above actions must be performed in the given order, although not
+all actions must be performed. Additionally, public companies may
+purchase private companies from players at any point during their
+operating round turn, if permitted by the current game phase.
+
+\subsubsection{Track tiles}
+The railway company can construct the track by placing or upgrading
 the track tiles on the map. This action will connect the city to the
 train so that it can travel and increase the value of the city through
 urban development. Track tiles are placed to fit into any hex on the
 map. Track tiles once placed become part of the map and can only be
-moved when replaced by other track tiles. The placement and
-replacement of the track tiles is optional and not critical. Also,
-companies do not need to use their track tiles when operating.
+moved when upgraded by other track tiles. The placement and upgrading
+of the track tiles is optional. Also, companies do not need to use the
+track tiles they placed when operating their trains.
 
-\paragraph{Line tile placement and replacement}
-Each railway company can place or replace one track tile (2 JRs
-available) in a hex that is connected to the train's availability
-regardless of distance from its station's station hex .
+\paragraph{Laying and upgrading track tiles}
+Each railway company can place or upgrade one track tile, except for
+JR, which may place or upgrade up to two in phases 1 to 3. Tiles can
+be placed or upgraded in hexes that are connected to one of the
+company's station tokens, regardless of distance.
 
-The track tiles are placed yellow first, then replaced by amber and
-then brown. Suddenly, you can not place a brown track tile or replace
-it with a yellow to brown track tile. Replacement of track tiles is
-initially prohibited, but can be done by advancing the game phase.
+Yellow tiles are laid on empty map hexes, and are then upgraded to
+green and brown. Brown track tiles may not be laid directly on the
+map, and yellow tiles may not be upgraded directly to brown.
 
-\paragraph{Line Tile Placement Restriction}
-Track tiles should be connected to non-hex locations, dark green
-castles, Osaka Bay, rivers running along the hex (Ayukawa, part of the
-Mukogawa river), non-tracked red castles, hexes banned in the scenario
-You can not place a track tile.
+Tile upgrades are not permitted until phase 2.
 
-Hexes drawn in black and thick frames (Tanigami, Uji, and Kizu)
-prohibit the placement and replacement of track tiles. Some hexes have
-a hex with a private company track. Any railway company will track
-that hex until the private company is purchased by a public company,
-is in phase 4 or loses the placement restrictions (C8.1, D8.1: Osaka
-City Tramway) I can not place a tile. There is no restriction on the
-placement of track tiles for private companies that are not used in
-the scenario.
+\paragraph{Restrictions on track tile laying}
+\label{track-lay-restrictions}
+Track tiles may not be laid such that they connect to non-hex
+locations, Osaka Bay, non-tracked edges of red offboard hexes, heavy
+black borders, and hexes not included in the current scenario.
 
-\paragraph{Arrangement of Track Tiles}
-The placement of yellow track tiles is done on empty hexes without
-yellow cups or black borders on the map. You can place only yellow
-track tiles with big cities in an empty hex with big cities. Only one
-yellow track tilel with the same number of small cities can be placed
-in an empty hex with a small city. Track tiles placed in a small city
-remain untouched until the end of the game and can not be replaced.
+Track tiles may also not be placed or upgraded in grey hexes
+(Tanigami, Uji, and northeast of Nara).
 
-\paragraph{Replacing Line Tiles}
-Line tile replacement may be in any direction as long as the previous
-line remains as it is, but it is prohibited by the placement
-restriction (10.3.1.2.1) of the trace tile. It can not be deployed to
-the place where The replaced track tiles are removed from the map and
-can be used again elsewhere.
+Certain hexes are blocked by private company track. No track tiles may
+be laid in these hexes until either: the corresponding private company
+is bought by a public company, closes, or otherwise loses placement
+restrictions.
 
-When replacing a track tile, the station tokens that have already been
-placed must be in the same position on the new track tile.
+\paragraph{Laying track tiles}
+Yellow track tiles are laid on empty hexes without yellow or black
+borders on the map. Only yellow track tiles with large cities may be
+placed on empty hexes with large cities. Only yellow track tiles with
+the same number of small cities can be placed on empty hexes with a
+small cities. Track tiles placed in a small city may not be further
+upgraded for the rest of the game.
 
-It can be expensive to place or replace track tiles. This cost comes
-from the funds of the railway company that pulls the track. The
-president can not make a shortfall. The obstacle terrain hexes on the
-map and the line tiles that are expensive to replace are marked with
-the required cost.
+\paragraph{Upgrading track tiles}
+Track tile may be upgraded in any direction that preserves all track
+and connections on the previous tile, but upgrades which would violate
+track lay restrictions (\autoref{track-lay-restrictions}) are
+prohibited. The previous track tile is removed from the map and is
+available for use elsewhere.
 
-\paragraph{Special Track Tiles}
-Big city hexes with yellow track tiles printed on the map (Osaka Kita,
-Osaka East, Osaka West, Osaka Minami, Kobe, Kyoto, Nara, Hirakata,
-Kuwahara) have been placed yellow tiles since the game started We
-treat as what we have.
+When upgrading a track tile, existing station tokens must be in the
+same position on the new track tile.
 
-A hex with a yellow frame on the map (Ibaraki, Moriguchi, Sakai) can
-be made from the green track tile arrangement of X (210, 211). Replace
-with brown track tile, use XX (217). When the green track tiles, the
-separate big cities become one big city when they become brown track
-tiles.
+\paragraph{Costs to lay or upgrade track tiles}
+Certain hexes on the map are printed with a terrain cost that must be paid in
+order to lay or upgrade a track tile there. This cost must be paid
+from the treasury of the operating crailway company, and the president
+can not contribute personal funds in the case of a shortfall.
 
-For Osaka North, Osaka East, Kobe, Kyoto, Amagasaki, and Osaka South,
-the line tiles to be used are determined, and the place names are
-entered on the line tiles.
+\paragraph{Special track tiles}
+Large city hexes with yellow track tiles printed on the map (Osaka Kita,
+Osaka Higashi, Osaka Nishi, Osaka Minami, Kobe, Kyoto, Nara, Hirakata,
+Kashiwara) are treated as pre-laid yellow tiles.
 
-Nishinomiya's yellow and green track tiles use normal track tiles,
-while brown track tiles use special tiles written as Nishinomiya.
+Yellow-framed hexes on the map (Ibaraki, Moriguchi, Sakai) can be
+upgraded with the green track tiles marked ``OO'' (\#210, \#211). These
+are further upgraded with the brown ``OO'' track tile (\#217), combines
+the two separate large cities into a single large city.
 
-The green track tile in Osaka West uses tile No. 12, but the brown
-tile uses the track tile written Osaka Nishi
+Amagasaki, Kobe, Kyoto, Osaka Higashi, Osaka Kita, and Osaka Minami
+may only be upgraded with the green and brown track tiles marked with
+their name.
 
-\subsection{Station Token Placement}
-The station token indicates the location and facilities of the railway
-company that the railway company needs to operate the train. Once
-station tokens are distributed, they can not be removed until the end
-of the game until the company shuts down or switches (Kintetsu, Kobe
-Electric Railway only).
+Normal yellow and green track tiles are used for Nishinomiya, but the
+only brown tile which may be upgraded there is the one marked with
+``Nishinomiya'' (\#465).
 
-\subsubsection{Home Station Token Placement}
-When a railway company is first run, at the very beginning, we will
-place a free station token at the start of the railway company. The
-starting point is No. for small companies, and abbreviations for
-public companies are printed in large cities on the map. (Exception:
-C84 Kinki)
+Osaka Nishi upgrades to the green \#12 track tile, and then to the
+brown tile marked ``Osaka Nishi'' (\#839).
 
-\subsubsection{Normal Station Token Placement}
-Each subsidiary company can pay only for the station token of its own
-turn. The costs for each station token are listed on the company seat,
-the first one costs \yen 40, and thereafter costs \yen 100. This charge
-comes from the funds of the railway company that places the station
-token. Only at company establishment. You can place multiple starting
-station tokens and regular station tokens. Station tokens can only be
-used in the number provided.
+\subsection{Station token placement}
+Station tokens represent locations and facilities that a railway
+company uses to operate its trains. Once station tokens are placed,
+they can not be removed until the end of the game, or the company
+closes. (Exceptions: Kinki Nippon Railways, Kobe Electric Railway).
 
-\subsubsection{Location of normal station tokens}
-To place a station token, the track must be properly connected so that
-the D train can operate from the station token currently on the map to
-a large city that is going to demand a new station token. It can be
-deployed in big cities that are far from station tokens. Also, there
-must be space for station tokens in the city to be deployed. Station
-tokens can not be stacked. Only one station token can be placed by one
-company on one track tile
+\subsubsection{Home station token placement}
+\label{or-home-station}
+During a railway company's first operating round turn of the game, a
+free station token is placed in its home location(s), indicated by the
+company's logo printed in large city spaces on the map. (Exception:
+Kinki Nippon Railways \ref{kinki})
 
-\subsubsection{Restriction on placement of token}
-The start city of a company that has not yet been established can not
-be station token placed so that there is no space to put a station
-token for that company.
+\subsubsection{Normal station token placement}
+Each public company can place one station during its turn. The cost
+for each token is listed on the company charter: 40円 for the first
+token, and 100円 for each subsequent token. This cost is paid from
+the treasury of the company placing the token. The number of station tokens
+a company may own is limited by the number of spaces on the charter.
 
-By replacing track tiles, if a large city free space occurs, then the
-public company can place station tokens in that space
+On a company's first operating turn, it may place a normal station
+token in addition to its home token(s).
 
-\subsection{Train operation}
-The established railway company establishes the operation route and
-operates the train in the operation round. The revenue generated is
-then distributed to the stockholders' and company's vaults
+\subsubsection{Requirements for placing normal station tokens}
+Station tokens are placed in empty large city locations. The city must
+be connected to one of the company's existing tokens on the map such
+that a train of infinite length could connect the two
+locations. Station tokens may not be stacked, and a company may only
+have one of its station tokens on any single track tile.
 
-\subsubsection{Right to decide the operation route of the train}
-The president of the company decides the route used by the train. The
-president must set up an operation route between at least one two
-cities if the railway company has a route that can be operated. The
-railway company's shareholders can point out the better operating
-route to the president, but the president does not have to follow it.
+Home station locations for unstarted companies are reserved and no
+station tokens may be placed there. If a track tile upgrade adds
+additional large city spaces, then other public companies may place
+their tokens in the additional space.
 
-\subsubsection{Train operation route}
-The train route must follow the line rate on the map according to the
+\subsection{Operating trains}
+The active company determines the routes that its trains will run. The
+revenue generated is then distributed to the company's shareholders
+and/or its treasury.
+
+\subsubsection{Right to decide train routes}
+The president of the operating company decides the routes that will be
+run by company's trains. The company's other shareholders can describe
+better routes to the president, but the president is not obligated to
+follow their suggestions.
+
+\subsubsection{Route definition}
+Train routes must follow the track on the map according to the
 following rules. If a railway company owns multiple trains, it is
-possible to have multiple operating routes.
+possible for it to operate multiple routes.
 \begin{itemize}
-\item The train's reroute must include at least one city of the
+\item The train's route must include at least one city containing the
   company's station token and one other city (large city, small city,
-  red city).
+  red off-board city).
 
-\item The number of cities where trains can operate is the same as the
-  type of trains (reference: 12.1 types of trains)
+\item The number of cities that the train can visit is the same as the
+  train number (\autoref{sec:train-types} types of trains)
 
 \item Trains can only travel in the direction of a straight or curved
-  track. The lines crossing each other on the line tile tile are solid
-  crossings, so the direction can not be changed on the way. Do not go
-  backwards on the track tiles.
+  track. The track lines crossing each other on a tile are overpasses,
+  so it is not possible to switch directions at such
+  points. Backtracking is not permitted.
 
-\item If the train route contains a red territory, use it as the start
-  or end point.
+\item If a route contains a red off-board location, it must be the start
+  or end of the route.
 
-\item The same city can not be used twice on a certain train route. We
-  also consider a red castle as a city. Different cities on one track
-  tile can be used.
+\item The same city can not be used twice on a single train's
+  route. This includes red off-board cities. However, different cities on one
+  track tile can be used.
 
-\item Tracks that have been used once can not be used on certain train
-  routes. But you can use the unused track of the same track tile
+\item Track may not be re-used in a single train route, but a
+  track tile can be revisited if doing so uses only yet unused track.
 
-\item You can use the city where all space is occupied by the station
-  token of the railway company, but you can not pass through without
-  your own station token. [Exception: 1890 scenario Kobe high-speed
-  train]
+\item A route may include cities where all spaces are occupied by
+  station tokens, but the route may pass through such cities only if
+  one of the tokens belongs to the operating company. (Exception: Kobe
+  Rapid Transit Railway \ref{kobe})
 
 \item Count all cities on the train route.
 
-\item You can use the city used by other trains of the same railway
-  company on the route of one train, but you can not use the track.
+\item If operating multiple trains, a single city may be visited by
+  more than one train as long as different track is used.
 \end{itemize}
 
 \subsubsection{Revenue from Operations}
-The sum of the values ​​of the cities (large cities-small cities-red
-cities) on the train service route is the revenue of the train. When
-there are multiple trains, each revenue is totaled. Companies without
-trains can not make a profit.
+The sum of the values ​​of the cities (large cities, small cities, and
+red off-board cities) on a train's route is the revenue for that
+train. Total the revenue from each train to obtain the revenue for the
+current operating round. Companies with no trains earn no revenue.
 
 \subsection{Deciding whether to pay dividends or not}
-The public company that operated the train decides whether to pay or
-not pay. However, companies that can not operate trains will not be
-distributed. Small companies can only make dividends
+A public company that operated trains may either pay the revenue as
+dividends or keep it in its treasury. Minor companies that operated
+trains must pay dividends. Companies that did not operate trains do
+not pay dividends.
 
 \subsubsection{Minor company dividends}
-Small companies can only pay dividends. Add half of the revenue to the
-president and the other half to the company's funds. I can not
-distribute it.
+Minor companies can only pay dividends. Half of the revenue is paid to
+the president and the other half is added to the company treasury.
 
 \subsubsection{Public company dividends}
-If the president of a public company chooses to pay a dividend, it
-will pay the revenue generated by the operation according to the
-percentage of the share certificate. The company's shareholders
-receive 10\% of the revenue for each share certificate (20\% for
-president share certificates). Dividends on shares in the open market
-can be resolved by adding them to company funds. Dividends on shares
-that have not been sold from the first position shall have been made
-to the bank and cash will not actually move.  (Exception: A8.4, C8.4
-JR)
+If the president of a public company chooses to pay a dividend, the
+revenue generated by the operating trains will be distributed among
+shareholders. The company's shareholders receive 10\% of the revenue
+for each share certificate (20\% for the president's
+certificates). Shares in the open market pay to the company
+treasury. Shares in the initial offer pay their dividends to the
+bank. (Exception: A8.4, C8.4 JR)
 
 \subsubsection{No distribution of public companies}
 If the president of a public company elects not to give a dividend,
-all the revenue generated by the operation will be added to the
+all the revenue generated by operating trains will be added to the
 company's funds.
 
-\subsubsection{Moving stock tokens}
-The stock price of a public company moves depending on whether it is a
-dividend or no payout. When you make a dividend, move one of the stock
-market stock tokens to the right and flip it over. If you do not pay a
-dividend, move the stock token to the left and return.
+\subsubsection{Moving stock price tokens}
+The stock price of a public company moves depending on whether it paid
+dividends or kept the revenue for its treasury. If a dividend was
+paid, move the stock price token to the right and flip it over. If it
+did not pay a dividend, move the stock price token to the left and
+flip it over.
 
 \subsection{Buy a train}
-Small companies and public companies can buy some trains as long as
-the ownership limit is not exceeded. Since purchasing a train will
-cause a phase change, each train purchased will make sure that there
-is a change in phase (see: 12.4 purchasing a train)
+Minor companies and public companies can buy some trains as long as
+the train limit is not exceeded. Check for phase changes in between
+each train purchased (see: 12.4 purchasing a train).
 
-\subsection{End of the operation round}
+\subsection{End of operating round}
 The operation round ends when all the operational companies have been
-operated. The stock token is put back in the table. At this time, the
-stock tokens in the same box are moved up to the top. The stock token
-of an unestablished company is always on the top
+operated. Flip over all stock price tokens. If any started companies
+are in a stack, their tokens will always be on the top.
 
-Move the round marker of the round progress table to the next square;
-if the current run round is the last run round, move the round marker
-to the square of the stock round. Advance the game turn marker by one.
+Move the round marker of the round progress table to the next space;
+if the current run round is the last operating round, move the round marker
+to the stock round space and advance the game turn marker by one.
 
 \subsection{Purchase of a Private Company in a Public Company}
-During the second and third phases, a public company can purchase a
-private company from any player during its own turn during
-operation. The purchase price will be settled between half and double
-of the price shown on the individual company's right sheet
+\label{or-private-purchase}
+During the phases 2 and 3, a public company can purchase a private
+company from any player during its own operating round turn.  The
+purchase price must be at least half and at most double the private
+company's face value. For example, the 20円 Arima Railway is sold
+between 10円 and 40円.
 
-For example, the \yen 20 Arima Railway is sold between \yen 10 and
-\yen 40. Payments are made directly from the funds of the public
-company to the player who held the private company Some private
-companies give benefits to the public company that owns it. This
-benefit can be used immediately after purchasing a private company. A
-public company that owns a private company receives the dividend of
-the private company and is added to the company's funds.
+Payments are made directly from the treasury of the public company to
+the player who held the private company. Some private companies give
+benefits to the public company that owns it. This benefit can be used
+immediately after purchasing a private company. Private companies that
+are owned by public companies pay their dividend directly to the
+owning company's treasury.
 
 Private companies, late private companies, and minor companies can
 not purchase private companies.
 
-% ①0.運喰ラウンド
 
-% 運営ラウンドでは、運営可能な全ての鉄道会社が順番に運喪します。運営ラ
-% ウンドは、①回のゲームターンに①③回行われます,最初のゲームターンには、
-% 運営ラウンドは①回しか行われませんが、ゲームフェイズが更新されることに
-% より、②困、③合と増えていきます。各運営ラウンドは、第①、第②、第③運営ラ
-% ウンドと数えます。`
-
-% ①0.①運営ラウンドの進行
-% 運営ラウンドは、以下の手順で進められます。
-% ①、個人会社と後発会社を運営します。
-% ②、小会社をNo(①ー⑤)に従い運営します。
-% ③、株価が高い公共会社から順番に運営します、
-
-% ①0.②個人会社、後発会社の運喰'
-% 個人会社と後発会社の運営は、同時に行います。権利書に書かれた配当金額をその権利書の持ち主に配当します。
-
-% ①0.③小会社、公共会社の運営
-
-% 最初に小会社がNo順に運営します。欧に公共会社が株価の高い順番に運営し
-% ます。公共会社が同じ株価の時は、株価トークンの位置が右の公共会社から
-% 運営します。会社の株価トークンが同じマス目にある場合は、上の会社から
-% 運営します。公共会社は運営中とに、プレーヤーの保持する個人会社を購入
-% することが出来ます。各小会社、公共会社は、自社の手番に、以下の手順で
-% 運営を行います。
-
-% 1、線路タイルの配置、置き換えを行います。(任意)
-% ②、新しい駅トーケンを置きます。(任意・公共会祀)
-% ③、列車を走らせ、収益を計算します。
-% ④、公共会社は、配当を出すか、会社の資金に入れます。小会社は、配当を行いますれ。
-% ⑤、株価表で株価トークンを移動させます。(公共会祀)
-% ⑥、列車を購入します。(任寓)
-
-% ①0.③.①線路タイル
-
-% 鉄道会社は、マップ上に線路タイルを配罪したり、置き換えることにより、
-% 線路の建設を行うことが出来まむ,。この行為は、都市聞を列車が通れるよう
-% に連絡させ、都市開発により都市の価値を上げることになります。線路タイ
-% ルは、マップ上のいずれかのヘクスに収まるように配置されます。一度置か
-% れた繰路タイルはマップの一部となり、他の線路タイルに罰き換えられる時
-% のみ動かすことができます。線路タイルの配置、置き換えは任意であり、張
-% 制されるものではありません。また、会社は、その線跡タイルを、運営する
-% ときに使用する必要はありません。
-
-% ①0.③.①.①線路タイルの配置と置き換え・
-
-% 各鉄道会社は、自社の駅トークタンのあるヘクスから厚離に関係なく列車の
-% 運行可能な状態につながっているヘクスに線路タイルを①枚(Rは②枚可能)を配
-% 置するか罠き換えることができます。
-
-% 線路タイルは、最初に黄色を配置し、緻色、そして茶色へと置き換えていき
-% ます。いきなり、茶色の線路タイルを配置したり、黄色から茶色の線路タイ
-% ルに露き換えることは出来ません。線路タイルの置き換えは、最初は森止さ
-% れていますが、ゲームフェイズが進むむことにより、行えるようになりまれ
-
-% ①0.③.①.②線路タイルの配置制限_
-% 線路タイルは、ヘクスでない覧所、濃い緑色の顕城、大阪湾、ヘクス辺を流れる川(淀川、武庫川の一部)、線路のつながらない赤色の領城、シナリオで薮止されんているヘクスにつながるような線路タイルの配置は行えません。
-
-% 黒く太い枠で撥かれんているヘクス(谷上、宇治、木津)は、線跡タイルを配
-% 置、置き換えすることを禁正しています。一部のヘクスには、個人会社の線
-% 路が記入されんたヘへタスがあります。これらの個人会社が公共会社に購入
-% されるか、笛④フェイズになるか、配置制限の効力を失う(C⑧.①、D⑧.①:大阪市
-% 電)まで、どの鉄道会社も、そのヘクスには線路タイルを配置することが出来
-% ません。シナリオで使用しない個人会社の線路タイルの配置制限は、ないも
-% のとします。
-
-% ①0.③.①.③線路タイルの配置
-
-% 黄色の線路タイルの配置は、マップ上の黄杯か黒杯のない空いているヘクス
-% に行われます。大都市のある空ヘタスには、大都市のある黄色の線路タイル
-% だけを配置できます。小都市のある空きヘへクスには、同じ敗の小都市のあ
-% る黄色の線路タイルルだけを置くことができます。小都市に配置した線路タ
-% イルは、ゲーム終了までそのままとなり、置き換える事ができません。
-
-% ①0.③.①.④線路タイルの置き換え
-
-% 線路タイルの置き換えは、以前の線路がそのまま残るようになっていれば、
-% どの方向を向いていてもかまいませんが、線跡タイルの配置制
-% 限(①0.③.①.②.①)で森正された場所につながる配置は行えません。罠き換えら
-% れた線路タイルはマップから取り除かれ、別の場所で再び使用することがで
-% きます.・線跡タイルを置き換えるとき、すでに配置されている駄トークンは、
-% 新しい線路タイルの同じ位置に賜かなくてはいけません。
-
-% 線跡タイルを配置もしくは置き換える時に経費がかかることがあります。こ
-% の経費は、線路を引く鉄道会社の資金から払われます。社長が不足分を出す
-% ことはできません。マップ上の隆害地形ヘクスや置き換え時に経費の必要な
-% 線路タイルには、必要な賄用が記されています。
-
-% ①0.③.①.⑤特殊な線路タイル(
-
-% マップ上に黄色の線路タイルが印刷された大都市へタス(大阪北、大阪東、大
-% 阪西、大阪南、神戸、京都、奈良、枚方、柏原)は、ゲーム開始時から黄色タ
-% イルを置かれているものとして扱います。
-
-% マップ上の黄色杯のあるヘクス(高槻、守口、堺)は、X(②①0,②①①)の緑色の線
-% 路タイル配置から行えます。茶色の線路タイルへの置き換えは、XX(②①⑦)を使
-% 用します。緑の線跡タイルの時、別々だった大都市は、茶色の線路タイルに
-% なると、一つの大都市となります。
-
-% 大阪北、大阪東、神戸、京都、尼崎、大阪南については、使用する線路タイ
-% ルが決められており、線路タイルにその地名が記入されています。
-
-% 西宮の黄色と緻色の線路タイルは通常の線路タイルを使用しますが、茶色の
-% 線路タイルには西宮と書かれた特殊タイルを使用します。
-
-% 大阪西の緻色の線路タイルには、⑫番のタイルを使用しますが、茶色のタイル
-% は大阪西と書かれた線路タイルを使用しますれ
-
-% ①0.④駅トークンの配置
-
-% 駅トークンは、鉄道会社が、列車の運営を行うために必要な鉄道会社の拠点
-% と施設を示しています。一度配畳された駅トークンは、その会社が閉鑽する
-% か、転換(近鉄、神戸電鉄のみ)するまで、ゲーム終了まで取り除くことが出
-% 来ません。
-
-% ①0.④.①スタート駅トークンの配置
-
-% 鉄道会社が最初に運営された時、一番初めに、その鉄道会社のスタート地点
-% に無料の駅トークンを配置します。スタート地点は、小会社はNoで、公共会
-% 社は略号により、マップ上の大都市に印刷されています。(例外:C⑧④近鋏)
-
-% ①0.④.②通常の駅トークンの配置ー
-
-% 各次共会社は、自社の手番中、費用を払ってーつだけ駅トークンを配置する
-% ことができます。佼駅トークンの費用は、会社シートに記載されており、最
-% 初のーつは\④0、それ以降は\①00の経費がかかります。この経責は、駅トーケ
-% ンを配置する鉄道会社の資金から払われます,0楊0が会社設立暁だけ;スター
-% ト駅トータンと通常の貫トータンの複数を配置できます。駅トークンは、準
-% 備された数のみ使用することができます。ー
-
-% ①0.④.3通常の駅トークンの配置位置
-
-% 駅トークンを配置するには、現在マップ上にある駅トークンから、新しい駅
-% トークンを需こうとする大都市にD列車の運行が可脈となるように正しく線路
-% がつながっていなくてはいけません。駅トークンから、いくら遠く離れてい
-% る大都市でも、配置が可能でむ。また、配霊しようとする都市に駅トークン
-% の罪けるスペースがなくてはいけません。駅トークンは重ねて置くことはで
-% きません。①つの会社が①枚の線路タイルに署ける駅トークンは①個だけでれ
-
-% ①0.④.④釈トークンの配置制限
-
-% まだ設立されていない会社のスタート都市には、その会社の駅トークンを置
-% くスペースがなくなるような蚕トークンの配置は行うことができません。
-
-% 線跡タイルを置き換えすることによって、大都市の空きスペースがぷが張生
-% した場合、それ以後、公共会社は、そのスペースに駅トークンを配置するこ
-% とができます
-
-% ①0.⑤列車の運行
-
-% 設立された鉄道会社は、運営ラウンドに、運行ルートを確謗し、列車を運行
-% します。そうして生み出された収益は、株主や会社の金庫に振り分けられま
-% す
-
-% ①0.⑤.①列車の運行ルートの決定権
-
-% 会社の社長が列車の使用するルートを決定します。社長は、運行できるルー
-% トをその鉄道会社が持っていれば、最低でも①つの②都市閾の運行ルートを設
-% 定しなくてはいけません。その鉄道会社の株主は、よりよい運行ルートを社
-% 長に指摘できますが、社長は必ずしもそれに従う必要はありません。
-
-% ①0.⑤.②列車の運行ルート
-
-% 列車の葬行ルートは、以下のレルーレに従い、マップ上の線路のレートに沿っ
-% ていなくてはなりません。鉄道会社は、複数列軍を保有しているのならば、
-% 複数の運行ルートを持つことも可能でむー
-
-% ・列車のレルートは、その会社の駅トータン①つのある都市と他の都市(大都
-% 市、小都市、赤色の領岐)が少なくとも①つ含まれていなくてはいけません。
-
-% ・幽車が運行できる都市の敗は、その列車のタイプと同じでれ(参熊:t②.①列
-% 車の種願)
-
-% ・列車は、直線かカーブとなっている線路の方向にのみ進むことが出来ます。
-% 線躇タイル上で、交差して交わっている線路は、立体交差となっているので、
-% 途中で方向を変えることが出来ません。線路タイル上で逆行してはいけませ
-% ん。
-
-% ・列車のルートに赤色の領基が含まれるときは始点か終点として使用しま
-% す。
-
-% ・ある列車のレルートで、同じ都市を②回使用することはできません。ある赤
-% い領城も、①つの都市と考えます。一つの線路タイル上の異なる都市は使用で
-% きます。
-
-% `ある列車のルートで、一底使用された線路は、使用することはできません。
-% しかし同じ線路タイルの使用されていない線路を使用することはできます
-
-% ・鉄道会社の駅トークンで全てのスペースが占められている都市を使用する
-% ことはできますが、自社の駅トータクンがなければ通遇することはできませ
-% ん。[例外:t⑧⑨0シナリオ神戸高速鉄道]
-
-% ・列車のルート上にある全ての都市を数えます。
-
-% ・ある列車のルートで、同じ鉄道会社の他の列車が使用した都市は使用できますが、線路は使用できません。
-
-% ①0.⑤.③運行による収益・
-
-% 列車の運行ルート上にある都市(大都市ノ小都市~赤都市)の価値の合計が、そ
-% の列車の収益になります。複数の列車があるときは、それぞれの収益を合計
-% します。列軍のない会社は、収益を上げることが出来ません。
-
-% ①0.⑥配当か無配かの決定
-% 列車を運行した公共会社は、配当か無配を決定します。た
-
-% だし、刃車の運行ができない会社は、無配となります。小会社は、配当のみ行えまずむ
-
-% ①0.⑥.①小会社の配当
-
-% 小会社は、配当のみ行えます。収益の半分を社長に残り半分を会社の資金に
-% 加えます。然配はできません。
-
-% ①0.⑥.②公共会社の配当
-
-% 公共会社の社長が配当を出すことを選択すれば、運行によって生じた収益を
-
-% 株券のパーセンテージに従って配当を行います。その会社の株主は、各株券
-% ごとに収益の①0\%を受けります(社長株券は②0\%)。公開市場にある株券への
-% 配当は、会社の資金へ送加することで解液されます。まだ最初の位置から売
-% 却されていない株券への配当は、銀行へ行われたものとし、実際に現金は移
-% 動しません。
-
-% (例外:AS.④・C⑧.④JR)
-% ①0.⑥.②公共会社の無配
-% 公共会社の社長が配当を出さないことを選折すれば、運行によって生じた収益全てを会社の資金に追加しまれ
-
-% ①0.⑥.③株価トークンの移動
-
-% 配当か無配かによって、公共会社の株価は変動します。記当を行ったときは、
-% 株式市場の株価トークンを右に①つ動かし裏返します。配当を出さなぶないと
-% きは、株価トークンをtつ左に動かし褻返しますれ
-
-% ①0.⑦列車の購入
-
-% 小会社と公共会社は、所有制限を超えない限り、いくつかの列車を購入する
-% ことができます。列車の購入はフェイズ変更の原因となるため、列軍は①輝嘴
-% 入するたびにフェイズの変更があるか確謗します(姜熊:⑫.④列車の嗚入)
-
-% ①0.⑧運営ラウンドの終了
-
-% 全ての運営可能な会社が運営を終えたときに、運営ラウンドは終了します。
-% 株価トークンを表に戻します。この時、同じマス目にある株価トークンは、
-% 先に移動してきたものが上にきます。未設立の会社の株価トークンは、常に
-% 一番上に来ますむれ'
-
-% ラウンド進行表のラウンドマーカーを、次のマス目に動かします;現在の運営
-% ラウンドが、最終の運営ラウンドならば、株式ラウンドのマス目ヘラウンド
-% マーカーを移動させます。ゲームターンマーカーを①個進めます。
-
-% ①0.⑨公共会社の個人会社購入
-
-% 第②フェイズから第③フェイズの間に公共会社は、運営ラウンシンド中の自社
-% の手番中にいずれかのプレーヤーから個人会社を購入することが出来ます。
-% 購入金額は、個人会社の権利書に示されている覧面価格の半額から②倍の間で
-% 清定します
-
-% 例えば、\0の有馬鉄道は\①0から\④0の間で売却されます。支払いは、その公
-% 共会社の資金から個人会社を保有していたプレーヤーに直棗行われまむいく
-% つかの個人会社はそれを所有する公共会社に特典を与えます。この特具は個
-% 人会社を購入したときからすぐに使用できます。個人会社を所有する公共会
-% 社は、個人会社の配当を受け取り、会社の資金に追加しまれ
-
-% 個人会社、後発会社、小会社は、個人会社を購入できません。
-
-\section{Railway company}
-In 1890, there are 6 private companies, 5 small companies, 4 generic
+\section{Railway companies}
+In 1890, there are 6 private companies, 5 minor companies, 4 late private
 companies, and 8 public companies. By operating these companies,
 players can earn a profit. Depending on the scenario, some companies
-may not use it or the handling may change.
+may not be used or their rules may change.
 
-\subsection{Private company}
+\subsection{Private companies}
 Private companies are small privately owned companies that are
-purchased by players in an initial stock round. Each individual
-company owned by the player counts as 1 piece in stock ownership
-restrictions. All private companies will pay dividends by recording
-the par value of the income statement at the beginning of each turn of
-the operating round. The player or public company that owns the
-individual company's rights document receives the dividend
+purchased by players in the initial stock round. Each private company
+owned by the player counts as 1 certificate towards the certificate
+limit. All private companies will pay dividends printed on their
+certificate at the beginning of each turn each operating round. The
+player or public company that owns the private company receives the
+dividend.
 
-\subsubsection{Limitation of Line Tile Placement for Private Company}
-Tracks of some private companies are marked in the hex on the map,
-while players own those private companies, every player has track
-tiles in the hex with the private company's tracks Placement is
-prohibited. When a private company is owned by a public company or in
-Phase 4, any railway company can place track tiles in its hex as
-usual. (Exception: C8.1 Osaka City Tram)
+\subsubsection{Private company restrictions on track tile placement}
+Certain hexes on the map are marked with private company tracks. While
+these private companies are owned by players, any placement of track
+tiles on these hexes is prohibited. This restriction is lifted when
+the private company is bought by a public company or the private
+company closes.
 
-\subsubsection{Private Company Purchase of Public Company}
-In the second phase, public companies can buy private companies
-anytime during their own management. The purchase price is determined
-by the seller and the buyer in any amount between half and twice the
-price of the title,
+\subsubsection{Purchase of private companies by public companies}
+Beginning in phase 2, public companies can buy private companies
+anytime during their own operating turn. The purchase price is any
+amount between half and twice the private company's face value agreed
+upon by the seller and buyer.  A railway company that purchases a
+private company may receive certain benefits.
 
-\subsubsection{Purchase of a player at a personal company}
-Players can purchase private companies at any price agreed to each
-other, from other players in their turn during the stock round. A
-railway company that purchases a private company may receive certain
-benefits.
+\subsubsection{Purchase of private companies by players}
+During their stock round turn, players can buy private companies from
+other players at any agreed-upon price.
 
-\subsubsection{Closing a Private Company}
-Private companies will be shut down in the fourth phase. If a private
-company is closed, the benefits of that individual company will be
-waived
+\subsubsection{Closure of private companies}
+Private companies close at the beginning of phase 4. All benefits from
+a private company cease when it is closed.
 
-\subsection{Lender company}
-Lenders are almost always treated the same as private companies. After
-the second game turn, each player will be able to purchase a
-late-start company if it is a regular stock round (not an initial
-stock round). Each later-owned company owned by the player counts one
-for each title of the title. After-purchased companies can not be sold
-during the game. At the beginning of each operating round, the player
-who owns the respective LLP's title records the par value of the
-income and receives a dividend. Lender companies are not closed during
-the game.
+\subsection{Late private company}
+Late private companies are almost always treated the same as private
+companies. From the second game turn, all players will be able to
+purchase late private companies during their turn in a regular stock
+round (not an initial stock round). Each late private company owned by
+the player counts as one certificate toward the certificate
+limit. Late private companies may not be sold during the game. At the
+beginng of each operating round, the player which owns the late
+private company receives the dividend printed on its certificate. Late
+private companies do not close during the game.
 
-\subsection{Subsidiary}
-Small companies are specialized private companies that operate in the
-same way as public companies. Small companies are purchased by players
-in the initial stock round. Small companies that have been purchased
-by players can not be sold during the game. The capital of a small
-company has been determined and will not change no matter how high the
-purchase price is. Small companies can not buy or sell between public
+\subsection{Minor companies}
+Minor companies are specialized private companies that operate in the
+same way as public companies. Minor companies are purchased by players
+in the initial stock round. Minor companies that have been purchased
+by players can not be sold during the game. The starting capital of a
+minor company fixed and will not change regardless of the purchase
+price. Minor companies may not be bought or sold between public
 companies or players.
 
-\subsubsection{Operation of a small company}
-A small company is operated after a private company, a late
-company. The No listed in the small company's license will be the
-order of operation of the small company, and the token corresponding
-to the No will be used as the station token for that small company.
+\subsubsection{Operation of a minor company}
+Minor companies is operated after a private companies and late private
+company. The number shown in the small company's charter will be its
+operating order, and the token corresponding to the number will be
+used as the station token for that small company.
 
-A small company is a larger company than a private company or a
-generic company, and operates like a public company until a merger
-with Kintetsu or a transfer to a generic company takes place.
+A minor company is a larger company than a private company or a late
+private company, and operates like a public company until a merger
+with Kinki Nippon Railways or a transformation to a late private
+company occurs.
 
-Small companies must pay dividends whenever they operate trains. A
-small company pays half of its earnings to the president of that
-company and the rest to the company. The stock price of a small
-company does not change from the par value.
+Minor companies must pay dividends whenever they operate trains. A
+minor company pays half of its earnings to the president of that
+company and the rest to the company treasury. The stock price of a
+minor company does not change from the par value.
 
 \subsection{Public companies}
-The 1890 has eight public companies: Osaka Subway, Hankyu, Hanshin,
-Keihan, Kintetsu, Nankai, Sanyo. It is a major railway company that
-brings great profits in this game. Public companies are owned by
-multiple players by purchasing stock certificates in a stock
-round. The president of a public company is managed by a player with a
-presidential stock and operates the public company. The president may
-be replaced by buying and selling stock certificates.
+There are eight public companies in 1890: Osaka Subway, Hankyu,
+Hanshin, Keihan, Kinki, Nankai, Sanyo, and JR. They are major railway
+companies that generate the greatest profits in this game. Public
+companies are owned by multiple players by purchasing stock
+certificates in a stock round. The president of a public company is
+the player with a presidential stock and operates the public company
+during the operating round. The president may change through the buying
+and selling of stock certificates.
 
-Some companies listed in the scenario may be established or operated
+Some companies listed in the scenario may be started or operated
 in special procedures.
 
 \subsubsection{Operation of public companies}
-In the turn of a public company with an operation phase, the president
-of that company arranges track tiles, arranges station tokens,
-operates trains to earn profits, decides whether to pay or not pay,
-buys trains, etc. Take action
+The president of a public company takes all of the company's actions
+during the operating round: laying or upgrading track tiles, placing
+station tokens, operating trains for revenue, deciding whether to pay
+dividends or withold, purchasing trains, etc.
 
-\subsubsection{Establishment of public company}
-If the share certificate of a public company is 50\% of what is held
-by all players and what is in the open market, then the public company
-is established. (Exception: D8.4 Kintetsu)
+\subsubsection{Starting of public company}
+If 50\% of a company's shares is held among all players and the open
+market, then the public company is started. (Exception: D8.4 Kinki
+Nippon Railways)
 
-Once established, the public company will continue to operate until
-the end of the game, unless it is closed. Once closed, the public
-company will not appear during the game.
+Once started, the public company will continue to operate until the
+end of the game, unless it is closed. Once closed, the public company
+will not appear again during the game.
 
 
-% ①①.　鉄道会社
-
-% ①⑧⑨0には、⑥つの個人会社と、⑤つの小会社、④つの後発会社、⑧つの公共会社
-% があります。これらの会社を運営することにより、プレーヤーが利益を得る
-% ことができます。シナリオにより、いくつかの会社は使用しなかったり、扱
-% いが変化したりします。
-
-% ⑪.①　個人会社
-
-% 個人会社は、個人が運営する小規模な会社で、初期株式ラウンドでプレーヤー
-% に購入されます。プレーヤーに所有されている各個人会社は、株式の所有制
-% 限においてそれぞれ①枚と数えます。全ての個人会社は、運営ラウンドの各ター
-% ンの始めに権利書に記載された額面の収益を計上して配当します。各個人会
-% 社の権利書を所有しているプレーヤーもしくは公共会社が、その配当を受け
-% 取ります
-
-% ⑪.①.①　個人会社の線路タイル配置制限
-
-% いくつかの個人会社の線路がマップ上のヘクスに記入されていますれあるプ
-% レーヤーが、それらの個人会社を所有している間は、どのプレーヤーもその
-% 個人会社の線路のあるへクスに線路タイルを配置することは禁止されます。
-% 個人会社が公共会社によって所有されるか第④フェイズになれば、どの鉄道会
-% 社も通常通り、そのヘクスに線路タイルを配置することがきます。(例
-% 外:C⑧.①大阪市電)
-
-% ⑪.①.②　公共会社の個人会社購入
-
-% 第②フェイズになると、公共会社は自分の運営ラウァンド中にいつでも個人会
-% 社を購入できます。購入価格は、権利書の価格の半分から②倍のあいだの任意
-% の金額で、売り手と買い手の交渉により決定されます,
-
-% ⑪.①.③　プレーヤーの個人会社購入
-
-% プレーヤーは、株式ラウンド中の自分の手番に他のプレーヤーから、お互い
-% に合意した任意の価格で、個人会社を購入することができます。個人会社を
-% 購入した鉄道会社は、ある種の特典を得ることがあります。
-
-% ⑪.①.④　個人会社の閉鎖
-% 個人会社は第④フェイズになった時点で閉鎮されます。個入会社が閉鎖されると、その個人会社の特典は放棄されます
-
-% ⑪.③　後発会社
-
-% 後発会社はほとんどの場合、個人会社と同じように扱います。第②ゲームター
-% ン以降で、通常の株式ラウンド(初期株式ラウンドでない)であれば、後発会
-% 社を各プレーヤーは、購入できるようになります。プレーヤーに所有されて
-% いる各後発会社は、権利書の所有制限において、それぞれ①枚と数えます。一
-% 度プレーヤーに購入された後発会社は、ゲーム中に売却することが出来ませ
-% ん。各後発会社の権利書を所有しているプレーヤーは、各運営ラウンドの始
-% めに、その額面の収益を計上して配当を受け取ります。後発会社は、ゲーム
-% 中閉鎖されません。
-
-% ⑪.④　小会社
-
-% 小会社は、公共会社と同じように運営される特殊な個人会社です。小会社は、
-% 初期株式ラウンドにおいてプレーヤーに購入されます。一度プレーヤーに購
-% 入された小会社は、ゲーム中に売却することが出来ません。小会社の資本金
-% は決定されており、購入価格がどれだけ高くても変更されることはありませ
-% ん。小会社は、公共会社やプレーヤー間で売買することはできません。
-
-% ⑪.④.①　小会社の運営
-
-% 小会社は、個人会社、後発会社の後に運営されます。小会社の権利書に記載
-% されているNoが小会社の運営の順番となり、そのNoに対応する額番トークン
-% をその小会社の駅トークンとして利用しますれ
-
-% 小会社は、個人会社、後発会社よりも規模の大きな会社で、近鉄への転横合
-% 併、もしくは後発会社への転摘が起こるまでは、公共会社のように運営を行
-% います。
-
-% 小会社は列車の運行を行うと必ず配当を実施しなくてはなりません。小会社
-% の配当は、収益の半分をその会社の社長に残りを会社に支払うことで行いま
-% す。小会社の株価は、額面価格から変化することはありません。
-
-% ⑪.⑤　公共会社
-
-% ①⑧⑨0には、、大阪地下鉄、阪急、阪神、京阪、近鉄、南海、山陽の⑧つの公共
-% 会社があります。このゲームで大きな利益を導き出す大手の鉄道会社です。
-% 公共会社は、株式ラウンドに株券を購入されることで、複数のプレーヤーに
-% 所有されんます。公共会社の社長は、社長株を持つプレーヤーが担当し、そ
-% の公共会社の運営を行います。株券の売買によって社長が交代することもあ
-% ります。
-
-% シナリオに記されでている一部の会社は、特別な手順によって設立したり、
-% 特別な運営を行なうことがあります。
-
-% ⑪.⑤.①公共会社の運営
-
-% 運営フェイズのある公共会社の手番に、その会社の社長は、線路タイルの配
-% 置、駅トークンの配置、収益を得るための列車の運行、配当／無配の決定、
-% 列車の購入、等の决断と行動を行います。
-
-% ⑪.⑤.②公共会社の設立
-
-% ある公共会社の株券が、全プレーヤーの保有しているものと公開市場にある
-% ものを合わせて⑤0\%になる場合、その公共会社が設立されま
-% す。(例外:D⑧.④近鉄)
-
-% 公共会社は一度設立されると閉鎖されない限り、ゲーム終了まで運営され続
-% けます。一度閉鎖された公共会社は、そのゲーム中に登場しません。
 
 \section{Trains}
 
-Trains can only be owned by small companies and public
+Trains can only be owned by minor companies and public
 companies. Trains make money by traveling between cities during the
-operation round. The president can not abolish or discard trains owned
-by the company.
+operating round. Trains owned by the company can not be voluntarily
+discarded.
 
 \subsection{Types of trains}
-
+\label{sec:train-types}
 The type of train represents the number of cities (large cities, small
-cities, red areas outside the map) where the train can operate. For
-example, four trains can operate between four cities. As an exception,
-2-2 can operate 2 large cities and 2 small cities, and 3-3 trains can
-operate 3 large cities and 3 small cities. There is no restriction on
-the arrangement of cities where D trains can operate.
+cities, red areas outside the map) where the train can run. For
+example, 4 trains can run to four cities. As an exception, 2-2 can run
+to 2 large cities and 2 small cities, and 3-3 trains can run to 3
+large cities and 3 small cities. D trains can run to an unlimited
+number of cities.
 
 The number of trains available is as shown in the table below, and the
-more trains that can operate the city, the more expensive they
-become. Trains use the type and number specified by the scenario.
+more cities a train can run to, the more expensive it becomes. The
+number of type of trains that are available is determined by the
+scenario.
 
 \begin{tabular}{|l|l|l|l|}
 \hline
 Train & Count & Price & Era \\
 \hline
-2 & 9 & \yen 80 & 1910 \\
-2-2 & 3 & \yen 120 & 1920 \\
-3 & 5 & \yen 180 & 1930 \\
-3-3 & 2 & \yen 230 & 1940 \\
-4 & 4 & \yen 300 & 1950 \\
-5 & 3 & \yen 450 & 1960 \\
-6 & 2 & \yen 630 & 1970 \\
-D & 6 & \yen 1100(800) & 1980 \\
+2 & 9 & 80円 & 1910 \\
+2-2 & 3 & 120円 & 1920 \\
+3 & 5 & 180円 & 1930 \\
+3-3 & 2 & 230円 & 1940 \\
+4 & 4 & 300円 & 1950 \\
+5 & 3 & 450円 & 1960 \\
+6 & 2 & 630円 & 1970 \\
+D & 6 & 1100円(800) & 1980 \\
 \hline
 \end{tabular}
 
-\subsection{Train ownership limit}
+\subsection{Train limit}
 
 The maximum number of trains that a railway company can own is fixed
-for each game phase. The railway company can not own or purchase a
-train beyond the limit of ownership of the train.
+for each game phase. A railway company can not own or purchase a
+train beyond the train limit.
 
-When a train company buys a new train, the game phase is updated, and
-the train holding limit is reduced, the presidents of all the train
-companies will discard the extra trains. Discarded trains that can be
-operated are placed in the open market.
+If the train limit is reduced when the game phase changes through the
+purchase of a train, the presidents of each company must immediately
+discard any trains the company holds exceeding the limit. Discarded
+trains are placed in the open market and are available for purchase.
 
 \subsection{Train ownership obligation}
 
-Railway companies have a train ownership obligation if the line tiles
-are drawn so that the train can be operated from the station token. A
-railway company that has an obligation to own a train must always buy
-a train in its turn in the operation round. If the train can not be
-purchased, the train will be forced to purchase.
+Companies are obligated to own a train if they can trace a valid route
+from any of their station tokens. If a company does not own a train at
+the end of its turn, it must buy one. If the company treasury is
+insufficient to do so, a force-purchase occurs.
 
-If there are no railways available (no tracks connected to cities
-other than the home city) and no trains available for purchase from
-banks or open markets (5 trains, 6 trains and D trains are all gone ),
-You will be exempt from the train ownership obligation
-
-However, in these cases, the railway company can not pay dividends, so
-the stock price will drop rapidly with each turn of each operation
+A company is exempt from owning a train if it has no route, or if
+there are no trains available for purchase from the bank or open
+market. However, in these cases, the railway company can not pay
+dividends, so the stock price will continue to fall each operating
 round.
 
 \subsection{Purchase train}
 
 All trains are initially purchased from the bank. Trains purchased
-from banks will be sold in order. For example, you can not buy 2-2
-trains unless all 2 trains are purchased from the bank, and 5 trains
-can not be purchased if all 4 trains are purchased from the
-bank. However, once the first six trains are purchased, you will be
-able to purchase D trains. The purchase of a new train will trigger an
-update to the new phase. This cost comes from the funds of the railway
-company that purchases the train. (Exception: forced purchase of 12.5
-trains)
+from the bank will be sold in order. For example, 2-2 trains cannot be
+bought until all 2 trains are purchased from the bank, and 5 trains
+cannot be bought until all 4 trains are purchased from the
+bank. However, once the first 6 train is purchased, D trains may be
+bought. The purchase of a new train type will trigger a change of game
+phase. The cost to purchase a train is paid from the treasury of the
+railway company that purchases the train. (Exception: forced purchase
+of 12.5 trains)
 
 \subsubsection{Purchase by the trade-in of the train}
 
 The price of the train is listed on the train card. D trains can be
-purchased at \yen 1,100 or at \yen 800 by trading off 4 or 5 or
-6 trains. Since 4 trains will be scrapped if D trains are purchased,
-it is only possible to buy up D trains by 4 trains with the first D
-train. The dropped trains are placed in the open market.
+purchased at 1円,100 or at 800円 by trading in a 4, 5 or 6
+train. Since 4 trains will be rusted when the first D train is
+purchased, it is only the first D train may be bought with the
+trade-in of a 4 train. Traded-in trains are placed in the open market.
 
-\subsubsection{Purchasing trains from outside banks}
+\subsubsection{Purchasing trains from the market and other companies}
 
-Trains can be purchased from open markets and railway companies as
-well as banks. The trains that can be purchased from a railway company
-are negotiated by each other's presidents and traded at a price of one
-or more. The open market trains are traded at the price that is
-written on the train.
+Trains can be purchased from other railway companies and the open
+market.  A company may buy a train from a different company at any
+price agreed upon by the two presidents, that is at least 1円. Trains
+in the open market are bought at face value.
 
-\subsection{Forced purchase of trains.}
+\subsection{Forced purchase of trains}
+If a company is obligated to own a train, and does not have enough
+money in its treasury to buy one from the bank or open market, the
+president of the company must use their own funds to make up the
+shortfall. The following rules apply for a forced purchase:
 
-Due to the ownership of trains, the company that has to buy the train
-does not have enough funds, so when the train purchase does not go
-from banks, open markets and other companies, the president of the
-company runs short You have to pay a minute and buy a train from a
-bank or an open market. If you buy a train from another company, the
-forced purchase rules do not apply.
-
-The president who is forced to donate for the purchase of trains must
-obey the following special rules.
 \begin{itemize}
-\item You can only buy one train.
-\item You have to buy the cheapest train from the open market or a
-  bank. It can not be purchased from other companies.
-\item Pay as much as possible with company funds, and only the
-  remaining short will be paid by the president.
+\item Only one train may be bought.
+\item The cheapest train from the open market or bank must be
+  bought. Buying a train from another company is not allowed.
+\item The company's entire treasury is spent, and the remaining amount
+  is paid by the president.
 \end{itemize}
+
 If the president doesn't have enough money to pay for the shortfall,
-he has to sell his stock to make the necessary money. (Refer to the
-section on forced sale of share certificates)
+they must sell stock to raise the necessary funds. (Refer to the
+section on forced sale of share certificates).
 
-12.6 Discarded trains
+\subsection{Train rusting}
 
-Trains from 2 to 4 will be scrapped at the moment the game phase is
-updated and will be unconditionally removed from the game. The timing
-of scrapping each train is determined by the game phase. (Reference:
-Game phase)
+2 trains, 2-2 trains, 3 and 3-3 trains, and 4 trains are rusted at the
+beginning of game phase 3, 4, 5, and 6 respectively. Rusted trains are
+immediately and unconditionally removed from the game
+(\autoref{sec:game-phases}).
 
-% 1②.列車
-
-% 列車は小会社と公共会社のみ所有することができます。列車は、運営ラウン
-% ド中に都市間を走行することにより、収益をあげます。社長は会社の所有し
-% ている列車を自分から、廃止したり、捨てたりすることはできません。
-
-% ⑫.①列車の種類
-
-% 列車の種類は、その列車が運行できる都市(大都市、小都市、マップ外の赤色
-% 領域)の数を表します。例えば、４列車は４つの都市の間を運行できます。例
-% 外として、②－②は大都市②つと小都市②つを運行でき、③ー③列車は大都市③っと
-% 小都市③つを運行できます。D列車が運行できる都市の整に制限はありませ
-% ん。
-
-% 各列車は、以下の表の数だけ用意されており、都市聞を変く運行できる列車
-% ほど高価になぶっています。列車は、シナリオによって指定されている種類
-% と数を使用します。
-
-% ⑫.②列車所有制限
-
-% 鉄道会社が、所有することが出来る列車の最大数は、ゲームフェイズごとに
-% 決まっています。この列車所有制限を越えて鉄道会社は、列車を所有するこ
-% とも、購入することもできません。
-
-% ある鉄道会社が新しい列車を購入し、ゲームフェイズが更新され、列車保有
-% 制限数が少なくなったら、全ての鉄道会社の社長は、余分な列車を廃棄しま
-% す。廃棄された列車で運営可能なものは、公開市場に置かれます。
-
-% ⑫.③ 列車保有義務
-
-% 鉄道会社は、駅トークンから列車が運行可能なように線路タイルが引かれて
-% いるならば、列車保有義務が生じます。列車保有義務が生じた鉄道会社は、
-% 運営ラウンドの自社の手番で、必ず列車を購入しなければなりません。列車
-% が購入できない時は、列車の強制購入を行います。
-
-% 使用可能なルートが存在しない鉄道会社(本拠地都市以外の都市に線路が繋がっ
-% ていない)と、銀行や公開市場から購入できる列車が存在しない場合(⑤列
-% 車、⑥列車およびD列車がすべて無くなってしまった場合)は、列車保有義務を
-% 免除されますれ
-
-% ただし、これらの場合、その鉄道会社は配当することができませんから、各
-% 運営ラウンドの手番がまわってくる度に株価はどんどん下がって行く事にな
-% ります。
-
-% ⑫.④列車の購入
-
-% 全ての列車は、始めは銀行から購入されます。銀行から購入される列車は、
-% 順番に売られていきます。例えば、全ての②列車が銀行から購入されてなけれ
-% ば②－②列車を購入することはできませんし、全ての④列車が銀行から購入され
-% てなければ⑤列車を購入することはできません。ただし、最初の⑥列車が購入
-% されたら、D列車を購入することができるようになります。新型列車の購入は、
-% 新たなフェイズへの更新のきっかけとなります。この経費は、列車を購入す
-% る鉄道会社の資金から払われます。(例外:⑫.⑤列車の強制購入)
-
-% ⑫.④.①D列車の下取りによる購入
-
-% 列車の価格は列車カードに記載されています。D列車は、１,①00で購入する
-% か、④列車か⑤列車か⑥列車を下取りすることより、\⑧00で交摘することができ
-% ます。D列車が購入されると④列車が廃車となるため、④列車によるD列車の下
-% 取り購入は、最初のD列車でしか行えません。下取られた列車は、公開市場に
-% 置かれます。
-
-% ⑫.④.②　銀行以外からの列車購入
-
-% 列車は、銀行以外に公開市場と鉄道会社から購入できます。鉄道会社から購
-% 入できる列車は、お互いの社長が交渉して１以上の価格で取引が行われます。
-% 公開市場の列車は、列車に記入されている価格で取り引きされます。
-
-% ⑫.⑤　列車の強制購入.
-
-% 列車保有義務により、列車を購入しなくてはいけない会社が、十分な資金を
-% 持っていないため、銀行、公開市場、他の会社から、列車の購入が行をない
-% とき、その会社の社長が不足分を支払って、銀行または公開市場から、列車
-% を購入しなくてはなりません。他の会社から列車を購入する場合は、強制購
-% 入ルールは適応されません。
-
-% 列車の購入のために寄付を強制される社長は、以下の特別ルーレに従わなくてはいけません。
-
-% ・列車を①輌しか購入できません。
-% ・公開市場もしくは銀行から、一番価格の安い列車を購入しなくてはいけません。他の会社からは、購入できません。
-% ・会社の資金で可能な限り支払い、残りの不足分だけ、社長が支払います。
-
-% 社長が不足分を支払うのに十分な手持ちの資金を持たないときは、必要な資
-% 金をつくるため株券を売却しなくてはい.けません。(株券の強制売却の項、
-% 参照)
-
-% ⑫.⑥列車の廃車
-
-% ②列車から④列車までの列車は、ゲームフェイズが更新する瞬間に廃車となり、
-% 無条件でゲームから取り除かれます。各列車の廃車の時期は、ゲームフェイ
-% ズにより決められています。(参照:ゲームフェイズ)
 
 \section{End of the game}
 
-The game ends basically in three ways. It is the player's bankruptcy,
-bankruptcy of the bank, the end of the game turn (according to the
-scenario). Different variants have different endings
+The game may end in three ways. A player goes bankrupt, the bank runs
+out of money, the end of the final game turn (according to the
+scenario).
 
-When the game is over, the biggest player in the asset will be the
-winner. Sometimes a player who has gone bankrupt wins. Treat the
-following totals as personal property:
+When the game is over, the player with the greatest assets will be the
+winner. It is possible for a player who has gone bankrupt to
+win. Count the following towards personal assets:
 
 \begin{itemize}
-\item On-hand funds held by players.
-\item Shares calculated to market price (price on stock table)
-\item The par value of a private company, a small company, and a late company.
+\item On-hand cash held by players
+\item Shares valued by their price on the stock price table
+\item The face value of private companies, a minor companies, and late
+  private companies
 \end{itemize}
 
 \subsection{End processing of the game}
 
-In order to make the game termination process more error-free, we will
-give up the following steps.
+In order to make the game termination process more error-free, we suggest
+the following procedure:
 
 \begin{enumerate}
-\item All cash remaining in each company will be returned to the bank.
-\item Exchange all your stock certificates for cash. We will exchange
-  all players at the same time, starting with the lowest stock prices.
-\item exchange private company, small business late departure company
-  at par value
-\item compare each other's cash at hand.
+\item Return all cash remaining in each company's treasury to the bank.
+\item Exchange all stock certificates for cash. Make the exchange for
+  all players at the same time, starting with the company with the
+  lowest stock price.
+\item Exchange private companies, minor companies, and late private companies
+  for cash at face value
+\item Compare all players' cash on hand.
 \end{enumerate}
 
 \subsection{Player Bankruptcy}
@@ -2432,113 +1367,50 @@ If a player can not provide the funds needed to make a payment, that
 player will go bankrupt. No player or company can do anything from
 that moment on.
 
-It is not possible to say voluntarily bankruptcy despite the fact that
-there is something wrong.
+It is not possible for a player to voluntarily declare bankruptcy.
 
-If a small company or a public company is obliged to purchase trains,
-and all cash on hand is issued and a share ticket is forcedly sold, if
-the train can not be purchased, the president player will go bankrupt,
-to the train of a bankrupt player All cash prepared for payment will
-be seized by the bank and the remaining payment will be
-exempted. After that, the game is processed immediately.
+If a minor company or a public company is obliged to purchase trains,
+and company treasury plus president's cash after all possible share
+sales is insufficient to buy a train, the president player is
+bankrupt. All money raised is seized by the bank and the remaining
+debt is waived. The end of game is then immediately processed.
 
-\subsection{Bankruptcy of Bank}
+\subsection{Breaking the bank}
 
-Banks will go bankrupt when their funds run out. If the bank goes
-bankrupt, it will run until the end of the game turn and the game will
-end.
+The bank breaks when there is insufficient money to pay players or
+companies, e.g. for operating revenue or share sales. The game will
+end at the end of the current game turn.
 
-We prepare for "banknote for game end" to use at the time of
-bankruptcy to spread game. If it is not enough to use it, it is good
-to use poker chips etc. as \ 1,000.
+Use whatever means necessary (e.g. additional banknotes/poker chips,
+spreadsheet) to track additional cash flows until the end of the game.
 
-\subsection{The end of the game turn}
+\subsection{Final game turn}
 
-When the game turn indicated at the end of the scenario game is over,
-the game is over and end processing is performed.
+When the last game turn indicated by the scenario is finished, the game is over.
 
-% ①③.ゲームの終了
 
-% ゲーム終了時に資産を一番多く所有しているプレーヤーが勝者となります。
+\section{Forced sale of shares}
 
-% ①③.①ゲームの終了
-
-% ゲームは基本的に③通りの方法で終了します。プレーヤーの破産か、銀行の破
-% 産、ゲームターン終了(シナリオによる)によるものです。バリアントによっ
-% て、異なる終わり方の時もあります
-
-% ゲームが終了した時、資産の一番大きいプレーヤーが勝者になります。破産
-% したプレーヤーが勝利することもあります。以下の合計を、個人の資産とし
-% て扱います。
-
-% ・プレーヤーの保有する手持ちの資金。
-% ・市覧価格(株価表上の金額)に挺算した株狸
-% ・個人会社、小会社、後発会社の額面価格。
-
-% ①③.①.①ゲームの終了処理
-
-% ゲームの終了処理をより、誤りのないようにするため、以下の手順を薙めま
-% す。
-
-% ①、各会社に残っている現金を全て銀行へ返却します。
-
-% ②、全ての手持ちの株券を現金に交换します。株価の低いものから、全プレー
-% ヤー同時に交換していきます。
-
-% ③、個人会社、小会社後発会社を額面価格にて、交換します
-
-% ④,お互いの手元の現金を比べます。
-
-% １３.②プレーヤーの破産
-
-% 支払いに必要な資金をプレーヤーが用意できないとき、そのプレーヤーは破
-% 産します。どのプレーヤーも会社も、その時點からどのような行動も行えま
-% せん。
-
-% 何かしら方法があるにもかかわらず自発的に破産を宜言することはできません。
-
-% 小会社、公共会社において、列車購入義務が発生し、手持ち資金を全て出し、
-% 株券の強制売却を行なっても、列車を購入できなければ、その社長プレーヤー
-% は破産します,破産したプレーヤーの列車に支払う為に準備した全ての現金は、
-% 銀行に没収され、残りの支払いは免除されます。その後、直ちにゲーム終了
-% の処理を行います。
-
-% ①③.③　銀行の破産
-
-% 銀行の資金がなくなると銀行の破産となります。銀行が破産したときは、そ
-% のゲームターン終了まで実行してゲーム終了となります。
-
-% ゲームを繁継するために破産時に使用する`ゲーム終了用紙幣」を用意してい
-% ます。それを使用しても足らない場合、ポーカーチップ等を\①,000として使
-% 用するとよいでしょう。
-
-% ①③.④ゲームターンの終了
-
-% シナリオのゲームの終了で示されんたゲームターンを終えると、ゲーム終了
-% となり、終了処理を行います。
-
-\section{Forced sale of share certificates}
-
-There are two situations in which the president of a company has to
-forcibly sell stock certificates.
+There are two situations in which the player is forced to sell stock
+certificates.
 \begin{itemize}
-\item If you have a claim beyond the limit of the claim, we will sell
-  the stock to meet the limit in the next round of share.
+\item They hold shares beyond the certificate and/or ownership
+  limits. In their next stock round turn, they must sell shares to
+  comply with the limits.
 
-\item When a small company or public company that does not hold a
-  train lacks cash to buy a train, the president pays the shortfall If
-  it is not enough to add cash owned by the president, the president
-  ’s Sell ​​the stock you own and make the necessary cash. If you sell
-  all of the available shares, if the player does not have the funds
-  to pay, the president's player goes bankrupt and the game ends
-  immediately.
+\item If they are the president of a minor or public company which is
+  obliged to buy a train, and their cash on hand combined with the
+  company treasury is insufficient to do so. They must sell shares to
+  raise the necessary cash. If all possible sales have been made and
+  they still cannot afford a train, the player is bankrupt and the
+  game ends immediately.
 \end{itemize}
 
 The following rules apply to all forced sale of stock certificates.
 \begin{itemize}
-\item We can not sell that a change of the president of the railway
-  company that caused the forced sale will occur. We can perform sale
-  that president change of other companies occurs
+\item Shares cannot be sold that would cause a change of presidency of
+  the company which caused the forced sale. However, sales can be made
+  which would cause a change of presidency in other companies.
 
 \item The president decides which company's stock certificates, in
   what order, and how many to sell
@@ -2549,122 +1421,71 @@ The following rules apply to all forced sale of stock certificates.
 
 \item All shares to be sold must be sold together.
 
-\item Share market, share certificates, holding restrictions of
-  rights, all rules apply
+\item Open market limits, certificate limits, and ownership limits, all apply.
 
-\item The president can only sell shares for the amount necessary for
-  payment.
+\item The president can only sell shares for the amount necessary to
+  purchase the train.
 \end{itemize}
 
-Even if the public company that caused the train purchase is shut down
+Even if the public company that caused the forced train purchase is closed
 due to a forced sale, all cash prepared for payment of the train will
 be seized by the bank. At this time, if the train is purchased, the
-train will It will be in the open market.
+train will be put in the open market.
 
-% ①④.株券の強制売却
 
-% 会社の社長が株券を強制的に売却しなくてはいけない状況が②つあります。
-
-% ・権利書の保有制限を越えて権利書を持っていた時、次回の株式ラウンドに
-% 保有制限を満たすように株を売却します。
-
-% `列車を保持していない小会社か公共会社が、列車を購入するための現金が足
-% りない時、社長が足りない分を支払います社長の所有する現金を追加しても
-% 足りなければ、社長の所有する株券を売却して必要な現金をつくりだします。
-% 全ての売却できる株券を売却しても、支払いに必要な資金ができなければ、
-% その社長のプレーヤーは破産し、ゲームはただちに終了します。
-
-% 株券の強制売却の全てに以下のルールが適用されます。
-
-% ・強制売卿の原因になった鉄道会社の社長の交代が起こる売却はできません。
-% 他の会社の社長交代が起こる売却は行えます
-
-% ・どの会社の株券を、どういう順番で、何枚売却するかは、社長が決定しま
-% す
-
-% ・株券が売却されることによって、公共会社が閉鎖しても構いません。この
-% 場合は、ここで作られた全ての現金は銀行に淡収されます。
-
-% `売却される全ての株券は、まとめて売却されなくてはいけません。
-
-% `株式市場、株券、権利書の保有制限、全てのルールが適用されます
-
-% ・社長は支払いに必要な分だけしか株券を売却できません.
-
-% 強制売却により、その列車購入の原因となった公共会社が閉鎮されても、列
-% 車の支払いに準備した現金は全て銀行に没収されますこの時、列車が購入さ
-% れていれば、その列車は、公開市場に置かれます。
+\newpage
 
 \section*{Scenarios}
 
-The 1890 has a relatively short-duration deployment scenario and It
-consists of a scenario. Depending on the skill of the player, decide
-which scenario to play. For each scenario, how many There is also an
-option available, so change the play Please try for it. We are
-preparing the following scenario.
+Several scenarios are available for selection depending on desired
+play time and/or player skill.
 
-A Hanshin Railway 2-3 hours
-
-B Keihanshin Railway 2-3 hours
-
-C 1890 3 to 5 hours
-
-D 1890 Simplified version 3 to 5 hours
-
-% シナリオ
-
-% ①⑧⑨0は、比較的、短晴間終了可能な導入用シナリオと本
-% シナリオからなります。プレーヤーの技量によって、どのシナ
-% リオをプレイするのか決定して下さい。各シナリオに、いくつ
-% かのオプションも用罪していますので、プレイに変化をつける
-% ためにもお試し下さい。以下のシナリオを準備しています。
-
-% Aム阪祐レーヤルウェイ②へ⑧③時間
-
-% B京阪枯レーレウェイ②へ③時間
-
-% Ct⑧⑨0~③~⑤時間
-
-% D①⑧⑨0簡易版③へ⑤時間
+\begin{enumerate}[label=\Alph*]
+\item Hanshin Railways: 2 to 3 hours, 2 to 4 players
+\item Keihanshin Railways: 2 to 3 hours
+\item 1890: 3 to 5 hours
+\item 1890 Simplified: 3 to 5 hours
+\end{enumerate}
 
 \newcounter{scenario}
-%\setcounter{section}{0}
+\renewcommand*{\thesection}{\Alph{section}}
+\renewcommand*{\theHsection}{scenarios.\Alph{section}}
+\setcounter{secnumdepth}{3}
+\setcounter{section}{0}
 
-\section*{Scenario A}
-Hanshin Railway Ver 1.4.1
+\section{Hanshin Railways Ver 1.4.1}
 
 This scenario was designed to play as an 18XX introductory game. It is
-designed to end the game quickly with a small number of people, with
-almost the same concept of phase. Once you get used to it, you can
-finish 1 game in 2 hours to 3 hours.
+designed to finish quickly with a small number of players, and almost
+the same game phase structure. Experienced players can finish a game
+in 2 to 3 hours.
 
-Experience the battle between Hanshin through the battle between
-Hanshin Railway, Hankyu Railway, and JR's three teams.
+Experience the battle of railways in Hanshin between Hanshin Railway,
+Hankyu Railway, and JR.
 
-In this scenario, six trains, D trains are very unlikely to
+In this scenario, 6 trains and D trains are very unlikely to
 appear. Once you get used to it, try playing the next `Keihanshin
-Railway Scenario`.
+Railways Scenario`.
 
-\subsection*{A1 Number of players}
+\subsection{Number of players}
 
-2-4 people (2-3 people recommended)
+2 to 4 (2 to 3 recommended)
 
-Two-player play is a severe game development. Three-player play is an
-enjoyable development. A four-player game will be a development that
-will not remain.
+The two-player game is an austere experience whereas the three-player
+game is more enjoyable. The four-player game is an unending
+experience.
 
-\subsection*{A2 Map}
+\subsection{Map}
 
-We will use the whole area base west of Kobe (in the direction of
-Kobe) than the Kamogawa (a river flowing around the hex) including
-Kyoto B and Osaka Kita. It is not possible to extend the line tiles
-towards Awakawa as per traditional Rule.
+The entire map west of the Yodo River (towards Kobe), including Osaka
+Kita and Kyoto. As per the normal rules, track tiles may not be laid
+pointing towards the Yodo River.
 
-\subsection*{A3 Track Tiles}
+\subsection{Track tiles}
 
-All usable (except for special terrain and used castles).
+All usable (except for special tiles cities not included in the scenario).
 
-\subsection*{A4 Trains}
+\subsection{Trains}
 \begin{tabular}{ll}
 Type & Count \\
 \hline
@@ -2678,15 +1499,10 @@ Type & Count \\
 D & 5
 \end{tabular}
 
-\subsection*{A5 Money}
-
-Bank funds will be used only for a total of \yen 6,000. All of
-\yen 500 and \yen 1,000 are bankruptcy processing banknotes.
-
-Banker gives player money at the start of the game
-
-The amount of money possessed is the amount of
-\yen 1,500 divided by the number of people.
+\subsection{Money}
+The bank size is 6,000円. Set aside all 500円 and 1000円
+banknotes for use after the bank breaks. Divide 1,500円 evenly
+among players as starting capital.
 
 \begin{tabular}{|l|c|c|c|}
 \hline
@@ -2696,15 +1512,12 @@ Start Money & 750 & 500 & 375 \\
 \hline
 \end{tabular}
 
-\subsection*{A6 Phases}
+\subsection{Phases}
+Phase 1 to phase 6 are played as normal. However, the concept of the
+first half and second half of phases 1 and 2 is not relevant.
 
-The first phase to the sixth phase are played normally. However, the
-concept of the first half of the second half will disappear
-
-\subsection*{A7 Certificate Limits}
-
-The following number is the number limit of the player's title.
-
+\subsection{Certificate Limits}
+Use the following certificate limits according to the number of players:
 
 \begin{tabular}{|l|c|c|c|}
 \hline
@@ -2714,102 +1527,106 @@ Certificates & 16 & 12 & 10 \\
 \hline
 \end{tabular}
 
-
-\subsection*{A8 Companies}
-
+\subsection{Companies}
 Due to the limited scope of the map, fewer companies are used. There
-are 5 private companies, 1 small company and 4 public companies. In
-this scenario, except for those converted from Kobe Electric Railway
-to a generic company, we do not use a generic company. Also, at the
-start of the game, the initial stock round will start in the following
-company order. Kyotsu Railway and Osaka City Tram use the par value
-and the dividend amount as shown below.
+are 5 private companies, 1 minor company and 4 public companies. Late
+private companies are not used, except in the case where Kobe Electric
+Railway converts to a late private company. Also, at the start of the
+game, the initial stock round will start in the following company
+order. Keishin Railway and Osaka Municipal Electric Railway use the par
+value and the dividend amount as shown below.
 
-\begin{tabular}{llll}
- & Company (par/revenue) & Type & Modified? \\
+\begin{table*}
+\begin{tabular}{lllll}
+ & Company & Par/Revenue (円) & Type & Modified? \\
 \hline
-A & Arima Railway (20/5) & Private company & \\
-B & Kobe City Tram (40/10) & Private company & \\
-C & Keishin Railway (60/15) & Private company & X \\
-D & Hanshin National road orbit (110/20) & Private company & \\
-E & Osaka Tramway (120/30) & Private company & X \\
-F & Kobe Electric (100) & Minor company & \\
+A & Arima Railway & 20/5 & Private & \\
+B & Kobe Tramway & 40/10 & Private & \\
+C & Keishin Railway & 60/15 & Private & X \\
+D & Hanshin Tramway & 110/20 & Private & \\
+E & Osaka Municipal Electric Tramway & 120/30 & Private  & X \\
+F & Kobe Electric Railway & 100/- & Minor  & \\
 \end{tabular}
+\end{table*}
 
-\subsubsection*{A8.1 Private Companies}
+\subsubsection{Private Companies}
 
 In this scenario, every private company can be purchased by a public
-company. The hexes with tracks for these private companies can not
-deploy track tiles until the private company is purchased by a public
-company or closed. The benefits and information rails of each
-individual company are as follows:
+company. Until the private company is purchased by a public company or
+closed, the hexes with tracks for these private companies can not have
+track tiles laid on them. The rules and benefits for each private
+company are as follows:
 
 \begin{description}
-\item[Arima Railway] \yen 20 / \yen 5
+\item[Arima Railway] 20円 / 5円
 
-Once purchased by a public company, you can
-place additional tiles on Arima in addition to the regular track tile
-placement. The track tiles need not be connected. This point
-disappears when Arima Railway closes
+  Once purchased by a public company, you can place an additional tile
+  on Arima in addition to the regular track tile placement. The track
+  tile does not need to be connected. This power disappears when Arima
+  Railway closes.
 
-\item[Kobe City Tramway] \yen 40 / \yen 10
+\item[Kobe City Tramway] 40円 / 10円
 
-There are no special features.
+  There are no special features.
 
-\item[Keishin Railway]  \yen 60 / \yen 15
+\item[Keishin Railway]  60円 / 15円
 
-There are no special offers.
+  There are no special features.
 
-\item[Hanshin National Highway Orbit] \yen 110 / \yen 20
+\item[Hanshin National Highway Orbit] 110円 / 20円
 
-Hanshin Electric Railway's stock certificate comes with one share.
+  Comes with one share of Hanshin Electric Railway.
 \end{description}
 
-\subsubsection*{A8.2 late departure company}
+\subsubsection{Late private companies}
 
-Except for Kobe Electric, which shifts from a subsidiary company to a
-generic company, we will not use a generic company.
+Late private companies are not used except for the case of exchanging
+the Kobe Electric Railway minor company for a late private company.
 
-\subsubsection*{A8.3 small company}
+\subsubsection{Minor Companies}
 \begin{description}
-\item[Kobe Dentetsu] Home: Tanigami Par Value: \yen 100 Capital: \yen 200
+\item[Kobe Electric Railway] \hfill
 
-Kobe Electric Co., Ltd. can directly say that it will be a subsidiary
-company at any time of the operation round. After becoming a
-subsidiary company, station tokens are eliminated and all assets are
-returned to the bank. Although Kobe Steel's later-developed company's
-rights document will no longer be included in the holding
-restrictions, its par value will be \yen 0. From this point on, it is
-acceptable for a general company to place a station token in the city
-(Tanikami) where the station token of Kobe Electric Railway was
-placed.
+  Home: Tanigami \hfill Par Value: 100円  \hfill Starting Capital: 200円
+
+  At any point during it's operating round turn, Kobe Electric Railway
+  may convert to a late private company. After converting, station
+  tokens are remvoed and all assets are returned to the bank. Although
+  the Kobe Electric Railway late private company certificate does not
+  count toward the certificate limit, its face value is 0円. From
+  this point onwards, any public company may place a station token in
+  the city previously occupied by Kobe Electric Railway's token
+  (Tanigami).
+
 \end{description}
 
-\subsubsection*{A8.4 Public company}
-You can say that you decide to deploy the game. Most of the special
-rules are not used to make the game progress smoothly.
+\subsubsection{Public companies}
+It is said that the development of the game is driven by public
+companies. In order to ease play, no special rules are used for this
+scenario.
 \begin{description}
-\item[Hanshin (Hanshin Electric Railway)] Home: Nishitomi Stations: 3
+\item[Hanshin (Hanshin Electric Railway)] \hfill
 
-  The company is established when 4 shares are purchased because 1
-  share of Hanshin stock is added at the time of Hanshin national
-  highway track purchase
+  Home: Nishitomi \hfill Stations: 3
 
-  The Hanshin stock attached to the Hanshin National Highway can not
-  be sold until the president stock of Hanshin is purchased.
+  The company is started when 4 shares are purchased because 1 share
+  of Hanshin stock comes with the Hanshin Tramway private company.
 
-\item[Hankyu (Hankyu Corporation)] Home: Toyonaka Station: 4
+  The Hanshin stock attached to the Hanshin Tramway can not be sold
+  until the president stock of Hanshin is purchased.
 
-  There is no benefit.
+\item[Hankyu (Hankyu Railways)] \hfill
+Home: Toyonaka \hfill Stations: 4
 
-\item[JR (Japan National Railways)]
+  No special rules.
 
-HQs: Osaka Kita, Kyoto, Nanaga, Kobe Station: 6
+\item[JR (Japan Railways)] \hfill
+Homes: Osaka Kita, Kyoto, Nara, Kobe \hfill Stations: 6
 
-JR will treat it as a regular public company except for the following rules:
+JR is treated as a regular public company except for the following rules:
 \begin{itemize}
-\item The stock price at establishment should be \ 100.
-\item There are more train restrictions than other public companies.
+\item The par price must be 100円.
+\item JR has a higher train limit than other public companies.
 
 \begin{tabular}{ll}
   Phase & Limit \\
@@ -2818,1391 +1635,827 @@ JR will treat it as a regular public company except for the following rules:
   2-3 & 4 \\
   4-6 & 3
 \end{tabular}
-\item When you distribute the revenue from the operation of the train,
-  it is always a half dividend. First of all, half of the income is
-  paid as retained earnings to the company's bank account, and only
-  the remaining half of the money is distributed \ 20 unearned
-  fractions to the company). In the case of non-delivery, we add all
-  the revenue to the company's funds.
-\item You can replace two track tiles in two hexes in the first three
-  phases. Placement or change of tiles in the same hex is prohibited.
+\item JR can only distribute operating revenue as half dividends. Half
+  of the revenue (rounded up to the nearest 10円) is paid directly
+  to the company treasury, the remaining half is distributed among
+  shareholders. Revenue can also be withheld as normal.
+\item In game phases 1 to 3, may place or upgrade two track tiles in
+  two different hexes. Performing two tile actions on the same hex is
+  not allowed.
 \end{itemize}
 
-\item[Sanyo (Sanyouden)] Home: Akashi Stations: 2
+\item[Sanyo (Sanyo Electric Railway)] Home: Akashi Stations: 2
 
-There is no benefit.
+No special rules.
 \end{description}
-\subsection*{A9 End of the game}
+\subsection{End of the game}
 
 The game will end if any of the following conditions are met:
 \begin{enumerate}
-\item when the bank went bankrupt
+\item The bank breaks
 
-\item when the player went bankrupt
+\item Player bankruptcy
 
-\item 10 When the game turn is over
+\item After 10 game turns.
 \end{enumerate}
 
-\subsection*{A10 Variants}
+\subsection{Variants}
 
 Please try to provide some variants. Also, try using the 1890 scenario
 variant if you are used to it.
 
-\subsubsection*{A10.1 Specialization of public companies}
+\subsubsection{Specialization of public companies}
 
-Incorporate and play the special rules of each railway company in the
-1890 scenario Which rules should be used, please determine at each
-player threshold
+Incorporate and play by the special rules of each railway company from the
+1890 scenario.
 
-\subsubsection*{A10.2 Change of Money}
+\subsubsection{Start capital}
 
 Reduce the amount of money held by the first player. The amount of
 money should be decided between players.
 
-\subsubsection*{A10.3 JR's rule change}
+\subsubsection{JR's rule change}
 
-Like ordinary railway companies, placement or replacement of track
-tiles can only be performed once in their own operation. It is also
-interesting to abolish other special rules of JR according to the
-player's agreement I think.
+Play without special rules for JR (extra track actions, half
+dividends, fixed par price).
 
-\subsubsection*{A10.4 Change of game turn end}
+\subsubsection{Number of game turns}
 
-The game ends in 8 game turns.
+The game ends after 8 game turns instead of 10.
 
+\newpage
+\section{Keihanshin Railway Ver1.2}
 
-% シナリオA
-% 阪神レールウェイVer 1.④.①
+This scenario is an extension to the Hanshin Railways
+scenarios. Frequently, the 6 trains will not come out.
 
-% このシナリオは、①⑧XXの導入ゲームとしてプレイすることを考え作或されん
-% ました。フェイズの概念をほとんどそのままで、少人数で早くゲームが終了
-% するように設計されています。慣れれば、①ゲームを、②へ③時間で終了するこ
-% とができます。
+\subsection{Number of players}
 
-% 阪神畿鉄と阪急電鉄、そしてJRの三つ巴の戦いを経て阪神間が開発されていく檜を体験してみてください。
+2 to 4 players
 
-% このシナリオでは、6列車、D列車が非常に登場しにくくなっています。慣れてきたら、次の`京阪神レールウェイ・シナリオ」をプレイしてみて下さい。
+\subsection{Map}
 
-% A①　プレイ人数
+The entire map west of the Yodo River, and also the hexes directly
+adjacent to the east (right) of the Yodo River. Osaka city includes
+Osaka Kita and Osaka Higashi. The hex to the east of Kyoto is also
+used.
 
-% ②ー④名(②~③名を推奨)
-% ②人プレイは、シビアなゲーム展開となります。③人プレイは、楽しめる展開。④人プレイは、ままならない展開となるでしょう。
-
-% A②マップ
-
-% 京都B、大阪北を含む淀川（ヘクス辺を流れる川)より西(神戸方向)の全地基を使用します。従来のルーレどおり淡川に向けて線路タイルを延ばすことは出来ません。
-
-% A③線路タイル
-
-% 全て使用可能(特殉地形で使用城以外のものを除く)。
-
-% A④列車
-
-% ②列車 ⑤輌
-
-% ②－②列車 　使用しません
-
-% ③列車 ④輌
-
-% ③－３列車 使用しません
-
-% ④列車 ③輌
-
-% ⑤列車 ②輌
-
-% ⑥列車 ①輌
-
-% D列車 ⑤輌
-
-% A⑤資金
-
-% 銀行の資金は祓、合計\⑥,000-のみを使用します。全ての
-% 500-、\1,000-が、破産処理用紙幣となります。
-
-% 銀行家が、ゲーム開始時の所持金をプレーヤーに配ります
-
-% 所持金は、\①,⑤00-を人数分で翻った金額となります。
-
-% A⑥フェイズ
-
-% 第①フェイズへ~第⑥フェイズまで、通常どおりプレイされます。但し、上期下期の概念は無くなりますれ
-
-% A⑦権利書の枚数制限
-
-% 以下の枚数をプレーヤーの権利書の枚数制限とします。
-
-% A⑧会社
-
-% マップの範 囲が限定されるため、使用される会社の数が少なくなっています。
-% 個人会社は⑤社、小会社は①社、公共会社は④社を使用します。なお、このシナ
-% リオでは、神戸電鉄から後発会社へ転極するものを除き、後発会社を使用し
-% ません。また、ゲーム開始時に、以下の会社の順番で初期株式ラウンドを開
-% 始します。京津鉄道と、大阪市電は、額面価格と配当金額を下記のように変
-% 宇して使用しまれ
-
-% A 有馬鉄道(②0/⑤)個人会社
-% B 神戸市電　(④0/①0)個人会社
-% C 京津鉄道（⑥0/①⑤)個人会社 変更
-% D 阪神国道軌道(①①0/②0)個人会社
-% E 大阪市電(①②0/③0) 個人会社 変更
-% F 神戸電鉄(①00)小会社
-
-% A⑧.①個人会社
-
-% このシナリオでは、全ての個人会社は、公共会社が購入することができます。
-% これらの個人会社の線路のあるヘクスは、その個人会社が公共会社に購入さ
-% れるか、閉鎖 するまで、線路タイルを配置することが出来ません。各個人会
-% 社の特典や情曽レールは、以下のとおりですむれ
-
-% 有馬鉄道 \20/\5
-
-% 公共会社が購入すると、通常の線路タイルの配置に加え、有馬に追加のタイ
-% ルを配置出来ます。線路タイルが繋がっている必要はありません。有馬鉄道
-% が閉鎮するとこの得点は消滅しまむ
-
-% 神戸市電\④0/\1０
-% 特に特瞞はありません。
-
-% 京津鉄道Y\⑥0/\1⑤
-% 特に特典はありません。
-
-% 阪神国道軌道　①10/\20
-% 阪神電鉄の株券①株が付属します。
-
-% A⑧.②後発会社
-
-% 子会社から後発会社へ転换る神戸電鉄を除き、後発会社を使用しません。
-
-% A⑧.③小会社
-% 神戸電鉄本拠地: 谷上\100 資本金\②00
-
-% 神戸電鉄は、運営ラウンドのいつでも、後発会社化を直言することができま
-% す。後発会社化すると、駅トークンは除去され、全ての資産は、銀行に戻さ
-% れます。神戸電鉄の後発会社化した権利書は、持ち株制限に含まれなくなり
-% ますが、額面価格は\0となります。これ以後、神戸電鉄の駅トークンの配置
-% してあった都市(谷上)に、一般の会社が駅トークンを配置しても構いませ
-% ん。
-
-% A⑧.④公共会社
-% ゲームの展開を決定すると言ってもいい公共会社でむ。ゲームの進行をスムーズにするため、佐とんどの特別ルールは、使用しません。
-
-% 阪神(阪神電気鉄道)
-% 本拠地:西富 駅:③
-% 阪神国道軌道購入時に阪神の株が①株付加しているため、④株購入されると会社が設立されます
-
-% 阪神の社長株が購入されんるまでは、阪神国道軌道に付加した阪神株は、売却することができません。
-
-% 阪急(阪急電鉄)
-% 本拠地:豊中 駅:④
-% 特典はありません。
-
-% JR(lB:日本国有鉄道)
-% 本拠地:大阪北、京都、奈長、神戸 駅:⑥
-% JRは、下記のルーレを除き、通常の公共会社として扱います。
-% ・設立時の株価は\①00でなければいけません。
-% ・持ち列車制限が他の公共会社より多くなっています。
-% 第①フェイズ　⑥輌
-% 第②－③フェイズ　④輌
-% 第④－⑥フェイズ　③輌
-
-% ・列車の運行による収益を配当するときは、必ず半配当となります。まず収
-% 益の半分は内部留保として会社の金庵へ納められ、残りの半分の資金のみを
-% 配当します\②0未濫の端数は会社へ)。無配を実施する場合には、収益の全て
-% を会社の資金に追加します。
-
-% ・第①~③フェイズに②ヶ所のヘクスに線路タイル②枚を、配酪か置き換えするこ
-% とができます。同一ヘクスでのタイルの配置や変更は、禁止します。
-
-% 山陽(山陽電鋒)
-% 本拠地:明石 駅:②
-% 特典はありません。
-
-% A⑨.0　ゲームの終了
-
-% 次の条件のいずれかを満たせば、ゲームを終了しますれ
-
-% ①、銀行が破産したとき
-
-% ②、プレーヤーが破産したとき
-
-% ③,　①0ゲームターンが終了したとき
-
-% A①0バリアント
-
-% いくつかのバリアントを提供しますお試し下さい。また、慣れれば①⑧⑨0シナリオのバリアントも、使用してみて下さい。
-
-% A①0.①公共会社の特殊化
-
-% ①⑧⑨0シナリオにある各鉄道会社の特別ルーレを取り入れてプレイしますどのルーレを用いるのかは、各プレーヤー閾で狐定して下さい
-
-% A①0.②所持金の変更
-
-% 最初のプレーヤーの所持金を減額します。金額については、プレーヤー間で決定して下さい。
-
-% A①0.③JRのルール変更
-
-% 通常の鉄道会社のように自分の運営手番にた①回だけしか、線路タイルの配置
-% か置き換えは行えないものとしますプレーヤーの合意によって他のＪRの各種
-% 特別ルールレを廃止してみるのもおもしろいかと思います。
-
-% A①0.④ゲームターン終了の変更
-
-% ⑧ゲームターンで、ゲーム終了とします。
-
-\section*{Scenario B Keihanshin Railway Ver1.2}
-
-This scenario is an expansion game of Hanshin Railway, and the
-situation where no one buys 6 trains seems to come out so much.
-
-\subsection*{B1 number of players}
-
-2 to 4 people
-
-\subsection*{B2 map}
-
-From Kyoto B to Osaka North, use the whole area base west of Kobe
-(toward Kobe) from the adjacent hexes (including the hexes on the foot
-of the Shogawa River) that are adjacent to the Akebonogawa River (a
-river that flows through the hex sides). Osaka city uses Osaka Kita
-and Osaka East. The hex next to the east (right) of Kyoto B is also
-used
-
-\subsection*{B3 track tile}
+\subsection{Track tiles}
 
 All usable (except for unused special locations).
 
-\subsection*{B4 train}
+\subsection{Trains}
 
-2 trains 5 cars
-Do not use 2-2 trains
-3 trains 4 trains
-Do not use 3-3 trains.
-4 trains 3 cars
-5 trains 2 cars
-6 trains 1 train
-D train 6
-
-\subsection*{B5 Money}
-
-The bank's funds only use a total of ¥ 6,000-. All 500-and 1000-will
-be bankruptcy banknotes.
-
-The banker gives the player the money he holds at the start of the
-game. The down payment is 1500- divided by the number of players.
-
-\begin{tabular}{|l|l|l|l|}
+\begin{tabular}{ll}
+Type & Count \\
 \hline
-Players & 2 & 3 & 4\\
+2 & 5 \\
+2-2 & Not used \\
+3 & 4 \\
+3-3 & Not used \\
+4 & 3 \\
+5 & 2 \\
+6 & 1 \\
+D & 6 \\
+\end{tabular}
+
+\subsection{Money}
+The bank size is 6,000円. Set aside all 500円 and 1000円 for
+use after the bank breaks.
+
+Divide 1,500円 evenly among players as starting capital.
+
+\begin{tabular}{|l|c|c|c|}
 \hline
-Start Money & 750 & 500 & 375\\
+Players & 2 & 3 & 4 \\
+\hline
+Start Money & 750 & 500 & 375 \\
 \hline
 \end{tabular}
 
-\subsection*{B6 Phases}
+\subsection{Phases}
+Phase 1 to phase 6 are played as normal. However, the concept of the
+first half and second half of phases 1 and 2 is not relevant.
 
-The game is played normally from the first phase to the sixth
-phase. However, the concept of the first half and second half
-disappears.
+\subsection{Certificate Limit}
+Use the following certificate limits according to the number of players:
 
-\subsection*{B7 Certificate Limit}
-
-The following number is the number limit of the player's title.
-
-\begin{tabular}{|l|l|l|l|}
+\begin{tabular}{|l|c|c|c|}
 \hline
-Players & 2 & 3 & 4\\
+Players & 2 & 3 & 4 \\
+\hline
 Certificates & 16 & 12 & 10 \\
 \hline
 \end{tabular}
 
-\subsection*{B8 Companies}
-
+\subsection{Companies}
 Due to the limited scope of the map, fewer companies are used. There
-are five private companies, one small company, and five public
-companies. In this scenario, except for the conversion from Kobe
-Electric Railway to a generic company, we do not use a generic
-company. Also, at the start of the game, we will start the initial
-stock round in the following company order: Osaka City Tram changes
-the par value and dividend amount as follows and uses it
+are 5 private companies, 1 minor company and 5 public companies. Late
+private companies are not used, except in the case where Kobe Electric
+Railway converts to a late private company. Also, at the start of the
+game, the initial stock round will start in the following company
+order. Osaka Municipal Electric Railway uses the modified par
+value and the dividend amount as shown below.
 
-\begin{tabular}{lllc}
- & Company (par/revenue) & Type & Modified? \\
+\begin{tabular}{lp{2cm}llc}
+ & Company & Par/Revenue (円) & Type & Modified? \\
 \hline
-A & Arima Railway (\yen 20/\yen 5) & Private company & \\
-B & Kobe City Tramway (\yen 40/\yen 10) & Private company & \\
-C & Hanshin national road orbit (\yen 110/\yen 20) & Private company & \\
-D & Osaka City Tram (\yen 120/\yen 30) & Private company & X \\
-E & Keishin Railway (\yen 160/\yen 25) & Private company & \\
-F & Kobe Electric (\yen 100) & Minor company & \\
+A & Arima Railway & 20/5 & Private  & \\
+B & Kobe Tramway & 40/10 & Private  & \\
+C & Hanshin Tramway & 110/20 & Private  & \\
+D & Osaka Municipal Electric Tramway & 120/ 30 & Private  & X \\
+E & Keishin Railway & 160/25 & Private & \\
+F & Kobe Electric Railway & 100/- & Minor & \\
 \end{tabular}
 
-\subsection*{B8.1 individual company}
+\subsection{Private Companies}
 
-Same as Hanshin Railway scenario. However, the following changes will
-be made to Keitsu Railway.
-
-\begin{description}
-\item[Keishin Railway]  \yen 60/ \yen 15
-
-There are no special offers.
-\end{description}
-
-\subsection*{B8.2 Subsidiary}
-Similar to the Hankyu Railway scenario
-
-\subsection*{B8.3 Late private companies}
-Hanshin Railway scenario same rights,
-
-\subsection*{B8.4 Public companies}
-As with the Hanshin Railway scenario, however, Keihan will be added.
+Same as the Hanshin Railways scenario. However, the following changes will
+be made to Keishin Railway.
 
 \begin{description}
-\item[Keihan (Keihan Express Railway)] Base: Hirakata Station: 3
+\item[Keishin Railway]  160円/ 25円
 
-The company will be established if 4 shares are purchased from the
-first position, since Keihan shares will be added at the time of
-purchasing Keishin Railway, and it will be added to Keihan Railway
-until Keihan's president stock is purchased. Share certificates can
-not be sold.
+Comes with one regular share of Keihan Electric Railway.
 \end{description}
 
-\subsection*{B9 End of the game}
+\subsection{Minor companies}
+Same as the Hanshin Railways scenario
+
+\subsection{Late private companies}
+Same as the Hanshin Railways scenario
+
+\subsection{Public companies}
+Same as Hanshin Railway scenario, with the addition of Keihan Electric Railway.
+
+\begin{description}
+\item[Keihan (Keihan Electric Railway)] \hfill
+
+Homee: Hirakata \hfill Stations: 3
+
+The company will be started if 4 shares are purchased from the initial
+offer, since the Keishin Railway private company comes with one share of
+Keihan Electric Railway. No shares of Keihan Electric Railway may be
+sold until its president's certificate has been purchased.
+\end{description}
+
+\subsection{End of the game}
 The game ends if any of the following conditions are met,
 \begin{enumerate}
-\item when the bank has a play
-\item when the player went bankrupt
-\item When the 8 game turns have passed
+\item The bank breaks
+\item Player bankruptcy
+\item After 8 game turns
 \end{enumerate}
 
-\subsection*{B10 Variants}
+\subsection{B10 Variants}
 Same with the Hanshin Railway scenario
 
-
-% シナリオ B
-% 京阪神レールウェイVer①.②
-
-% このシナリオは、阪神レールウェイの拡張ゲームですむ誰も⑥列車を購入しないという状況は、そうそう出てこないかと思しヽます。
-
-% B①プレイ人数
-
-% ②へ④名
-
-% B②　マップ
-
-% 京都Bから大阪北を含むe淀川(ヘクス辺を流れる川)の隣接するヘクス(淀川の東俵のヘクスも含む)より西(神戸方向)の全地基を使用しますれ。大阪市内は、大阪北と大阪東を使用します。京都Bの東隣(右)のヘクスも使用しまれ
-
-% B③線路タイル
-
-% 全て使用可能(特残地形で使用基以外のものを除く)。
-
-% B④列車
-
-% ②列車⑤輌
-% ２－②列車使用しません
-% ③列車④輛
-% ③－③列車使用しません.
-% ④列車③輌
-% ⑤列車②輌
-% ⑥列車①輛
-% D列車6
-
-% B⑤資金
-
-% 銀行の資金は、合計\⑥,000-のみを使用します。全ての５00-、１,000-が、破産処理用紙幣となります。
-
-% 銀行家が、ゲーム開始時の所持金をプレーヤーに配ります所降金は、１⑤00-を人数分で割った金額となります
-
-% ス変|るトライ
-% 昌拳を|⑦⑤0|⑤00|③⑦⑤
-
-% B⑥フェイズ
-
-% 第①フェイズ~第⑥フェイズまで、通常どおりプレイされます。但し、上期下期の概念は無くなります。
-
-% B⑦権利書の枚数制限
-
-% 以下の枚数をプレーヤーの権利書の枚数制限とします。
-
-% 変|ラタライ」
-% 権周書|⑯|⑫　①0
-
-% B⑧会社
-
-% マップの範囲が限定されるため、使用される会社の数が少なくなっています。個人会社は⑤社、小会社は①社、公共会社は⑤社を使用します,なお、このシナリオでは、神戸電鉄から後発会社へ転換するものを除き、後発会社を使用しません。また、ゲーム開始時に、以下の会社の順番で初期株式ラウンドを開始します,。大阪市電は、額面価格と配当金額を下記のように変更して使用します
-
-% A有馬鉄道〈(②0ノ⑤)個人会社
-% B神戸市電(④0ノ①0)個人会社
-% C阪禄国道軌道(①①0ノ②0個人会社
-% D大阪市電(①②0ノ③0⑦個人会社変更
-% E京津鉄道(①⑥0ノ②⑤)個人会社
-% F神戸電鉄(①00)小会社
-
-% B⑧.①個人会社
-
-% 阪神レールウェイ・シナリオと同樣。但し以下のように京津鉄道に変更を加えます.
-
-% 京津鉄道\⑥0/１⑤
-% 特に特典はありません。
-
-% B⑧.②　小会社
-% 阪祐レールウェイ・シナリオと同様、
-
-% B⑧.③　後発会社
-% 阪神レールウェイ・シナリオと同権、
-
-% B⑧.④　公共会社
-% 阪祐レールウェイ・シナリオと同様,但し、京阪を追加します.
-
-% 京阪(京阪急行鉄道)
-% 本拠地:枚方駅:③
-
-% 京津鉄道購入時に京阪の株が①株付加しているため、最初の位置から④株購入されると会社が設立されます,京阪の社長株が購入されるまでは、京津鉄道に付加した株券は、売却することができません。
-
-% B⑨　ゲームの終了
-% 以下の条件のいずれかを満たせば、ゲームを終了します,
-% ①、銀行が戯産したとき
-% ②、プレーヤーが破産したとき
-% ⑧,⑧ゲームターンが終了したとき
-
-% B①0バリアント
-% 阪神レールウェイ・シナリオと同樣。
-
-\section{Scenario C 1890 ver 3.1}
+\newpage
+\section{1890 ver 3.1}
 
 This scenario is the 1890 scenario.
-If you are playing this game for the first time, Hanshin Relewe
-We recommend play of Lee Ya, Keihanshin Reu Reway. Also,
-Simple games will be introduced later
 
-C1 number of players
+If you are playing this game for the first time, the Hanshin Railways,
+Keihanshin Railways, or Simplified 1890 scenario may be a better
+introduction.
+
+\subsection{Number of players}
+
+The 1890 scenario is designed to be played with 2 to 7 players. A two
+player game is very difficult and it will be difficult for a player
+who makes two consecutive mistakes to be victorious. Three and four
+players can enjoy various bargains if the player is familiar with the
+rules. If you have fun as a multiplayer game, I recommend 5-6 play. It
+will be the most standard play.
+
+\subsection{Map}
+
+The entire map is used.
+
+\subsection{Track tiles}
 
-The 1890 scenario is designed to play with 2 to 7 players. A two player game is very difficult and it will be difficult for a player who made two consecutive mistakes to be victorious. Three players and four players can enjoy various bargains if the player is familiar with the rules. If you have fun as a multiplayer game, I recommend 5-6 play. It will be the most standard play
+All are available
 
-C2 map "
+\subsection{Trains}
 
-I will use the whole range
+\begin{tabular}{ll}
+Type & Count \\
+\hline
+2T & 9\\
+2+2T & 3\\
+3T & 5 \\
+3+3T & 2 \\
+4T & 4 \\
+5T & 3 \\
+6T & 2 \\
+D & 8
+\end{tabular}
 
-C3 track tile
+\subsection{Money}
+The bank size is 12,500円. Set aside 12 500円 and 12 1000円
+banknotes for use after the bank breaks. Divide 2,520円 evenly
+among players as starting capital.
 
-All available
+\begin{tabular}{l|llllll}
+Players & 2 & 3 & 4 & 5 & 6 & 7 \\ \hline
+Money(円) & 1250 & 840 & 630 & 504 & 420 & 360
+\end{tabular}
 
-C4 train
+\subsection{Phases}
 
-2 trains 9 axes
-2-2 trains 3 cars
-3 trains 5 cars
-2-3 trains 2 cars
-4 trains 4 cars
-5 trains 3 cars
-6 trains 2 cars
-D train 8 cars
+Phases 1 to phase 6 are played as normal.
 
-C5 funds
+\subsection{Certificate Limits}
+Use the following certificate limits according to the number of players:
 
-I will use all the money. 12 500-, 12 pears, 000- become bankruptcy banknotes Banker distributes the money at the start of the game to the player It will be the amount deducted.
+\begin{tabular}{l|llllll}
+Players & 2 & 3 & 4 & 5 & 6 & 7\\
+\hline
+Certificates & 26 & 18 & 15 & 13 & 11 & 10 \\
+\end{tabular}
 
-C6 phase
+\subsection{Companies}
 
-The game will be played normally until the first phase, the sixth phase.
+In the 1890 scenario, 6 private companies, 5 minor companies, 4 late
+private companies, and all 8 public companies are in use. At the start
+of the game, start the initial stock round in the following company
+order:
 
-C7 limit number of documents limited
+\begin{description}
+\item[Private companies] \hfill
 
-The player sets the following number as the limit of the number of profit documents
+\begin{tabular}{lp{3cm}l}
+ & Company & Par (円) \\
+\hline
+A & Arima Railway & 20\\
+B & Kobe Tramway & 40\\
+C & Hankai Tramway & 70 \\
+D & Hanshin Tramway & 110\\
+E & Keishin Railway & 160\\
+F & Osaka Municipal Electric Railway & 120
+\end{tabular}
+\item[Minor companies] \hfill
+
+\begin{tabular}{lll}
+ & Company & Par (円) \\
+\hline
+G & Kanan Railway & 100\\
+H & Osaka Electric Railroad & 200\\
+I & Osaka Railway & 100 \\
+J & Nara Electric Railway & 160\\
+K & Kobe Electric Railway & 100
+\end{tabular}
+\end{description}
 
-C8 company
+\subsection{Private companies}
+Private companies block tile lays on the map hexes where their track
+is. They also carry certain benefits and abilities which are explained
+as follows:
 
-In the 1890 scenario, we use six private companies, five small companies, four generic companies, and all eight public companies. At the start of the game, start the initial stock round in the following company order
+\begin{description}
+\item[Arima Railway] \hfill 20円/5円
 
-Personal company
-A Arima Railway 0
-B Kobe City Tramway \ 40
-C 塀 70 70
-D Deity National Road Orbit 10
-E Keitsu Railway \yen 160
-F Osaka City Tramway \yen 220
-Small company
-G Henan Railway Team 100
-H Osaka Electric Trajectory 200 '
-I Osaka Railway \yen 100
-J Nara Electric Railway Co., Ltd. 60
-K Kobe Electric Railway 00
+  The public company which purchases Arima Railway may place a track
+  tile in Arima in addition to its regular track tile placement. The
+  tile does not need to be connected.
 
-C. C8.1 individual company
+\item[Kobe Tramway] \hfill 40円/10円
 
-The track of a private company is entered in the hex on the map, which limits the layout of the track tiles. The benefits of each individual company are as follows.
+  No special rules
 
-Arima Railway-S0 / Box
+\item[Hankai Tramway] \hfill 70円/ 15(5)円
 
-Once purchased by a public company, you can place additional tiles on Arima in addition to the regular track tile placement. There is no need for busy track tiles.
+  Does not close in phase 4. However, its revenue is reduced to 5円, it may
+  no longer be purchased by a public company, and continues to count
+  as one certificate toward the certificate limit.
 
-Kobe City Line 0 / Tan 0
+\item[Hanshin Tramway] \hfill 110円/20円
 
-There are no special offers.
+Comes with one regular share of Hanshin Electric Railway.
 
-Hankyu Electric Railway Co. 0 / RL55
+\item[Keishin Railway] \hfill 160円/25円
 
-It does not close after the 4th phase. However, the earnings will be reduced to 5. After the 4th phase, the purchase by the public company is also prohibited, and it is counted as one of the number limit of the title of the rights.
+Comes with one regular share Keihan Electric Railway.
 
-Hanshin National Highway Track Decision 10 / \ 20
+\item[Osaka Municipal Electric Railway] \hfill 220円/ 40円 \label{osaka-municipal}
 
-Hanshin Electric Railway's stock certificate comes with one share.
+  The purchasing player immediate sets the par price of the Osaka
+  Municipal Subway public company and receives the president's
+  certificate. The par value of Osaka Muncipal Electric Railway then
+  becomes 0円.
 
-Kyotsu Railway Commission 60 / P5
+  During Osaka Muncipal Subway's first operating round turn, it may
+  upgrade one of Osaka Kita, Osaka Higashi, or Osaka Nishi for free.
 
-One share certificate of Keihan Electric Railway is attached.
+  Osaka Municipal Electric Railway closes when Osaka Municipal Subway
+  buys a train. Even if Osaka Municipal Subway has started, but is
+  trainless, Osaka Municipal Electric Railway will continue to stay
+  open, but the public company's stock price will fall due to
+  non-payment of dividends.
+\end{description}
 
-Osaka City Tram 20 / round 0
+\subsection{Late private companies}
 
-With the point that Osaka Tramway purchased, the purchasing player sets the stock price of Osaka subway and receives the president stock.
+This scenario includes four late private companies. Their rules and
+benefits are as follows:
 
-Even if Osaka Subway is established, if you don't buy a train, Osaka City Railway will not be shut down and Osaka Subway can continue to receive dividends, but Osaka Subway is in its turn of the operating round The stock price continues to fall because of the repeated non-delivery. Once the Osaka Subway's first move is in place, the replacement of tiles into three hexes in Osaka will be free.
+\begin{description}
+\item[Keifuku Electric Railroad] \hfill 200円/40円
 
-When Osaka Subway buys a train, Osaka City Tramway will be destroyed. This private company can not be purchased by a public company. When Osaka Trampo is purchased by the player, the par value will be changed to \ 0.
+  If Keihan has a station token in Kyoto, it will receive 40円 to
+  its treasury each operating round.
 
-C8.2 late departure company
+\item[Kobe Rapid Transit ​​Railway] \hfill 240円/? \label{kobe}
 
-In this scenario, four generic companies will appear. Below are the benefits of each generic company:
+  Kobe Rapid Transit Railway is a special railway company with no
+  trains. There is no fixed income and it earns no revenue from its
+  operation. Although it has a station token in Kobe, there is no
+  obligation to own trains.
 
-Keifuku Electric Railway 200 40
+  Kobe Rapid Transit Railway is started at the moment of purchase by a
+  player. Station tokens other than JR in Kobe will be returned to the
+  owning public companies, the number 6 turn token will be placed in
+  Kobe as a station token of Kobe Rapid Transit Railway. This station
+  token occupies a city space like a regular station tokens and
+  affects train operations in the same way. From this point on, if
+  there is a free space in Kobe, any public company may place their
+  station tokens in Kobe as usual.
 
-When Keihan places a station token in Kyoto, the Keihan vault also enters 40 each time it is operated.
+  Public companies may ignore the existence of the Kobe Rapid Transit
+  Railway station token by paying a 100円 fee to the bank. This
+  payment is considered to be the company's one station token
+  placement per operating round turn, but does not consume one of its
+  station tokens. This does not apply to JR because it already has a
+  station token in Kobe. Furthermore, Osaka Municipal Subway cannot
+  use this privilege.
 
-Kobe High Speed ​​Rail 40?
+  Any public company that previously had its token in Kobe is
+  considered to have obtained the privilege to ignore the Kobe Rapid
+  Transit Railway token.
 
-Kobe High Speed ​​Rail is an exceptional railway company with no trains. Kobe High Speed ​​Rail can not make a profit at its own operation. Also, there is no fixed income. Although station tokens will be placed in Kobe, there will be no train operation and no train ownership obligation.
+  Every time a railway company that does not have a station token in
+  Kobe counts Kobe in its train route for revenue (including those
+  companies which have obtained the privilege described above), Kobe
+  Rapid Transit Railway pays half the value of Kobe as dividend,
+  without changing the revenue for the other railway company.
 
-Kobe Rapid Railway is established at the moment of purchase by someone. Station tokens other than JR in Kobe will be returned to each public company, and 6 turn tokens will be placed in Kobe as a station totan of Kobe High Speed ​​Rail. This station token takes city space as well as regular station tokens and affects train operation. From this point on, if there is space in Kobe, each railway company can arrange and operate station tokens as usual.
+\item[Kita-Osaka Kyuko Railway] \hfill 280円/60円
 
-Each public company can operate by ignoring the existence of the station token at the time of the route confirmation of the revenue by paying the station token price for the station token of Kobe Shinkansen like regular station token tongue purchase It becomes. This payment is considered to be a station token arrangement, but it does not consume a station token (think of it as increasing the number of 100- station tokens that can only be used for transit). Osaka Subway can not exercise this benefit. As JR has a station token in Kobe since its establishment, this rule is not applicable.
+  In the operating round following the purchase of the first 6-train,
+  pays a one-time dividend of 100円 in addition to the usual 60円 dividend.
 
-It is assumed that the public company that previously placed the station token in Kobe has obtained this privilege. You can reuse it as a 100-station token token from Kobe station, which is returned to each public company.
+\item[Semboku Rapid Railway] \hfill 320円/70円
 
-Every time a railway company that does not have a station token in Kobe records its revenue (including the public company that has acquired the above benefits, it receives half of the revenue from Kobe as revenue. There is no change in the income of each railway company that uses Kobe.
+  Any public company with a station token in Sakai receives 40円
+  into its treasury each operating round.
+\end{description}
 
-North Osaka Express \ 580 \ 60
+\subsection{Minor companies}
+\label{sec:minor-companies}
 
-Only once in the next round of operation when the first six trains are bought, you will receive ¥ 100 plus the usual dividend of ¥ 100 as a special income at the Osaka National Exposition.
+This scenario includes five minor companies. The number printed on the
+minor company's charter is its operating order, and the corresponding
+turn order token is used as its station token. Minor companies 2 and 3
+operate out of the same station token in Osaka Higashi.
 
-Senboku high-speed railway \ 320 70
+The minor companies 1 to 4 will convert or merge into the Kinki Nippon
+Railways public company at certain points in the game. This conversion
+or merger may be declared at any point during the minor company's
+operating turn.
 
-In the safe of a public company that has station tokens in the basement, it costs ¥ 40 for every operation.
+Each minor company owned by a player counts towards the player's
+certificate limit. The rules for each minor company are as follows:
 
-C8.3 small company
+\begin{description}
 
-In this scenario, five small companies will be launched. The No. listed in the small company's license will be the order of operation of the small company, and the order mourning token corresponding to that No will be used as the station token for the small company. Osaka Railway No. 3 uses the station token of Osaka Shimouki Orbit of No. 2.
+\item[1 Kanan Railway] \hfill
 
-Among the small companies, one or four of the four companies will become Kintetsu's savings, and will be converted to Kintetsu if it is time to come, or it will be a merger.
+Home: Norohara \hfill Par price: 100円 \hfill Start Capital: 100円
 
-The timing of establishment and merger can be declared anytime during the operation of each railway company during the operation round.
+Beginning in phase 2, merger with Kinki Nippon Railway is
+possible. The merger with Kinki is forced in phase 3. Kanan Railways
+is closed and exchanged for a 10\% regular share of Kinki. Kinki
+receives half of Kanan Railway treasury (rounded up) and its
+trains. The remainder of the treasury is given to the owner of Kanan
+Railway.
 
-Each small company owned by a player counts as one in a player's stake sting. The benefits of each small meeting pond are as follows'
+\item[2 Osaka Electric Railroad] \hfill
+Home: Osaka Higashi \hfill Par price: 200円 \hfill Start capital: 200円
 
-1 Henan Railway Headquarters: Norohara 100 Capital ¥ 100
+Osaka Electric Railroad is the predecessor of the Kinki Nippon
+Railways public company. When purchased in the initial stock round,
+the owner of Osaka Electric Railroad immediately sets the par price
+for Kinki.
 
-From the second phase, merger with Kintetsu will be possible. In the third phase, it will be forced to join Kintetsu. It will be closed by replacing it with a 10% share of Kintetsu Kintetsu will pick up a half of the cash (a fractional release) and a train at the time of closing. I will refund the remaining cash to the president.
+Beginning in phase 2, Osaka Electric Railroad may convert into Kinki
+Nippon Railways. The conversion into Kinki is forced when the second
+half of phase 2 begins. Transfer all of Osaka Electric Railroad's
+assets to Kinki. The owner of Osaka Electric Railroad receives the
+20\% president's certificate of Kinki in exchange, and Kinki
+immediately floats.
 
-2 Osaka Electric Railroad Headquarters: Osaka East \ 200 Capital \ 200
+\item[3 Osaka Railway] \hfill
+Home: Osaka Higashi \hfill Par price: 100 \hfill Start capital: 100
 
-Osaka Electric Tramway is the company that became the predecessor of Kintetsu. When purchased in the initial stock round, it will determine the share price of Kintetsu, Kintetsu's president stock (20% closed in exchange for 20% and Kintetsu will be established with these two shares. Kintetsu will take over all assets , Conversion to Kintetsu will be possible from Phase 2. In the second half of Phase 2, it will be forced to Kintetsu.
+When Kinki Nippon Railways floats, Osaka Railway is forced to
+merge. All assets are transferred to Kinki, and the owner of Osaka
+Railway receives a 10\% regular share of Kinki in exchange.
 
-3 Osaka Railway Base: Osaka East Bank 00 Capital \ I00
+\item[4 Nara Electric Railway] \hfill
+Home: Kyoto, Nara \hfill Par price: 160円 \hfill Start capital: 320円
 
-It will be closed in exchange for one share of Kintetsu. Kintetsu takes over all the assets at the closing time. If Kintetsu is established, it will be enforced,
+May merge into Kinki Nippon Railways from the beginning of phase 4. Is
+forced to merge at the beginning of phase 5. All assets are
+transferred to Kinki and the owner of Nara Electric Railway receives 2
+regular shares of Kinki in exchange.
 
-4 Nara Electric headquarters: Kyoto, Nara \ 160 Capital \ 320
+If Kinki already has its station token in the same city as Nara
+Electric Railway's tokens, the minor company's token is
+removed. Otherwise, it is replaced with a Kinki station token.
 
-Two stocks of Kintetsu will be exchanged for closure and all the assets will be handed over at the time of closing. From the 4th phase, merger with Kintetsu becomes possible. In the 5th phase, it will be forcibly merged into Kintetsu. If the token of Kintetsu is already convicted where the token of Nara Electric Railway of 4 is placed at the time of merger with Kintetsu, the station token of Nara Electric Railway will be removed . If it is not placed, it will change the tontan of Kintetsu
+\item[5 Kobe Electric Railway]\hfill
 
-5 Kobe Electric Railway Main Building: Tanikami 00 Capital ¥ 200
-Kobe Electric Co., Ltd. can declare the Lendering company to be a subsidiary company any time. After the late departure company, the station token is removed and all assets are returned to the bank. The written title of Kobe Dentetsu Co., Ltd. is no longer included in the shareholding restrictions, but the price is \ O. From this point on, it is acceptable for a general company to distribute station tokens to the city (Tanikami) where the station tokens for Kobe Electric Railway were located.
+  Home: Tanigami \hfill Par price: 100円 \hfill Start capital: 200円
 
-C8.4 Public company
+  At any point during it's operating round turn, Kobe Electric Railway
+  may convert to a late private company. After converting, station
+  tokens are remvoed and all assets are returned to the bank. Although
+  the Kobe Electric Railway late private company certificate does not
+  count toward the certificate limit, its face value is 0円. From
+  this point onwards, any public company may place a station token in
+  the city previously occupied by Kobe Electric Railway's token
+  (Tanigami).
+\end{description}
 
-The 1890 has eight public companies. A company in a city is established or operated in a special procedure.
+\subsection{Public companies}
 
-JR (old: Japan National Railways)
+The 1890 scenario includes eight public companies. Each company has
+specific rules:
 
-Home location: Osaka Kita, Kyoto, Nara, Kobe Station: 6
+\begin{description}
+\item[JR (Japan National Railways)] \hfill
 
-The company was a state-owned railway until the 6th phase, and its operation was influenced by the intention of the country. During this game, JR 酉 Japan is treated as JR. JR treats as a normal public company except for the following rules.
+Homes: Osaka Kita, Kyoto, Nara, Kobe \hfill Stations: 6
 
-・ The stock price at establishment should be \ 100.
+Historically, JR was a state-owned railway until phase 6, and it was
+operated with the national interest under consideration. JR is played
+as a normal public company except for the following:
+\begin{itemize}
+\item The par price for JR is 100円
 
-・ There are more train restrictions than other public companies.
+\item JR has a higher train limit than other public companies.
 
-First phase 6 ships
-Phase 2-3 Phase 4
-4th to 3rd phase
+Phase 1: 6 trains
+Phase 2-3: 4 trains
+Phase 4-6: 3 trains
 
-・ When you distribute the revenue from the operation of the train, it is always a half dividend. First of all, half of the profits are paid to the company's vault as retained earnings, and only the remaining half of the money is distributed. If you do not pay, add all of your earnings to the company's funds.
+\item When distributing operating revenue, JR pays half
+  dividends. First half of the revenue (rounded up) is paid to the
+  company treasury. The remainder of the revenue is then distributed
+  among shareholders. Revenue may also be withheld as usual.
 
-・ To 1st Phase, you can arrange 2 tracks or place tiles in 2 hexes in 3 phases. Disposal in the same hex is prohibited.
+\item In phases 1 to 3, JR can lay or upgrade 2 track tiles per
+  operating round in different hexes. Performing two tile actions in
+  the same hex in one operating round is prohibited.
+\end{itemize}
 
-Osaka Subway (Osaka City Transportation Bureau)
+\item[Osaka Subway (Osaka Municipal Subway)] \hfill
 
-Headquarters: Osaka West Station: 1
+Home: Osaka Nishi \hfill Stations: 1
 
-The par value of the subway stock certificate is determined on the spot by the player who purchased Osaka Tramden in the initial stock phase.
+The par price for Osaka Municipal Subway is set immediately when the
+Osaka Municipal Electric Railroad private company is purchased in the
+initial stock round.
 
-Two-way subway:
+\paragraph{Subway service}
+After phase 4, subway service is established in the city of
+Osaka. Osaka Subway may ignore other companies' station tokens in the
+Osaka tiles (Osaka Kita, Osaka Higashi, Osaka Nishi, and Osaka Minami)
+if they have been upgraded to brown.
 
-After the 4th phase, Osaka Subway will be in the city of Osaka City (Osaka Kita, Taiho Higashi, Osaka Nishi, Osaka Minami) if the tile is a brown tile, even if it is stopped by a token of another company You can operate the train by ignoring the station tokens.
+\paragraph{Special tile placement}
+During its first operating turn, Osaka Subway can place one tile in
+Osaka free of charge.
 
-Special tiling:
+\item[Keihan (Keihan Electric Railway)] \hfill
 
-The subway can distribute only one tile in Osaka city free of charge in the tile arrangement of the first operation turn.
+Home: Hirakata \hfill Stations: 3
 
-Keihan (Keihan Express Railway)
+Keihan will be float when 4 certificates have been bought from the initial offer because the Keishin Railway private company comes with one regular share of Keihan.
 
-Base: Hirakata Station: 3
+The Keihan share attached to Keishin Railway may not be sold until the
+president's certificate of Keihan has been purchased.
 
-The company will be established when it buys 4 shares from the first rank because Keihan shares add 1 share at the time of Kyotsu Railway purchase.
+\item[Nankai (Nankai Electric Railway)] \hfill
 
-The share certificates attached to Keitsu Railway can not be sold until the Keihan president's stock is purchased. .
+Home: Osaka Minami \hfill Stations: 3
 
-Nankai (Nankai Electric Railway
+No special rules
 
-Base: Osaka Minami Station: 3
+\item[Kinki (Kinki Nippon Railways)] \hfill
+\label{kinki}
 
-There is no benefit.
+Home: Osaka Higashi (Kashiwara, Kyoto, Nara) \hfill Stations: 6
 
-Kintetsu (Kinki Japan Railway)
+Kinki Nippon Railways was historically formed through the merger of a
+large number of smaller railway companies. In this scenario, the Osaka
+Electric Railroad, Osaka Railway, Kanan Railway, and Nara Electric
+Railway minor companies will merge to form Kinki.
 
-Headquarters: Osaka East (Kashihara, Kyoto, Nara) Station: 6
+The par price of Kinki share certificates will be decided immediately
+by the player who purchased Osaka Electric Railroad in the initial
+stock round.
 
-The Kinki Japan Railway has become the current form as a large number of railway companies have repeatedly been merged. In this scenario, Osaka Electric Rail, Osaka Railway, Henan Railway, and Nara Electric Railway will be Kintetsu.
+Each minor company will be replaced by one or two Kintetsu share
+certificates upon merger with Kintetsu. Moreover, the president's
+certificate of Kinki is reserved for Osaka Electric Railroad. These
+trade-in share certificates reserved by the bank until the and can not
+be bought or sold until the merger or conversion. In other words, only
+4 Kinki stock certificates can be purchased from the initial
+offer. These four stock certificates can be bought and sold from the
+first stock round as usual, but they will not earn any income until
+Kinki begins operations.
 
-The surface price of Kintetsu stock certificates will be decided on the spot by the player who purchased Osaka Electric Trajectory in the initial stock phase.
+Each minor company may declare merger or conversion into Kinki, in
+between company operations. The process and timing for merger and
+conversion is described in \autoref{sec:minor-companies}
 
-Each small company will be replaced by one or two Kintetsu stock certificates upon merger with Kintetsu. Moreover, the president stock of Kintetsu is reserved for Osaka Electric Trajectory. These convertible share certificates must be secured by the bank until the subsidiary company is converted into a merger, and can not be bought or sold until the merger or consolidation. In other words, only 4 Kintetsu stock certificates can be purchased from the first state. These four stock certificates can be bought and sold from the first stock round as usual, but you will not earn any income until Kintetsu starts operations.
+Kinki Nippon Railway forms when Osaka Electric Railway declares that
+it will convert. Then, the Osaka Railway minor company is immediately
+merged into Kinki. Kanan Railway may also choose to merge at this
+time. Kinki immediately floats, even if none of its shares have been
+purchased from the initial offer. It now receives additional starting
+capital equal to 4 times its par price.
 
-When each small company declares a conversion or merger to Kintetsu, Kintetsu will be established or merged. You can always call this point unless you are in the operation of each railway company during the fortune round. Kintetsu will be established when there is a call for conversion to Kintetsu, even if no stock certificates are sold. .
+Immediately after Kinki floats, it performs a special operating round
+out of turn order. During this special operating round, the share
+price of Kinki does not drop due to non-payment of dividends. If
+dividends are paid, the share price increases as normal. Kinki does
+not operate again during the round in which it performed this special
+operating round.
 
-When Osaka Electric Trajectory calls for the establishment of Kintetsu, it ignores the order of operations and handles Kintetsu special operations. All assets of Osaka Electric Trajectory will be transferred to Kintetsu's company sheet, and small company sheet will be transported with Kintetsu's president stock. Osaka Railway will be absorbed and transferred all assets to Kintetsu. Exchange a small company sheet for one share of Kintetsu. For Henan Railway, if you meet the conditions of merger, you may process the merger.
+Kinki's stock price will not rise until Nara Electric Railway merges,
+as the stock certificates reserved for mergers does not count as being
+sold.
 
-Once the merger has been processed and Kintetsu has decided, it will receive Kintetsu's company sheet, station token, assets at the time of the merger (trains and funds), and the face value of Kintetsu's stock certificate X4 as additional funding. Put in company safe
+If Kinki closes before all minor companies have merged, the remaining
+minor companies are unable to merge with Kinki and will close when they would
+otherwise be forced to merge.
 
-Kintetsu ignores the company's management number when it is established and performs special management. In the turn of this operation round, only special operation can be performed. It can only be operated regardless of order, and Kintetsu can not operate twice.
+\item[Sanyo (Sanyo Electric Railway)] \hfill
 
-Only in this special operation, even if Kintetsu does not pay out, Kintetsu stock token does not move to the left. If you pay a dividend, the stock token will sway to the right, as usual.
+Home: Akashi \hfill Stations: 2
 
-The sale of Kintetsu stock prices will not occur because all share certificates will not appear until Nara Electric is absorbed.
+No special rules
 
-After Kintetsu is shut down, each small company converting to Kintetsu will not be able to merge. It will be closed automatically when the forced merger time comes
-
-Sanyo (Sanyo Electric Railway)
-
-Base: Akashi Station: 2
-There is no benefit.
-
-Hanshin (Hanshin Electric Railway)
+\item[Hanshin (Hanshin Electric Railway)] \hfill
 
 Base: Nishinomiya Station: 3
 
-The company is established when 4 shares are purchased, since 1 share of Hanshin stock is added at the time of Hanshin National Highway trajectory purchase.
+The company is established when 4 shares are purchased, since the
+Hanshin Tramway private company comes with 1 share of Hanshin stock.
 
-Until the Hanshin president's stock was purchased, it was added to the Hanshin national road track
-Hanshin stock can not be sold.
+Until the Hanshin president's certificate is purchased, the share
+attached to Hanshin Tramway cannot be sold.
 
-Hanshin Tigers:
+\paragraph{Hanshin Tigers}
+Hanshin Electric Railway receives bonus revenue due to the popularity
+of the Hanshin Tigers baseball team. After Nishinomiya is upgraded to
+brown, if Hanshin operates routes which include Nishinomiya, increase
+operating revenue by 10円, and also add 10円 to the Hanshin company
+treasury from the bank.
 
-When Nishinomiya tiles turn brown, Hanshin Tigers' influence on Hanshin Electric Railway. If Hanshin uses Nishinomiya tiled cities for each operating room, it will add \ 10 to the earnings and enter \ 10 into the company's safe. This benefit can only be used once, regardless of how many times Nishinomiya is used during the operation round.
+\item[Hankyu (Hankyu Railways)] \hfill
 
-Hankyu (Hankyu Corporation)
+Home: Toyonaka \hfill Station: 4
 
-Base: Toyonaka Station: 4
+\paragraph{Takarazuka Revue}
+Hankyu profits from popularity of the Takarazuka Revue musical
+troupe. If Hankyu has a station token in Takarazuka, it receives
+40円 to its treasury each operating round.
 
-Takarazuka Opera Group:
 
-When Hankyu Corporation places a station token in Takarazuka, the Takarazuka Opera is formed, and the Gizuka Family Park starts its activities. When station tokens are placed in Takarazuka, ¥ 40 income goes into the company's safe after each operation round due to performance activities, etc.
+\paragraph{Hankyu Land Commercial Code}
+Every time Hankyu lays a yellow track tile, it receives 10円 into the
+company treasury.
 
-Hankyu Land Commercial Code:
+\end{description}
 
-Every time Hankyu Railway puts a yellow track tile, ¥ 10 enters the company safe,
+\subsection{End of the game}
 
-End of C9 game
+The game will end if any of the following conditions are met:
+\begin{enumerate}
+\item The bank breaks
 
-The game ends if any of the following conditions are met,
+\item Player bankruptcy
 
-1, when the bank went bankrupt
+\item After 10 game turns.
+\end{enumerate}
 
-2, when the player went bankrupt
+\subsection{Variants}
 
-3, 10 When the game turn is over
+These variants can be used to change the evolution of the game. Some
+variants will disrupt game balance and change the experience
+significantly.
 
-C10 variant
+\subsubsection{Hidden personal cash (recommended)}
+The amount of player cash is secret. Players do not need to respond to
+inquiries about their cash holdings.
+
+\subsubsection{Hiding of train purchase price}
 
-These variants can be used to change the evolution of the game. Some variants will break the game balance and change the deployment significantly, so please be careful when using it.
+The buying and selling of trains between companies must be made public
+to other players, but it is not necessary to make their prices public.
 
-C10.1 Hidden personal funds (recommended)
-
-It is a variant to make the game more paper-friendly. Personal funds will not be disclosed. When asked, there is no need to answer. However, all funds must be kept together and visible. I hide it from the other players, such as a pocket, and hide it in the invisible place.
-
-C10.2 Hiding of train purchase price
-
-The buying and selling of trains between companies must be made public to other players, but it is not necessary to make their prices public.
-
-C10.3 Change of train
-
-Use 8 trains instead of D trains. You can also trade off from 4 trains, 5 trains and 6 trains. The price is the same as D train, and it is \ 1,100 (\ 800). The train card uses the D train's
-
-C10.4 Forced closure of a small company
-
-If six trains appear, the small company will be shut down immediately. Kobe Electric turns out to be a subsidiary company, and Nara Electric is forced to merge with Kintetsu. This is a case where it will earn too much profit if it is decided that Kobe Electric will carry D trains etc. (although it hardly happens). Because there is a variant to prevent it
-
-C10.5 share price closing (00/4/17 breaks)
-
-The game is over when the stock price of a public company reaches \ 400 and the winner is decided when the company's operation is over. A company which has not been managed yet will not be operated, and if the token reaches \ 400 in the stock round, no company can operate.
-
-C10.6 Kobe High-Speed ​​Revenue Control (200/5/10)
-
-Reduce Kobe Express's earnings. Kobe's track tiles change to \ 10 for yellow, 15 for amber, and \ 20 for brown.
-
-C10.7 Deactivation of Next-Generation Company Benefits
-
-Deactivate the benefits for each subsequent generation company. Under this rule, Kobe Express will pay a fixed payout of \ 50.
-
-C10.8 Line tile placement restrictions
-
-Brown No. 78 tile (K-type urban tile) can only be placed in Nara or in a city bordering the sea or the Kamogawa river.
-
-C10.9 Change of company establishment method (00/04/17 breaks)
-
-Change the method of establishing a company. Incorporating this option makes it easier to set up the company, and the game will be more aggressively deployed.
-
-・ We change confirmation time of public company establishment. We will confirm the establishment of the company's turn (price on stock list) during the operation round. A public company is established only when the commission of the number of shares sold (including those added to a private company) from the first position of the company is greater than or equal to the number of trains that can be purchased from the first position. For example, when 3 trains have to be purchased, the company will not be established if only the president stock (2 shares) is purchased for the player.
-
-・ The company's capital will be put into the company's safe whenever you buy stock from the first position. The Hanshin, Keihan, and Osaka subway shares that are added to a private company are treated as if they were already purchased from the first position, and the funds will also be put from the bank in the company's safe.
-
-• Public companies established after the fifth round use the normal establishment rules.
-
-・ JR will not be established unless 5 shares are purchased from the first position.
-
-・ The rules for establishing Kintetsu remain normal. Osaka Electric Tramway will not be established until it declares Kintetsu. However, the establishment fund (fund of the bond * 4) will be put into the Kintetsu safe every time the stock certificate is purchased. If Kintetsu has not been established yet, the bank will keep it and it will be handed over as Kintetsu additional funds when Kintetsu is established.
-
-C10.10 Changes in conversion from JNR to JR
-
-JR was a private company from the former National Railways and was divided into JR companies. After the 6th phase, do not put half of the earnings into the safe at the time of dividend. We shall pay the whole amount
-
-C10.11 Conversion of Kintetsu to a general company
-
-The handling of Kintetsu in 1890 is an interesting thing that feels like a change in history, but there are also a lot of procedures and there is also the problem that you have to play a small company with a number of extra rules.
-
-Kintetsu station tokens are assumed to consist of 4 station tokens automatically placed and 2 regular station tokens. Treat station tokens that are automatically placed in the same way as start tokens, at no cost. Station tokens automatically placed should always be placed at the very beginning of each run round, and if possible, you can place as many as one at a time. Station tokens that can be placed freely are handled in the same way as regular station tokens, and are used according to the usual rules, and the relationship between game phase and station token is as follows.
-
-Phase 1 Osaka East
-
-Second phase 3 Ebara
-
-Phase 3 Nara
-
-4th phase 4 Kyoto
-
-When using this rule, do not use three 2 trains and all 3-3 trains.
-
-10.12 Hanshin Tigers
-
-If you use this rule, you will need one die. If Nishinomiya is marked with a brown line tile after the 4th phase, the value of Nishinomiya used by Hanshin Railway will change every time. After Hanshin Electric Railway determines the route of the train in the operation round, it rolls one die and determines the order of Hankan Tiger Suzu (琳). Based on the following table as the order of dice, determine the earnings in Nishinomiya s If you use this rule, you will give up the benefit of using the traditional rule Nishinomiya separately
-
-C10.13 The Great Hanshin Earthquake
-
-The Great Hanshin Earthquake in January 1995 caused a major damage to the city of Hanshinji Castle. In particular, Nishinomiya, Ashiya and Kobe suffered heavy damage, and urban functions were torn from the center. Due to the collapse of the house and the fire, etc., there are a considerable number of casualties due to the collapse of the house, and because the house is thrown out, those who still live in the house for the victims are also welcome. In addition, there are many industries that can not return to the catastrophe due to financial instability and recession, etc., and they are socially socially inclined. The time and money spent to recover from this disaster is considerable, but it never returns to its original state. (98/04 / 0D
-
-On one of the D trains, write `Earthquake` on the reverse side. The Great Hanshin Earthquake occurs when the D train with the printing of the earthquake on the reverse side is bought. If the bank has already gone bankrupt at this time, no tremor should occur. '
-
-Until the end of the next share randando, Hanshin Railway's income will be 0, and Hanshin, JR, Sanyo's income will decline. However, the stock price in between is frozen and shall not move.
-
-Kobe high-speed railway is closed, the tiles of Kobe and Ashiya are removed, and they are returned to the original railway companies. Nishinomiya's tiles can be arranged one level lower than Repere. Tokens placed in Itami will be redeemed and will return to the table by paying a fixed amount of 00 from the company after the European equities round.
-
-Contributions: Each player pays the following amount to the bank as a contribution. Make sure to pay this contribution by the end of your next share of Rawland. If you can not pay in cash, you will be subject to forced sale of stock certificates.
-
-・ Number of D trains already sold * ¥ 100
-・ The number of shares held by the time of the earthquake * 200
-
-* The president 椛 treats as 2 shares.
-* The number of shares includes those other than public companies.
-
-C10.14 Assault of the 2nd Captain.
-
-At the end of World War II, the United States military repeatedly
-bombarded fears around the big cities in Japan's four largest
-industrial areas. These bombings have resulted in the deaths and
-deaths of many civilians, and it is an exaggeration to say that many
-of the basic economics of Jochang have been destroyed and they have
-created a large period of confusion after the war. The influence of
-Hanshin-jiki during this period was enormous, as it played a
-particularly large part in Japan's industrial production. In the
-Keihanshin area, Osaka, Kobe and Amagasaki were targeted for fear
-bombardment. Bombings are also taking place in other Keihanshin
-districts.
-
-When all three or three trains have been purchased, WWII will end, and
-a fear bombing will take place. All green track tiles placed in the
-hexes around Kobe, Ashiya, Nishinomiya, Jirizaki, Osaka Kita, Osaka
-Nishi, Osaka East, Osaka Minami, and so on are discarded. The yellow
-tile will remain placed
-
-After removing the green track tiles, perform station token
-relocation. Relocation can only be done with the station token's
-placement. The station token of the company is placed in the place
-where the starting point is stamped, and no one can redistribute it to
-the place where the station token of the company which has not been
-established is printed. Station tokens can be placed in the remaining
-cities, so they will be placed. If station tokens from multiple
-companies remain and the number of cities is smaller than that, we
-will relocate the station tokens from the next railway company that
-purchased 3–3 trains according to the current operation procedure. If
-you relocate one station token, your turn will move to the next
-company. This procedure is repeated until all station stations have
-been deployed in the relocatable city. If the city where you want to
-place the station totan is no longer present, it will be placed in the
-corner of the hex until it can be placed. It will be the reserved
-station token.
-
-The reserved station Totan will be treated as a station token that can
-only arrange the line tiles of the hex and change the crime. Station
-tokens that have been reserved will be replaced as their hexes, and
-will be automatically redistributed into the space as the city is
-expanded, and will become normal station tokens. The reserved station
-token can be used again as a regular \ I0O token by removing it from
-the hex.
-
-Due to this fear detonation, the removed track tiles must be retapped
-from the beginning. When placing an empty rope tile in an empty and
-hex, you must pay the cost of the disabled terrain hex again.
-
-% このシナリオは、①⑧⑨0の本シナリオとなりますれ。
-% 初めてこのゲームをプレイされる方は、まず、阪神レーレウェ
-% イや、京阪神レつーレウェイのプレイをおすすめします。また、
-% 簡易ゲームもあとで紹介しまれ
-
-% C①プレイ人数
-
-% ①⑧⑨0シナリオは、②へ⑦人でプレイするように考え作成されています。②人プレ
-% イは、非常に難しく②回連続してミスをしたプレーヤーが勝刑することは難し
-% いでしょう。③人プレイ、そして④人プレイは、ルールを熟知したプレーヤー
-% なら、色々な駆け引きを楽しめます。マルチ・ゲームとして楽しむゃのなら
-% ば、⑤ー⑥人プレイを薦めます。一番、スタンダードなプレイとなりますれ
-
-% C②マップ“
-
-% 全ての範囲を使用しますれ
-
-% C③線路タイル
-
-% 全て使用可能でむ
-
-% C④列車
-
-% ②列車⑨軸
-% ②－②列車③輌
-% ③列車⑤輌
-% ３－３列車②輌
-% ④列車④輌
-% ⑤列車③輌
-% ⑥列車②輌
-% D列車　⑧輌
-
-% C⑤資金
-
-% 全ての資金を使用します。①②枚の　500-、①②枚の梨,000-が、破産如理用紙幣
-% となりますれ銀行家が、ゲーム開始時の所持金をプレーヤーに配ります所持
-% 金は、姦,⑤②0-を人数分で副った金額となります。
-
-% C⑥フェイズ
-
-% 第①フェイズ一第⑥フェイズまで、通常どおりプレイされます【。
-
-% C⑦権利書の枚数制限
-
-% プレーヤーは、以下の枚数を檬利書の枚数制限とします
-
-% C⑧会社
-
-% ①⑧⑨0シナリオでは、⑥つの個人会社と、⑤つの小会社、④つの後発会社、⑧つの
-% 公共会社の全てを使用します。ゲーム開始時に、以下の会社の順番で初期株
-% 式ラウンドを開始します。
-
-% 個人会社
-% A有馬鉄道0
-% B神戸市電\④0
-% C貨塀電鉄\⑦0
-% D除神国道軌道迪①0
-% E京津鉄道\]⑥0
-% F大阪市電\②②0
-% 小会社
-% G河南鉄道ぎ①00
-% Ｈ　大阪電気軌道200'
-% I大阪鉄道\①00
-% Ｊ奈良電鉄迪⑥0
-% K神戸電鉄迪00
-
-% CでC⑧.①個人会社
-
-% 個人会社の線路がマップ上のヘクスに記入されており、線路タイルの配置に制限を加えます。各個人会社の特典は以下のとおりですれ。
-
-% 有馬鉄道ーS0/箱
-
-% 公共会社が購入すると、通常の線路タイルの配置に加え、有馬に追加のタイルを配置出来ます。線路タイルが繁がっでている必要はありません。
-
-% 神戸市電裳0/坦0
-
-% 特に特典はありません。
-
-% 阪堺電鉄寄0/RL⑤⑤
-
-% 第④フェイズ以降に閉鎖しません。但し、収益が5に減少します。第④フェイズ以降は、公共会社による購入も禁止され、権利書の根数制限の①枚としても数えます。
-
-% 阪神国道軌道定①0/\②0
-
-% 阪神電鉄の株券①株が付属します。
-
-% 京津鉄道委⑥0/P⑤
-
-% 京阪電鉄の株券①株が付属します。
-
-% 大阪市電翠⑳/巡0
-
-% 大阪市電が購入された資点で、購入プレーヤーが大阪地下鉄の株価を設定し、社長株を受け取ります。
-
-% 大阪地下鉄が設立されでても、列車を購入しなければ、大阪市電は閉鎮され
-% ず、大阪地下鉄は、配当を受け続けることができますしかし、大阪地下鉄は、
-% 運営ラウンドの自社の手番で無配を繰り返すため、株価は下がり続けます。
-% 大阪地下鉄の最初の手番がくれば、大阪市内の③ヘックスへのタイルの置き換
-% えは、自由になるものとします。
-
-% 大阪地下鉄が列車を購入すると大阪市電は閤鎮されます。この個人会社は、
-% 公共会社が購入することが出来ません。大阪市電は、プレーヤーに購入され
-% た時点で、額面価格が\0に変更されます。
-
-% C⑧.②後発会社
-
-% このシナリオでは、④社の後発会社が登場します。各後発会社の特典は以下のとおりですれ
-
-% 京福電鉄　２００　　４0
-
-% 京阪が京都に駅トークンを置いたとき、京阪の金庫にも毎運営時に④0入ります。
-
-% 神戸高速鉄道宋④0?
-
-% 神戸高速鉄道は、列車を持たない特残な鉄道会社です。神戸高速鉄道は、自
-% 社運営時に収益を得ることができません。また、決まった収入もありません。
-% 神戸に駅トークンを配置しますが、列車の運行をすることもありませんし、
-% 列車保有義務も生じません。
-
-% 神戸高速鉄道は、誰かに購入された瞬間に設立されます。神戸のJR以外の駅
-% トークンは、各公共会社に戻し、神戸に⑥の順番トークンを神戸高速鉄道の駅
-% トータンとして配置します。この駅トークンは、通常の駅トークンと同様に
-% 都市のスペースを奪い、列車の運行に影響します。これ以降、神戸に空きス
-% ペースができれば、各鉄道会社は、通常どおり駅トークンを配置し、運営す
-% ることもできます
-
-% 各公共会社は、神戸髙速の駅トークンに対して、通常の駅トークンタン購入
-% のように駅トークン代金を支払うことにより、その駅トークンの存在を収益
-% の路線確認の時に無視して運行できるようになります。この支払い行為は、
-% 駅トークンの配置と見なされますが、駅トークンを消費することはありませ
-% ん(通過のみとして使える１00-の駅トークンがーつ増えるようなものと思っ
-% てください)。大阪地下鉄は、この特典を行使することができません。JRは、
-% 設立時から、神戸に駅トークンが存在するため、このルールの適応外となり
-% ます。
-
-% 先に神戸に駅トークンを置いてあった公共会社は、この特典を得ているもの
-% とします。各公共会社に戻された神戸の駅トークタン組、１00-の駅トークン
-% として再利用できますれ
-
-% 神戸高速鉄道は、神戸に駅トークンを配置していない鉄道会社が神戸の収入
-% を計上する度に(上記特典を得た公共会社も含むり、神戸による収入の半額を
-% 収益として受け取ります。この時、神戸を使用する各鉄道会社の収入には何
-% の変化も超こりません。
-
-% 北大阪急行\⑤⑧0\⑥0
-
-% 最初の⑥列車が買われた次の運行ラウンドに一回だけ、大阪上国博覧会で特別収入として通常の配当に\④0を加算し①00)受け取りますれ
-
-% 泉北高速鉄道 \③②0 70
-
-% 堺に駅トークンを配置している公共会社の金庫に、毎運営時に\④0入ります。
-
-% C⑧.③小会社
-
-% このシナリオでは、小会社は⑤社発場します。小会社の権利書に記載されてい
-% るNoが小会社の運営の順番となり、そのNoに対応する順喪トークンをその小
-% 会社の駅トークンとして利用します。③番の大阪鉄道は、②番の大阪霜気軌道
-% の駅トークンを併用します。
-
-% 小会社のうち、①つ④の④つの会社は、近鉄の節身となり時期が来れば近鉄に転換、あるいは昇収合伍さもます.
-
-% 設立、合併のタイミングは、運営ラウンド中の各鉄道会社の運営中でなければ、いつでも宣言できます。
-
-% プレーヤーに所有されんている各小会社は、プレーヤーの株式の所有刺限において①枚と数えます。各小会池の特典は以下のとおりです′
-
-% ①河南鉄道　本拠地:拒原　１00　資本金\①00
-
-% 第②フェイズから、近鉄への合併が可能になります,第③フェイズになると、近
-% 鉄に強制合伍されます。近鉄の①0\%株に引き替えて閉鎖します閉鎖時に現金
-% の半分(端数刊り上げ)と列車を近鉄が引き取ります。残りの現金を社長に払
-% い戻します。
-
-% ②大阪電気軌道本拠地:大阪東\②00資本金\②00
-
-% 大阪電気軌道は、近鉄の前身となった会社です。初期株式ラウンドで購入さ
-% れたとき、近鉄の株価を決定します,近鉄の社長株(②0\%0に引き替えて閉類し
-% まれ近鉄はこの②株で設立されますれ。全資産を近鉄が引き継ぎます,第②フェ
-% イズから、近鉄への転換が可能になります。第②フェイズ下期になると、近鉄
-% に強制転横されます。
-
-% ③大阪鉄道　本拠地:大阪東岸00資本金\I00
-
-% 近鉄の株１株に引き碁えて閉須します。閉鉄時に全資産を近鉄は引き継ぎます。近鉄が設立されたら、強制実行されます,
-
-% ④奈良電鉄本拠地:京都、奈良\①⑥0資本金\③②0
-
-% 近鉄の株②株に引き替えて閉須します,閉鎖時に全資産を近鋼が引き継ぎま
-% す,第④フェイズから、近鉄への合併が可能になります。第⑤フェイズになると、
-% 近鉄に強制合併されます近鉄へ合併時、④の奈良電鉄のトークンが配置されて
-% いるところに近鉄のトークンが既に配罪されていれば、奈良電鉄の駅トーク
-% ンを取り除きます。配置されていなければ、近鉄のトータンド変更しますれ
-
-% ⑤神戸電鉄本拠坪:谷上00資本金\②00
-
-% 神戸電鉄は、運営ラランドのいつでも、後発会社化を宣言することができま
-% す。後発会社此すると、駅トークンは除去され、全ての資産は、銀行に戻さ
-% れます。神戸電鉄の後城会社化した権利書は、持ち株制限に含まれなくなり
-% ますが、領面価格は\Oとなります。これ以後、神戸電鉄の駅トークンの配置
-% してあった都市(谷上）に、一般の会社が駅トークンを配儀しても構いませ
-% ん。
-
-% C⑧.④公共会社
-
-% ①⑧⑨0には、⑧つの公共会社があります。一都の会社は、特別な手順によって設
-% 立されたり、特別な運営を行ないます。
-
-% JR(旧:日本国有鉄道)
-
-% 本押地:大阪北、京都、奈良、神戸駅:⑥
-
-% この会社は第⑥フェイズになるまでは、国営鉄道であり、国の意向によって運
-% 営を左右されていました。このゲーム中では、JセR酉日本をJRとして扱って
-% います。Rは、下記のルールを除き、通常の公共会社として扱います。
-
-% ・設立時の株価は\①00でなければいけません。
-
-% ・持ち列車制限が他の公共会社より多く設定されています。
-
-% 第①フェイズ⑥輛
-% 第②ー③フェイズ④輸
-% 第④ベ~フェイズ③載
-
-% ・列車の運行による収益を配当するときは、必ず半配当となります。まず収
-% 益の半分仕内部留保として会社の金庫へ納められ、残りの半分の資金のみを
-% 配当します0未満の端数は会社へ)。無配を実施する場合には、収益の全てを
-% 会社の資金に追加しますれ。
-
-% ・第①へ③フェイズに②ヶ所のヘクスに線路タイル②枚を、配置か僑き換えする
-% ことができます。同一へクスでの置き槻えは禁止します。
-
-% 大阪地下鉄(大阪市交通屑)
-
-% 本拠地:大阪西駅:①
-
-% 地下鉄の株券の額面価格は、初期株式フェイズで大阪市電を購入したプレーヤーが、その場で決定しまれ地下鉄の相亘乗り入れ:
-
-% 第④フェイズ以降、大阪地下鉄は、大阪市(大阪北、大防東、大阪西、大阪南)の
-% ヘクスにおいて、たとえ他社のトークンによって止められていても、そのタ
-% イルが茶色タイルならば、そのタイルの駅トークンを無視して列車の運行を
-% することが出来まずす特別タイル配罹:
-
-% 地下鉄は、最初の運営ターンのタイル配置において、大阪市内のタダイルを①枚だけ無料で配罰できます。
-
-% 京阪(京阪急行鉄道)
-
-% 本拠地:枚方_駅:③_'・
-
-% 京津鉄道嗚入時に京阪の株が①株付加しているため、最初の位醇から④株購入されると会社設立されます。
-
-% 京阪の社長株が購入されるまでは、京洋鉄道に付加した株券は、売却することができません。・・
-
-% 南海(南海電気鉄道
-
-% 本拠地:大阪南駅:③
-
-% 特典はありません。
-
-% 近鉄(近畿日本鉄道)
-
-% 本拠地:大阪東(柏原、京都、奈良)駅:⑥
-
-% 近畿日本鉄道は、非常に多くの鉄道会社が君収合併を繰り返して現在の形と
-% なりました。このシナリオでは、小会社の大阪霞気転逢、大阪鉄道、沼南鉄
-% 道、奈良電鉄の④社が近鉄となりますれ
-
-% 近鉄の株券の類面価格は、初期株式フェイズで大阪露気軌道を購入したプレーヤーが、その場で決定します。
-
-% 各小会社は近鉄に転摘合併するさい、①②株の近鉄の株券に引き替えられます。
-% また、近鉄の社長株は大阪電気輻道に予約されています。これらの変換する
-% 分の株券はその小会社が転換合併するまでは、必ず鉾行に確保されなければ
-% ならず、設立合併されるまでは、売買することはできません。つまり最初の
-% 状態から購入できる近鉄の株券は、④枚だけということになります。この④枚
-% の株券は、通常どおり最初の株式ラウンドから売買することができますが、
-% 近鉄が運営を開始するまで、収入を得ることはありません。
-
-% 各小会社が、近鉄への転換や合併を宣言すると近鉄設立や、合併が行われま
-% す。この客言は、運諦ラウンド中の各鉄道会社の運営中でなければ、いつで
-% も客言できます。近鉄は、①枚も株券が売れなくても、近鉄への転換の客言が
-% あった時点で、設立されます。.
-
-% 大阪騰気軌道が、近鉄の設立を客言すると、運営の順番を無視して近鉄の特
-% 別運営を処理します。大阪電気軌道の全ての資産を近鉄の会社シートに移し、
-% 小会社シートを近鉄の社長株と交搬します。大阪鉄道は明収合併され、全て
-% の資産を近鉄に移行させます。小会社シートを近鉄の①株と交探します。河南
-% 鉄道については、合併条件を漂たしていれば、合併の処理を行っても楠いま
-% せん。
-
-% 合併の処理が終わり、近鉄社馬が決定したら、近鉄の会社シートと、駅トー
-% クンと、合併時の資産(列車と資金)、そして、近鉄の株券の額面価格X④の金
-% 額を追加の設立資金として受け取り会社のを庫に入れます
-
-% 近鉄は股立した時に会社の運営手番を無視して、特別遅営を行いまず、この
-% 運営ラランドのターンでは、特別運営のみの運営が行えをます。順番に関係
-% なく運諦できるだけで、②回近鉄が運営できるわけではありません。.
-
-% この特刊運営に限り、近鉄は配当しなくても、近鉄の株価トークンはだに移労しません。配当すれば、通常のレーレどおり株価トーダンは、右に彦動します.
-
-% 近鉄の株価の売り切れ上がりは、奈良電鉄が吾収合併されるまで、すべての株券が登場しないため、おこりません。
-
-% 近鉄が閤須された後、近鉄に転換する各小会社は、合併を行えなくなります,張初合併曽即がくると自動的に閉須されます
-
-% 山暖(山暖電鋒)
-
-% 本拠地:明石駅:②
-% 特典はありません。
-
-% 阪神(阪神電気鉄道)
-
-% 本拠地:一宮駅:③
-
-% 阪神国道軌道購入時に阪神の株が①株付加しているため、④株購入されると会社が設立されます,
-
-% 阪神の社長株が購入されるまでは、阪神国道軌道に付加した
-% 阪神株は、売却することができません。
-
-% 阪神タイガース:
-
-% 西宮のタイルが茶色になると、阪神タイガースの活曜が阪神電気鉄道に彫響
-% を与えます,各運営ラウァンドごとに、阪神が西宮タイルの都市を使用すると
-% 収益に\①0加算され、会社の金庫に\①0入ります。この特典は、その運営ラウ
-% ンド中に西宮を何度使っても、①回しか利用できません。
-
-% 阪急(阪急電鉱)
-
-% 本拠地:豊中駅:④
-% 宝塚歌麟団:
-
-% 阪急電鉄は、宝塚に駅トータンを配置すると、宝塚歌嘴が結成され、宜塚ファ
-% ミリーパークが活動を開始します。宝塚に駅トークンが配置されると、公演
-% 活動等により、各運営ラウンドごとに\t0の収入が会社の金庫に入ります,
-
-% 阪急の土地商法:
-
-% 阪急電鉄が、黄色の線路タイルを置く度に\①0が会社の金庫に入ります,
-
-% C⑨ゲームの終了
-
-% 以下の条件のいずれかを満たせば、ゲームを終了します,
-
-% ①、銀行が破産したとき
-
-% ②、プレーヤーが破産したとき
-
-% ③,①0ゲームターンが終了したとき
-
-% C①0バリアント
-
-% これらのバパバリアントは、ゲームの展開に変化を付けるために使用するこ
-% とができます。一部のバリアントは、ゲーム・バパバランスを崩し展開を大
-% きく変化させるため、使用に関しては、ご注意下さい。
-
-% C①0.①個人資金の隠蔽(お勧め)
-
-% グダームをより上紙者向けにするためのバリアントです。個人の資金につい
-% ては、非公開とします。尋ねられても、答える必要はありません。但し、全
-% 資金はまとめて見えるところに置いでおかなくて社なりません。ポケット等
-% 他のプレーヤーから、見えないところに隠すことは森止します。
-
-% C①0.②列車購入価格の隠嘲
-
-% 会社間の列車の売買行為は他のプレーヤーに公表されなくてはいけませんが、その価格を公表する必要はありません。
-
-% C①0.③列車の変更'
-
-% D列車の代わりに⑧列車を使用します。④列車、⑤列車⑥列車からの下取りも行え
-% ます。価格は、D列車と同様で、乳,①00\S00)ですれ。列車カードは、D列車の
-% ものを使用します
-
-% C①0.④小会社の強制閉鎖
-
-% ⑥列車が登場すると、直ちに小会社は強制閉鎖されます。神戸電鉄は後発会社
-% 化し、奈良電鉄は近鉄へ強制合併されますこのルーレは、神戸霜鉄にD列車等
-% を持たせることが出付た場合(ほとんどおこりませんが)、あまりに収益を上
-% げすぎる場合があるため、それを防止するためのバリアントですず
-
-% C①0.⑤株価による終了(00/④/①⑦改)
-
-% ある公共会社の株価が\④00となった時点でゲームは終了し、その会社の運営
-% が終了した時点で勝者を決定します。まだ道営されていない会社は運営され
-% ず終了しますれ株式ラウンドでトークンが\④00に到逐した場合は、どの会社
-% も運営を行えません。
-
-% C①0.⑥神戸高速の収益コントロール(②00/⑤/①0改)
-
-% 神戸高速の収益を港少します。神戸の線路タイルが、黄色の時は\①0、縁色の時は述⑤、茶色の時は、\②0と変更します。
-
-% C①0.⑦後発会社の特典の無効化
-
-% 各後発会社の特典を無効化します。このルーレでは、神戸高速は、配当を\⑤0固定とします。
-
-% C①0.⑧線路タイルの配置制限
-
-% 茶色の⑦⑧番タイル(K型の都市タイル)は、奈良、もしくは海か淀川に接した都市にしか配置できません。
-
-% C①0.⑨会社設立方式の変更(00/0④/①⑦攻)
-
-% 会社の設立方式を変更します。このオプションを取り入れることにより、会
-% 社設立が容易になるため、ゲームがより遇激に展開されるようになりますむ
-% ルールレに以下の変更を加えます。
-
-% ・公共会社設立の確認時期を変更します。運営ラウンド中のその会社の手
-% 番(株価表上の椛価)に設立の確認をします。その会社の最初の位置から売ら
-% れた株数(個人会社に付加したものも含む)の合託が、最初の位置から購入で
-% きる列車の数値以上の時のみ、公共会社は設立されます。例えば、③列車を購
-% 入しなければならないとき、プレーヤーに社長株(②株)しか購入されていない
-% と、会社は設立されません。
-
-% ・会社の資本金は、株を最初の位置から購入する度に会社の金庫に入れてい
-% きます。個人会社に付加されでいる阪神、京阪、及び大阪地下鉄の株は、す
-% でに最初の位置から購入されたものと扱い、その資金も会社の金庫に、銀行
-% から入れるものとしますむ
-
-% ・第⑤ラウンド以降に設立された公共会社は、通常の設立ルールを使用します
-
-% ・丁モは、最初の位置から⑤株購入されないと、設立されません。
-
-% ・近鉄設立のルールは、通常のままです。大阪篤気転道が、近鉄設立を客音
-% するまで設立されません。但し、設立賽金(椛券*④の資金)は、株券が購入さ
-% れるたびに近鉄の金庫に入ることとなります。近鉄がまだ設立されていない
-% ときは銀行が預かり、近鉄設立時に近鉄の追加資金として渡さきれますれ`
-
-% C①0.①0国鉄からJRへの転換における変更
-
-% JRは、旧国鉄から民営会し、丁各社に分制されました。第⑥フェイズ以降になると、配当時に金庫に収益の半分を入れません。全額を配当するものとします
-
-% C①0.①①近鉄の一般会社化
-
-% ①⑧⑨0の近鉄の処理は、歴史の変化を感じる面自いものになっているのですが、
-% 手順が多くなり、いくつもの特残ルールを持った小会社をプレイしないとい
-% けないという唯題もあります。
-
-% 近鉄の駅トークンは、自動的に配置される④個の駅トークンと、②個の通常の
-% 駅トークンからなるものとどします。自勘配置される複数の駅トータンは、
-% スタートトータンと同じように扱い、コストはかかりません。自動的に配置
-% される駅トータンは、各運営ラウンドの一番最初に必ず吉置することとし、
-% 可能であれば、一度に何個でも配置を行えます。自由に配置できる駅トーク
-% ンは、通常の駅トークンと同じように扱い、通常のルーレに従って使用しま
-% れゲームブフェイズと駅トークタンの関係は、下のとおりですれ。
-
-% 第①フェイズ①大阪東
-
-% 第②フェイズ③柑原
-
-% 第③フェイズ④奈良
-
-% 第④フェイズ④京部
-
-% このルールを使用するとき、③つの②列車と全ての③-③列車を使用しません。
-
-% で①0.①②阪祖タイガースー
-
-% このルーレを使用する場合、ダイスがひとつ必要になります。第④フェイズ以
-% 降に西宮に茶色の線路タイルが署かれると、阪神電鉄が使用する西宮の価催
-% は毎回変化するようになります。運営ラウンドで阪神電鉄が、列車のルート
-% を津定した後、ダイスを①個振り、阪被タイガースズ(琳団)の順位を決定しま
-% す。ダイスの目を順位として以下の表により、西宮での収益を決定しますsこ
-% のルールを使用する場合、従来ルールの西宮を別用する特典を放棄すること
-% になります
-
-% C①0.①③飯祖大震炎
-
-% ①⑨⑨⑤年①月、阪神大震炎により、阪神地基の都市は大きな被害を受けました。
-% 特に西宮、芦屋、神戸の被害は大きく、都市機能が中板から破墓されました。
-% この震災では、住宅の崩壊や火炎等のため、死傷者もかなりの数にのぼり、
-% 家を投げ出された為に現在も被災者用の住宅に住んでいる方もおおせぜいお
-% られます。また、金融不安や不景気等も重なって、震災酷の犬態に戻れない
-% 産業等も多くあり社会的に問顧となっています。この震災の復興に費やした
-% 時間とお金はかなりのものになっていますが、元の状態に戻ることは決して
-% ありません。(⑨⑧/0④/0D
-
-% D列車の①枚には、裏面に`地震」と記入します。裏面に地震の印刷が入っ
-% たD列車が買われた時に、阪神大震災が発生します。この時既に銀行が破産し
-% ていたら、震炎は起こらないものとします。'
-
-% 次の株式ラワンド終了時まで、阪神電鉄の収入は0となり、阪吾、JR、山陽の
-% 収入は平減します。但し、その間の株価は凍結され、動かないものとしま
-% す。
-
-% 神戸高速鉄道は閉鎖され、神戸、芦屋のタイルは除去され、各鉄道会社の元
-% に戻ります。西宮のタイルは①ランク下のレペレのものに取り精えられます。
-% 伊丹に置いてあるトークンは糟返され、欧の株式ラウンド以降に会社から
-% 定00支払うことにより、表に返し橋能回復します。
-
-% 製援金:各プレーヤーは、以下の金額を義援金として銀行に支払います。この
-% 義援金は、次の株式ラウランドの終わりまでに支払うようにして下さい。も
-% し、手持ちの現金で支払うことが出来なかった場合、株券の強制売却レーレ
-% の対象になります
-
-% ・既に売れているD列車の数*\100
-% ・震災の起こった時為で持っている株数*\②00
-
-% *社長椛は②株として扱いますれ。
-% *株数には、公共会社以外のものも含む.
-
-% C①0.①④ ②次大輝の悩帆燦撃.
-
-% 第②時世界大戦の終局、アメリカ軍は日本の④大工業地帯の大都市を中心に恐
-% 怖爆撃を繰り返しました。これらの爆撃により、多くの民閾人の死傷者を生
-% み出し、目本の基昌産業の多くが崔壊し、戦後により大きな混沌期を作った
-% と言っても過言ではないかと性います。この時期の阪神地基は、日本の工業
-% 生産の中でも特に大きな部分を担っていましたから、その影響は芦大でした。
-% 京阪神地区は、大阪、神戸、尼崎が恐怖爆撃の目標とされました。この他の
-% 京阪神地基でも、爆撃は行われています。
-
-% ③ー③列車が全て購入された時、第②次大戦終局となり、恐怖爆撃が行われます。
-% 神戸、芦屋、西宮、尻崎、大阪北、大阪西、大阪東、大阪南、とそのまわり
-% のヘクスに配置されている全ての緑色の線路タイルは、廃棄されます。黄色
-% タイルは配置されたままとしますれ
-
-% 緑の線路タイルを取り除いた後、駅トークンの再配置を行います。再配置は、
-% その駅トークンの配置されていたヘタスでしか行えません。スタート地点の
-% 印剪されている場所には、その会社の駅トークンを配置しまれ,まだ設立され
-% もていない会社の駅トークンが印刷されている場所には誰も再配罠できませ
-% ん。残った都市に駅トークンが配置できるので有れば配置します。複数の会
-% 社の駅トークンが残り、都市の数がそれより少ない場合は、現在の運営手順
-% に従い③ー③列車を購入した次の鉄道会社から、駅トークンを再配置していき
-% ます。①個の駅トークンを再配置すると、次の会社へと手番が移ります。再配
-% 置可能な都市に全ての駅トークタンが配置されるまで、この手項は繰り返さ
-% れます。駅トータンを配置する都市が存在しなくなった場合は、配置できる
-% ようになるまでそのヘクスの隅に置かれ、.予約された駅トークンとなりま
-% す。
-
-% 予約された駅トータンは、そのヘクスの線路タイルの配置や罪き換えのみを
-% 行える駅トークタンとして扱います。予約された駅トークンは、そのヘクス
-% が置き換えされ、都市が拡張されるとそのスペースに自動的に再配贋され、
-% 通常の駅トークンとなります。予約された駅トークンは、そのヘクスから取
-% り去ることにより、再び通常の\I0Oトータンとしても使用できます。
-
-% この恐怖爆攣により、撤去された線路タイルは、最初から線路タイルを醇き
-% 直さなければなりません。空いたとヘクスに再の縄路タイルを配置する時は、
-% 障害地形ヘクスのコストを再び支払わなければなりません。
-
+\subsubsection{Change D-trains to 8-trains}
+D-trains can visit only 8 cities in their route. All other properties,
+including the ability to trade in a 4, 5, or 6 train, are the same.
+
+\subsubsection{Forced closure of minor companies}
+At the beginning of phase 5, Kobe Electric Railway is forced to
+convert to a late private company.
+
+\subsubsection{End of game when highest stock price is reached}
+The game is over when the stock price of a public company reaches 400円.
+If the price reached 400円 during the operating round, the game ends
+immediately after the company's operating turn. If the prices reaches
+400円 at the end of a stock round, the game ends immediately.
+
+\subsubsection{Kobe Rapid Transit Revenue Control}
+Reduce the value of Kobe to 10円 in yellow, 15円 in green, and 20円 in brown.
+
+\subsubsection{No late private company abilities}
+Remove all late private company special abilities. Kobe Rapid Transit
+Railway pays a fixed dividend of 50円.
+
+\subsubsection{Track tile placement restrictions}
+Brown tile \#78 may only be placed in Nara or a city bordering the sea
+or the Yodo river.
+
+\subsubsection{Public company floatation}
+This variant changes the rules for floating public companies, making
+them easier to start. Incorporating this variant will produce a more
+aggressive game experience.
+
+When a company would begin its very first operating turn, check the
+number of 10\% shares which have been sold from the initial
+offering. If this number is greater than or equal to the rank of the
+train currently for sale from the bank, then the company floats and
+may operate. Otherwise, the company is considered not to have floated,
+and will not take an operating turn. At the beginning of the game,
+only the 20\% president's certificate needs to be sold in order for a
+company to float and operate. Later in the game, if for example the
+current train available for sale is a 3T or 3+3T, then a public
+company must have sold at least 3 shares from the initial offer in
+order float and operate.
+
+Instead of receiving ten times the par value when floating, public
+companies receive money as shares are sold from the initial offer. The
+shares of Hanshin, Keihan, and Osaka Subway that are attached to
+private companies are considered to be already sold, and the
+respective public companies will begin the game with those funds in
+their treasuries.
+
+Additionally:
+\begin{itemize}
+
+\item After phase 5, public companies will be started using the normal
+  rules. 50\% of shares must be sold from the initial offer to float,
+  and the company receives 10 times the par value to its treasury.
+
+\item JR does not float unless 5 shares (50\%) are purchased
+  from the initial offer
+
+\item Kinki Nippon Railway is started as normal, when Osaka Electric
+  Railway converts. If the non-reserved shares of Kinki are bought
+  from the initial offer before the company is formed, the money from
+  those sales is still added to the Kinki treasury.
+
+\end{itemize}
+
+\subsubsection{Changes in conversion from JNR to JR}
+
+Historically, JR transformed from a national railway to a private
+railway company. After phase 6, JR will pay full dividends instead of
+half.
+
+\subsubsection{Conversion of Kintetsu to a normal company}
+While the treatment of Kinki Nippon Railways in 1890 aims to simulate
+its historical development, it also creates extra rules burdens. In
+this variant, minor companies 1-4 are eliminated, and Kinki is started
+like a normal public company.
+
+In addition to 2 regular station tokens, Kinki will have 4 station
+tokens that are automatically placed at the beginning of the following
+game phases:
+
+\begin{description}
+\item[Phase 1] Osaka Higashi
+\item[Phase 2] Kashiwara
+\item[Phase 3] Nara
+\item[Phase 4] Kyoto
+\end{description}
+
+Automatically placed station tokens are placed at the very beginning
+of each operating round, at no cost. These tokens are treated as home
+tokens, and reserve a space in their cities.  Follow normal token
+placement rules for the automatic station tokens: connectivity and a
+free city space is required. If possible, multiple automatic tokens
+may be placed at once.
+
+When using this variant, remove three 2 trains and all 3+3 trains.
+
+\subsubsection{Hanshin Tigers}
+This variant requires one six-sided die. After Nishinomiya is upgraded
+to brown, instead of receiving a fixed amount, Hanshin Electric
+Railway will receive a variable bonus if its routes include
+Nishinomiya.
+
+Each operating turn in which Hanshin runs to the brown Nishinominya
+tile, roll the die. The value of Nishinomiya will be determined by the
+result and the following table:
+
+\begin{tabular}{l|llllll}
+Die Roll & 1 & 2 & 3 & 4 & 5 & 6 \\
+\hline
+Value & 100 & 60 & 50 & 40 & 40 & 40 \\
+\end{tabular}
+
+\subsubsection{The Great Hanshin Earthquake}
+This variant simulates the Great Hanshin Earthquake of January 1995,
+which caused major damage to the Hanshi region. In particular,
+Nishinomiya, Ashiya, and Kobe suffered heavy damage, and urban
+functions were destroyed in the city centers. Building collapse and
+fires caused many to lose their homes and many of the affected people
+still live in refugee housing. Many industries were disrupted due to
+the ensuing financial instability and economic recession. Despite
+signficant time and money spent for recovery, the effects of this
+disaster are still seen today.
+
+Label the reverse side of one D-train with the word ``Earthquake'',
+and shuffle it with the other D-trains during game setup. The Great
+Hanshin Earthquake will occur when this labeled D-train is purchased,
+unless the bank has already broken at this point.
+
+If the earthquake occurs, then until the next stock round Hanshin
+Railway's income will be 0, and the incomes for Hankyu, Sanyo, and JR
+will be reduced by half. During this time, stock prices will be frozen
+and will not move.
+
+Kobe Rapid Transit Railway is closed, and the station tokens in Kobe
+and Ashiya are removed and returned to their owning companies. The
+Nishinomiya tile is downgraded one level. Tokens in Itami are flipped
+face down. After the next stock round, companies may pay 100円 to flip
+them back face up.
+
+Charity Payments: Each player pays the following amount to the bank by
+the end of the next stock round.
+
+\begin{align*}
+&(\textrm{\# D-trains already sold} \times \textrm{100円}) + \\
+&(\textrm{\# of shares held} \times \textrm{200円})
+\end{align*}
+
+This amount is calculated at the time the earthquake occurs. If cash
+on hand is insufficient to make the payment, then shares must be sold to
+make up the difference.
+
+
+\subsubsection{Second World War Air Raids}
+
+At the end of World War II, the United States military conducted a
+sustained campaign of air raids in cities around Japan's four
+largest industrial areas. These bombings resulted in many civilian
+deaths and impeded economic recovery after the war. The Hanshin region
+was particularly impacted as it formed a large part of Japan's
+industrial base, Osaka, Kobe, and Amagasaki were targeted for bombing.
+
+After the last 3+3 train is purchased, the air raids will take
+place. Discard all green tiles from Kobe, Ashiya, Nishinomiya,
+Amagasaki, Osaka Kita, Osaka Nishi, Osaka Higashi, and Osaka Minami,
+as well as surrounding hexes. Yellow tiles will not be
+discarded. Green track tiles that were removed from empty map hexes
+must be laid again starting with yellow, and repaying any terrain costs.
+
+After green tiles have been removed, station tokens are
+replaced. Tokens may not be replaced into spaces reserved for
+unstarted companies. If a city contains station tokens from multiple
+companies and there are no longer enough token spaces, then the tokens
+are placed in operating order beginning with the company after the one
+that purchased the last 3+3 train. Remaining tokens will be placed on
+the tile, as a reserved token. When the tile is upgraded, creating a
+new token space, the reserved token will automatically fill that
+space. At any time, reserved tokens may be removed to be used
+elsewhere as a normal 100円 station token.
+
+\end{multicols}
+
+\renewcommand*{\thesection}{\Alph{section}}
+\renewcommand*{\theHsection}{appendix.\Alph{section}}
+
+\include{phase_chart}
+
+\include{18xx_diff}
 
 \end{CJK}
 \end{document}
