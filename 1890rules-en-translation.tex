@@ -120,6 +120,7 @@ ahead of their turn.
 
 
 \subsection{Disclosure of player share and cash holdings}
+\label{player-cash}
 Cash and share holdings of each player are public knowledge. Players
 should arrange their possessions such that they are easily seen by
 others, and must respond truthfully to questions. However, excessive
@@ -127,7 +128,7 @@ inquiries will slow the game and should be avoided.
 
 
 \subsection{Company Charters}
-
+\label{company-charters}
 The president of each railway company places trains and private
 companies owned by the railway company on top of the company sheet so
 that everyone can see it. Company funds are also placed on the company
@@ -541,7 +542,7 @@ certificate and/or ownership limits to be exceeded. In this case,
 affected players must sell shares in their next stock round turn to
 bring them in compliance with the limits.
 
-\subsection{Change of president}
+\subsection{Change of president} \label{shares-change-president}
 A change of president may occurs when a player purchases a stock
 certificate or a president sells their stock certificates.
 
@@ -556,7 +557,7 @@ certificate, and receive the company charter and all its holdings
 (trains, station tokens, private companies, funds).
 
 
-\section{Starting and closing of companies}
+\section{Starting and closing of companies}\label{sec:starting-companies}
 Private companies, minor companies, and late private companies are
 started at the time of purchase by a player. Public companies are
 established when a fixed number of shares are purchased from the
@@ -583,6 +584,7 @@ Railways is started when the owner of the Osaka Electric Railway minor
 company announces the start of Kinki Nippon Railways.
 
 \subsubsection{Purchasing the president certificate of a public company}
+\label{floating-par-price}
 Usually, the first stock certificate purchased from a public company
 is the president's stock certificate. The player who buys the
 president's stock certificate determines the par price of the public
@@ -594,13 +596,14 @@ token is placed at the bottom of the stack. The price to purchase the
 president's certificate is two times the par price.
 
 \subsubsection{Preparation for starting a public company}
+\label{floating-initial-capital}
 The president of the started public company receives the company
 charter and its station tokens, placing them on the spaces on the
 company charter marked with prices 40円 and 100円. As capital,
 the company receives ten times the par price from the bank. For the
 remainder of the game, further sale and purchase of the company's
 shares will not affect the amount of funds in its treaury. [Exception:
-C8.4 Kintetsu]
+Kinki, \autoref{kinki}]
 
 \subsection{Company closure}
 Private companies will be closed at the beginning of Phase 4
@@ -657,7 +660,7 @@ round has not ended before the turn returns to them.
 \subsection{Selling shares}
 Only shares of public companies may be sold. During another player's
 turn, it is possible to sell private companies if the other player
-requests to purchase them (reference: 10.9).
+requests to purchase them.
 
 \subsubsection{Fall in stock price due to the sale of shares}
 \label{sr-sell-price-drop}
@@ -684,7 +687,7 @@ prohibited from selling stock.
 Players can purchase one stock certificate from the initial offer, or
 one stock certificate from the open market. Players may also buy one
 private company from another player.  Stock certificates from the
-initial offer, will be purchased in order, beginning with the
+initial offer will be purchased in order, beginning with the
 president's certificate, at the par price decided by the first player
 to buy shares of that company. Stock certificates in the open market
 are purchased at the price currently indicated on the stock price
@@ -854,7 +857,8 @@ simultaneously.  The dividend amount printed on their certificate is
 paid to their owner.
 
 \subsection{Operating minor companies and public companies}
-First, small companies operate in numeric order. Next, public
+\label{or-operating-order}
+First, minor companies operate in numeric order. Next, public
 companies operate in the order of descending stock price. If two
 public companies have the same stock price, the company whose stock
 price token is further right will operate first. If the two companies'
@@ -888,7 +892,7 @@ moved when upgraded by other track tiles. The placement and upgrading
 of the track tiles is optional. Also, companies do not need to use the
 track tiles they placed when operating their trains.
 
-\paragraph{Laying and upgrading track tiles}
+\paragraph{Laying and upgrading track tiles} \label{or-laying-tiles}
 Each railway company can place or upgrade one track tile, except for
 JR, which may place or upgrade up to two in phases 1 to 3. Tiles can
 be placed or upgraded in hexes that are connected to one of the
@@ -932,6 +936,7 @@ available for use elsewhere.
 When upgrading a track tile, existing station tokens must be in the
 same position on the new track tile.
 
+
 \paragraph{Costs to lay or upgrade track tiles}
 Certain hexes on the map are printed with a terrain cost that must be paid in
 order to lay or upgrade a track tile there. This cost must be paid
@@ -972,7 +977,7 @@ free station token is placed in its home location(s), indicated by the
 company's logo printed in large city spaces on the map. (Exception:
 Kinki Nippon Railways \ref{kinki})
 
-\subsubsection{Normal station token placement}
+\subsubsection{Normal station token placement} \label{or-normal-stations}
 Each public company can place one station during its turn. The cost
 for each token is listed on the company charter: 40円 for the first
 token, and 100円 for each subsequent token. This cost is paid from
@@ -983,6 +988,7 @@ On a company's first operating turn, it may place a normal station
 token in addition to its home token(s).
 
 \subsubsection{Requirements for placing normal station tokens}
+\label{or-station-placement-requirements}
 Station tokens are placed in empty large city locations. The city must
 be connected to one of the company's existing tokens on the map such
 that a train of infinite length could connect the two
@@ -999,13 +1005,13 @@ The active company determines the routes that its trains will run. The
 revenue generated is then distributed to the company's shareholders
 and/or its treasury.
 
-\subsubsection{Right to decide train routes}
+\subsubsection{Right to decide train routes} \label{or-route-choice}
 The president of the operating company decides the routes that will be
 run by company's trains. The company's other shareholders can describe
 better routes to the president, but the president is not obligated to
 follow their suggestions.
 
-\subsubsection{Route definition}
+\subsubsection{Route definition} \label{or-route-definition}
 Train routes must follow the track on the map according to the
 following rules. If a railway company owns multiple trains, it is
 possible for it to operate multiple routes.
@@ -1055,25 +1061,25 @@ dividends or keep it in its treasury. Minor companies that operated
 trains must pay dividends. Companies that did not operate trains do
 not pay dividends.
 
-\subsubsection{Minor company dividends}
+\subsubsection{Minor company dividends} \label{or-minor-dividends}
 Minor companies can only pay dividends. Half of the revenue is paid to
 the president and the other half is added to the company treasury.
 
-\subsubsection{Public company dividends}
+\subsubsection{Public company dividends} \label{or-public-dividends}
 If the president of a public company chooses to pay a dividend, the
 revenue generated by the operating trains will be distributed among
 shareholders. The company's shareholders receive 10\% of the revenue
 for each share certificate (20\% for the president's
 certificates). Shares in the open market pay to the company
 treasury. Shares in the initial offer pay their dividends to the
-bank. (Exception: A8.4, C8.4 JR)
+bank. (Exception: JR \autoref{JR})
 
-\subsubsection{No distribution of public companies}
+\subsubsection{No distribution of public companies} \label{or-withholding}
 If the president of a public company elects not to give a dividend,
 all the revenue generated by operating trains will be added to the
 company's funds.
 
-\subsubsection{Moving stock price tokens}
+\subsubsection{Moving stock price tokens} \label{or-moving-stock-prices}
 The stock price of a public company moves depending on whether it paid
 dividends or kept the revenue for its treasury. If a dividend was
 paid, move the stock price token to the right and flip it over. If it
@@ -1081,9 +1087,9 @@ did not pay a dividend, move the stock price token to the left and
 flip it over.
 
 \subsection{Buy a train}
-Minor companies and public companies can buy some trains as long as
+Minor companies and public companies can buy trains as long as
 the train limit is not exceeded. Check for phase changes in between
-each train purchased (see: 12.4 purchasing a train).
+each train purchased (\autoref{sec:buying-trains}).
 
 \subsection{End of operating round}
 The operation round ends when all the operational companies have been
@@ -1264,9 +1270,9 @@ discard any trains the company holds exceeding the limit. Discarded
 trains are placed in the open market and are available for purchase.
 
 \subsection{Train ownership obligation}
-
+\label{train-obligation}
 Companies are obligated to own a train if they can trace a valid route
-from any of their station tokens. If a company does not own a train at
+from any of their station tokens. If such a company does not own a train at
 the end of its turn, it must buy one. If the company treasury is
 insufficient to do so, a force-purchase occurs.
 
@@ -1276,13 +1282,13 @@ market. However, in these cases, the railway company can not pay
 dividends, so the stock price will continue to fall each operating
 round.
 
-\subsection{Purchase train}
+\subsection{Purchasing trains} \label{sec:buying-trains}
 
 All trains are initially purchased from the bank. Trains purchased
-from the bank will be sold in order. For example, 2-2 trains cannot be
-bought until all 2 trains are purchased from the bank, and 5 trains
-cannot be bought until all 4 trains are purchased from the
-bank. However, once the first 6 train is purchased, D trains may be
+from the bank will be sold in order. For example, 2+2 trains cannot be
+bought until all 2-trains are purchased from the bank, and 5-trains
+cannot be bought until all 4-trains are purchased from the
+bank. However, once the first 6-train is purchased, D trains may be
 bought. The purchase of a new train type will trigger a change of game
 phase. The cost to purchase a train is paid from the treasury of the
 railway company that purchases the train. (Exception: forced purchase
@@ -1291,19 +1297,20 @@ of 12.5 trains)
 \subsubsection{Purchase by the trade-in of the train}
 
 The price of the train is listed on the train card. D trains can be
-purchased at 1円,100 or at 800円 by trading in a 4, 5 or 6
-train. Since 4 trains will be rusted when the first D train is
+purchased at 1,100円 or at 800円 by trading in a 4-, 5- or 6-
+train. Since 4-trains will be rusted when the first D train is
 purchased, it is only the first D train may be bought with the
-trade-in of a 4 train. Traded-in trains are placed in the open market.
+trade-in of a 4-train. Traded-in trains are placed in the open market.
 
 \subsubsection{Purchasing trains from the market and other companies}
+\label{trains-buying-from-companies}
 
 Trains can be purchased from other railway companies and the open
 market.  A company may buy a train from a different company at any
 price agreed upon by the two presidents, that is at least 1円. Trains
 in the open market are bought at face value.
 
-\subsection{Forced purchase of trains}
+\subsection{Forced purchase of trains} \label{train-force-buy}
 If a company is obligated to own a train, and does not have enough
 money in its treasury to buy one from the bank or open market, the
 president of the company must use their own funds to make up the
@@ -1362,7 +1369,7 @@ the following procedure:
 \end{enumerate}
 
 \subsection{Player Bankruptcy}
-
+\label{endgame-player-bankruptcy}
 If a player can not provide the funds needed to make a payment, that
 player will go bankrupt. No player or company can do anything from
 that moment on.
@@ -1376,7 +1383,7 @@ bankrupt. All money raised is seized by the bank and the remaining
 debt is waived. The end of game is then immediately processed.
 
 \subsection{Breaking the bank}
-
+\label{endgame-bank-break}
 The bank breaks when there is insufficient money to pay players or
 companies, e.g. for operating revenue or share sales. The game will
 end at the end of the current game turn.
@@ -1620,7 +1627,7 @@ Home: Toyonaka \hfill Stations: 4
 
   No special rules.
 
-\item[JR (Japan Railways)] \hfill
+\item[JR (Japan Railways)] \hfill \label{JR}
 Homes: Osaka Kita, Kyoto, Nara, Kobe \hfill Stations: 6
 
 JR is treated as a regular public company except for the following rules:
@@ -1848,7 +1855,7 @@ Type & Count \\
 4T & 4 \\
 5T & 3 \\
 6T & 2 \\
-D & 8
+D & 6
 \end{tabular}
 
 \subsection{Money}
@@ -1907,7 +1914,7 @@ K & Kobe Electric Railway & 100
 \end{tabular}
 \end{description}
 
-\subsection{Private companies}
+\subsection{Private companies}\label{privates}
 Private companies block tile lays on the map hexes where their track
 is. They also carry certain benefits and abilities which are explained
 as follows:
@@ -2119,7 +2126,7 @@ Phase 4-6: 3 trains
   the same hex in one operating round is prohibited.
 \end{itemize}
 
-\item[Osaka Subway (Osaka Municipal Subway)] \hfill
+\item[Osaka Subway (Osaka Municipal Subway)] \hfill \label{osaka-subway}
 
 Home: Osaka Nishi \hfill Stations: 1
 
