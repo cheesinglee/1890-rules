@@ -11,14 +11,38 @@
 \usepackage{multicol}
 \usepackage[top=1in, bottom=1.25in, left=1.25in, right=1.25in]{geometry}
 \usepackage{mathtools}
+\usepackage{tocvsec2}
 
-\title{1890}
 \setcounter{secnumdepth}{4}
+
+\makeatletter
+\renewcommand\tableofcontents{%
+    \@starttoc{toc}%
+}
+\makeatother
 \begin{document}
 \begin{CJK}{UTF8}{min}
+
+\begin{titlepage}
+\centering
+
+{\Huge 1890 - History of Osaka Railways}
+
+\vspace{1cm}
+
+{\large Shin-ichi Takasaki (高崎真一)}
+
+\vspace{1cm}
+
+\maxtocdepth{subsection}
+\begin{multicols}{2}
+\tableofcontents
+\end{multicols}
+\end{titlepage}
+
 \begin{multicols}{2}
 \section*{Introduction}
-
+\settocdepth{section}
 \subsubsection*{1890 is a game about the railways of Kansai}
 1890 is a member of the 18XX genre of railway development games that
 is focused on the the development of railroads in the Keihanshin
@@ -116,7 +140,7 @@ smoothed by players planning their stock trades or company operations
 ahead of their turn.
 
 
-\subsection{Disclosure of player share and cash holdings}
+\subsection{Disclosure of player assets}
 \label{player-cash}
 Cash and share holdings of each player are public knowledge. Players
 should arrange their possessions such that they are easily seen by
@@ -199,7 +223,7 @@ Shares for private companies, late private companies, minor companies, and
 public companies.
 
 
-\subsection{Public company and Minor Company Charters}
+\subsection{Company Charters}
 This sheet is used when operating public and minor companies.  These
 charters are managed by the president of the company. Company funds
 and trains, unused station tokens, and purchased private companies are
@@ -483,7 +507,7 @@ phase:
 
 
 \section{Shares}
-
+\resettocdepth
 \subsection{Shares and certificates}
 The 1890 uses stock certificates to represent the ownership of each railway
 company.
@@ -713,6 +737,7 @@ row. If the stock price token is already on the top row, it does not move.
 
 
 \section{Initial stock round}\label{isr}
+\settocdepth{section}
 An initial stock round will be played until all private and minor
 companies appearing in the chosen scenario have been purchased by
 players.
@@ -822,11 +847,12 @@ Railways public company. (C8.1, C8.2, D8.1)
 
 
 \section{Operating Round}
+\resettocdepth
 In the operating round, all railway companies that can operate will do
 so in turn order. There will be 1 to 3 operating rounds per game turn
 depending on the game phase.
 
-\subsection{Progress of the operation round}
+\subsection{Overview}
 The operation round will proceed in the following steps.
 \begin{enumerate}
 \item Operate private companies and late private companies.
@@ -834,12 +860,12 @@ The operation round will proceed in the following steps.
 \item Operate public companies in order of descending stock price.
 \end{enumerate}
 
-\subsection{Operating private companies and late private company}
+\subsection{Private companies and late private companies}
 All private companies and late private companies operate
 simultaneously.  The dividend amount printed on their certificate is
 paid to their owner.
 
-\subsection{Operating minor companies and public companies}
+\subsection{Minor companies and public companies}
 \label{or-operating-order}
 First, minor companies operate in numeric order. Next, public
 companies operate in the order of descending stock price. If two
@@ -1038,7 +1064,7 @@ red off-board cities) on a train's route is the revenue for that
 train. Total the revenue from each train to obtain the revenue for the
 current operating round. Companies with no trains earn no revenue.
 
-\subsection{Deciding whether to pay dividends or not}
+\subsection{Dividends}
 A public company that operated trains may either pay the revenue as
 dividends or keep it in its treasury. Minor companies that operated
 trains must pay dividends. Companies that did not operate trains do
@@ -1069,7 +1095,7 @@ paid, move the stock price token to the right and flip it over. If it
 did not pay a dividend, move the stock price token to the left and
 flip it over.
 
-\subsection{Buy a train}
+\subsection{Purchase trains}
 Minor companies and public companies can buy trains as long as
 the train limit is not exceeded. Check for phase changes in between
 each train purchased (\autoref{sec:buying-trains}).
@@ -1083,7 +1109,7 @@ Move the round marker of the round progress table to the next space;
 if the current run round is the last operating round, move the round marker
 to the stock round space and advance the game turn marker by one.
 
-\subsection{Purchase of a Private Company in a Public Company}
+\subsection{Purchase Private Companies}
 \label{or-private-purchase}
 During the phases 2 and 3, a public company can purchase a private
 company from any player during its own operating round turn.  The
@@ -1318,6 +1344,7 @@ immediately and unconditionally removed from the game
 
 
 \section{End of the game}
+\settocdepth{section}
 The game may end in three ways. A player goes bankrupt, the bank runs
 out of money, the end of the final game turn (according to the
 scenario).
@@ -1423,7 +1450,7 @@ train will be put in the open market.
 \newpage
 
 \section*{Scenarios}
-
+\settocdepth{section}
 Several scenarios are available for selection depending on desired
 play time and/or player skill.
 
@@ -2460,3 +2487,8 @@ elsewhere as a normal 100円 station token.
 
 \end{CJK}
 \end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
