@@ -23,15 +23,15 @@ Run the following command to generate a PDF of the rules:
 
 ## Status
 
-OCR and machine translation is finished through Appendix C of the
-rules. Appendix D (1890 simplified scenario) and the Designer Notes
-remain to be OCR'd and machine translated. OCR output is stored
-[here](./ocr_output.txt).
+OCR and machine translation is finished with the exception of the
+example game at the end of book. That section appears to use lots of
+colloquialisms that cause the maching translation output to be barely
+intelligible. OCR output is stored [here](./ocr_output.txt).
 
 The machine translation output has been rewritten into legible prose,
 but as this rulebook contains some extra details and repetitions
-compared to typical English language 18xx rulebooks, substantial
-editing work remains to be done.
+compared to typical English language 18xx rulebooks, it could be
+streamlined substantially.
 
 ## Contributing
 
