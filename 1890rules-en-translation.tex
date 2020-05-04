@@ -2,7 +2,7 @@
 
 \usepackage{CJK}
 \usepackage{amssymb}
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 \usepackage[utf8]{inputenc}
 \usepackage{parskip}
 \usepackage{hyperref}
@@ -12,7 +12,8 @@
 \usepackage[top=1in, bottom=1.25in, left=1.25in, right=1.25in]{geometry}
 \usepackage{mathtools}
 \usepackage{tocvsec2}
-
+\usepackage{pgffor}
+\usepackage{xtab}
 \setcounter{secnumdepth}{4}
 
 \makeatletter
@@ -20,6 +21,29 @@
     \@starttoc{toc}%
 }
 \makeatother
+
+% commands for tile manifest
+\newcommand{\zeropad}[1]{\ifnum#1<100 0\fi\ifnum#1<10 0\fi#1}
+\newcommand{\tile}[1]{\parbox[c][18pt][c]{28pt}{\includegraphics[height=16pt]{img/t\zeropad{#1}.png}{\scriptsize #1}}}
+\newcommand{\noupgrades}{\emph{No further upgrades}}
+
+\newcommand{\row}[3]{\tile{#1} & #2 &
+\ifthenelse{\equal{#3} {}} {\noupgrades}{\foreach \i in {#3}{\tile{\i}\hspace{1em}}} \\ \hline}
+
+\makeatletter
+\let\mcnewpage=\newpage
+\newcommand{\TrickSupertabularIntoMulticols}{%
+  \renewcommand\newpage{%
+    \if@firstcolumn
+      \hrule width\linewidth height0pt
+      \columnbreak
+    \else
+      \mcnewpage
+    \fi
+  }%
+}
+\makeatother
+
 \begin{document}
 \begin{CJK}{UTF8}{min}
 
@@ -1455,6 +1479,7 @@ train will be put in the open market.
 \settocdepth{section}
 \include{designers_notes}
 \include{phase_chart}
+\include{tile_manifest}
 \include{18xx_diff}
 
 \end{CJK}
